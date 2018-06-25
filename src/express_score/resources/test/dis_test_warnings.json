@@ -1,0 +1,8 @@
+[
+  {"Case_Count":2.0,"Country":"Saudi Arabia","Disease":"MERS","Event_Date":"2018-04-29","Warning_ID":"test_2018-04-29","Event_Type":"Disease"},
+  {"Case_Count":3.0,"Country":"Saudi Arabia","Disease":"MERS","Earliest_Reported_Date":"2018-05-06","Event_Date":"2018-05-06","Warning_ID":"test_2018-05-06","Event_Type":"Disease"},
+  {"Case_Count":1.0,"Country":"Saudi Arabia","Disease":"MERS","Earliest_Reported_Date":"2018-05-13","Event_Date":"2018-05-13","Warning_ID":"test_2018-05-13","Event_Type":"Disease"},
+  {"Case_Count":0.0,"Country":"Saudi Arabia","Disease":"MERS","Event_Date":"2018-05-20","Warning_ID":"test_2018-05-20","Event_Type":"Disease"},
+  {"Case_Count":1.0,"Country":"Saudi Arabia","Disease":"MERS","Event_Date":"2018-05-27","Warning_ID":"test_2018-05-27","Event_Type":"Disease"},
+    {"Case_Count":0.0,"Country":"Saudi Arabia","Disease":"MERS","Event_Date":"2018-06-03","Warning_ID":"test_2018-06-03","Event_Type":"Disease"}
+]

@@ -277,7 +277,7 @@ class CaseCountScorer(Scorer):
 
     def score(self, warn_data, gsr_data):
         """
-        Perform scoring on ICEWS Protest Events
+        Perform scoring on Case Count event types
         :param warn_data: List of dicts of warnings
         :param gsr_data: List of dicts of GSR events
         :return: Dict with scoring results.

@@ -11,6 +11,7 @@ from main.schema import (
 )
 import json
 import os
+import numpy as np
 
 EXPRESS_SCORE_HOME = os.path.abspath("..")
 RESOURCE_PATH = os.path.join(EXPRESS_SCORE_HOME, "resources")
@@ -34,9 +35,9 @@ class CaseCountScorerTest(unittest.TestCase):
     gsr_dict[JSONField.COUNTRY] = LocationName.SAUDI_ARABIA
     gsr_dict[JSONField.EVENT_DATE] = "2016-03-27"
     gsr_dict[JSONField.EARLIEST_REPORTED_DATE] = "2016-04-01"
-    result_dict = dict()
-    result_dict[JSONField.WARNING_ID] = "test_1"
-    result_dict[JSONField.EVENT_ID] = "Disease_Saudi_Arabia_MERS_2016-03-27"
+    expected_dict = dict()
+    expected_dict[JSONField.WARNING_ID] = "test_1"
+    expected_dict[JSONField.EVENT_ID] = "Disease_Saudi_Arabia_MERS_2016-03-27"
     
     # Load CU Count Warnings
     # Egypt
@@ -102,6 +103,18 @@ class CaseCountScorerTest(unittest.TestCase):
     with open(gsr_path, "r") as f:
         madaba_monthly_gsr = json.load(f)
 
+    # Load Disease Warnings
+    warn_filename = "dis_test_warnings.json"
+    warn_path = os.path.join(TEST_RESOURCE_PATH, warn_filename)
+    with open(warn_path, "r") as f:
+        mers_warn = json.load(f)
+    # Disease GSR
+    gsr_filename = "dis_test_gsr.json"
+    gsr_path = os.path.join(TEST_RESOURCE_PATH, gsr_filename)
+    with open(gsr_path, "r") as f:
+        mers_gsr = json.load(f)
+
+
     def test_qs(self):
 
         # Test when both are 0
@@ -123,103 +136,104 @@ class CaseCountScorerTest(unittest.TestCase):
         warn_["Case_Count"] = 0
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 0
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 1.0
-        result_[JSONField.WARN_VALUE] = 0
-        result_[JSONField.EVENT_VALUE] = 0
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 1.0
+        expected_[JSONField.WARN_VALUE] = 0
+        expected_[JSONField.EVENT_VALUE] = 0
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
         warn_ = self.warn_dict.copy()
         warn_["Case_Count"] = 10
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 10
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 1.0
-        result_[JSONField.WARN_VALUE] = 10
-        result_[JSONField.EVENT_VALUE] = 10
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 1.0
+        expected_[JSONField.WARN_VALUE] = 10
+        expected_[JSONField.EVENT_VALUE] = 10
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
         warn_ = self.warn_dict.copy()
         warn_["Case_Count"] = 1
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 0
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 0.75
-        result_[JSONField.WARN_VALUE] = 1
-        result_[JSONField.EVENT_VALUE] = 0
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 0.75
+        expected_[JSONField.WARN_VALUE] = 1
+        expected_[JSONField.EVENT_VALUE] = 0
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
         warn_ = self.warn_dict.copy()
         warn_["Case_Count"] = 3
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 0
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 0.25
-        result_[JSONField.WARN_VALUE] = 3
-        result_[JSONField.EVENT_VALUE] = 0
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 0.25
+        expected_[JSONField.WARN_VALUE] = 3
+        expected_[JSONField.EVENT_VALUE] = 0
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
         warn_ = self.warn_dict.copy()
         warn_["Case_Count"] = 9
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 10
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 0.9
-        result_[JSONField.WARN_VALUE] = 9
-        result_[JSONField.EVENT_VALUE] = 10
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 0.9
+        expected_[JSONField.WARN_VALUE] = 9
+        expected_[JSONField.EVENT_VALUE] = 10
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
         warn_ = self.warn_dict.copy()
         warn_["Case_Count"] = 1
         event_ = self.gsr_dict.copy()
         event_["Case_Count"] = 10
-        value = self.scorer.score_one(warn_, event_)
-        result_ = self.result_dict.copy()
-        result_[ScoreComponents.QS] = 0.1
-        result_[JSONField.WARN_VALUE] = 1
-        result_[JSONField.EVENT_VALUE] = 10
+        result_ = self.scorer.score_one(warn_, event_)
+        expected_ = self.expected_dict.copy()
+        expected_[ScoreComponents.QS] = 0.1
+        expected_[JSONField.WARN_VALUE] = 1
+        expected_[JSONField.EVENT_VALUE] = 10
         for k in warn_.keys():
-            if k in result_.keys():
+            if k in expected_.keys():
                 if k == ScoreComponents.QS:
-                    self.assertAlmostEqual(value[k], result_[k])
+                    self.assertAlmostEqual(result_[k], expected_[k])
                 else:
-                    self.assertEqual(value[k], result_[k])
+                    self.assertEqual(result_[k], expected_[k])
 
     def test_match(self):
         """
         Tests the CaseCountScorer match function
         :return:
         """
+        # Egypt Daily CU
         scorer = CaseCountScorer(location=LocationName.EGYPT, event_type=EventType.CU)
         warn_ = self.eg_daily_warn[-4:]
         gsr_ = self.eg_daily_gsr[-5:]
@@ -233,26 +247,262 @@ class CaseCountScorerTest(unittest.TestCase):
         self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
         self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
         self.assertEqual(set(match_list), set(result["Matches"]))
+        # Tahrir Weekly CU
+        scorer = CaseCountScorer(location=LocationName.TAHRIR, event_type=EventType.CU)
+        warn_ = self.tahrir_weekly_warn
+        gsr_ = self.tahrir_weekly_gsr
+        match_list = [("test_Tahrir-05-02", "CU_Count_Tahrir_2018-05-02")]
+        match_list.append(("test_Tahrir-05-09", "CU_Count_Tahrir_2018-05-09"))
+        match_list.append(("test_Tahrir-05-16", "CU_Count_Tahrir_2018-05-16"))
+        match_list.append(("test_Tahrir-05-23", "CU_Count_Tahrir_2018-05-23"))
+        match_list.append(("test_Tahrir-05-30", "CU_Count_Tahrir_2018-05-30"))
+        unmatched_warn_list = ["test_Tahrir-06-06", "test_Tahrir-06-13"]
+        unmatched_gsr_list = ["CU_Count_Tahrir_2018-04-18", "CU_Count_Tahrir_2018-04-25"]
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+        # Jordan Weekly CU
+        scorer = CaseCountScorer(location=LocationName.JORDAN, event_type=EventType.CU)
+        warn_ = self.jo_weekly_warn
+        gsr_ = self.jo_weekly_gsr
+        match_list = [("test_Jordan-05-02", "CU_Count_Jordan_2018-05-02")]
+        match_list.append(("test_Jordan-05-09", "CU_Count_Jordan_2018-05-09"))
+        match_list.append(("test_Jordan-05-16", "CU_Count_Jordan_2018-05-16"))
+        match_list.append(("test_Jordan-05-23", "CU_Count_Jordan_2018-05-23"))
+        match_list.append(("test_Jordan-05-30", "CU_Count_Jordan_2018-05-30"))
+        unmatched_warn_list = ["test_Jordan-06-06"]
+        unmatched_gsr_list = []
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+        # Amman Monthly CU
+        scorer = CaseCountScorer(location=LocationName.AMMAN, event_type=EventType.CU)
+        warn_ = self.amman_monthly_warn
+        gsr_ = self.amman_monthly_gsr
+        match_list = [("test_Amman-01-01", "CU_Count_Amman_2018-01-01")]
+        match_list.append(("test_Amman-02-01", "CU_Count_Amman_2018-02-01"))
+        match_list.append(("test_Amman-03-01", "CU_Count_Amman_2018-03-01"))
+        match_list.append(("test_Amman-04-01", "CU_Count_Amman_2018-04-01"))
+        match_list.append(("test_Amman-05-01", "CU_Count_Amman_2018-05-01"))
+        unmatched_warn_list = ["test_Amman-06-01"]
+        unmatched_gsr_list = ["CU_Count_Amman_2017-12-01"]
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+        # Irbid Monthly CU
+        scorer = CaseCountScorer(location=LocationName.IRBID, event_type=EventType.CU)
+        warn_ = self.irbid_monthly_warn
+        gsr_ = self.irbid_monthly_gsr
+        match_list = [("test_Irbid-01-01", "CU_Count_Irbid_2018-01-01")]
+        match_list.append(("test_Irbid-02-01", "CU_Count_Irbid_2018-02-01"))
+        match_list.append(("test_Irbid-03-01", "CU_Count_Irbid_2018-03-01"))
+        match_list.append(("test_Irbid-04-01", "CU_Count_Irbid_2018-04-01"))
+        match_list.append(("test_Irbid-05-01", "CU_Count_Irbid_2018-05-01"))
+        unmatched_warn_list = ["test_Irbid-06-01"]
+        unmatched_gsr_list = ["CU_Count_Irbid_2017-08-01", "CU_Count_Irbid_2017-09-01",
+                              "CU_Count_Irbid_2017-10-01", "CU_Count_Irbid_2017-11-01",
+                              "CU_Count_Irbid_2017-12-01"]
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+        # Madaba Monthly CU
+        scorer = CaseCountScorer(location=LocationName.MADABA, event_type=EventType.CU)
+        warn_ = self.madaba_monthly_warn
+        gsr_ = self.madaba_monthly_gsr
+        match_list = [("test_Madaba_2017-09-01", "CU_Count_Madaba_2017-09-01")]
+        match_list.append(("test_Madaba_2017-10-01", "CU_Count_Madaba_2017-10-01"))
+        match_list.append(("test_Madaba_2017-11-01", "CU_Count_Madaba_2017-11-01"))
+        match_list.append(("test_Madaba_2017-12-01", "CU_Count_Madaba_2017-12-01"))
+        match_list.append(("test_Madaba-01-01", "CU_Count_Madaba_2018-01-01"))
+        match_list.append(("test_Madaba-02-01", "CU_Count_Madaba_2018-02-01"))
+        match_list.append(("test_Madaba-03-01", "CU_Count_Madaba_2018-03-01"))
+        match_list.append(("test_Madaba-04-01", "CU_Count_Madaba_2018-04-01"))
+        match_list.append(("test_Madaba-05-01", "CU_Count_Madaba_2018-05-01"))
+        unmatched_warn_list = ["test_Madaba-06-01"]
+        unmatched_gsr_list = []
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+
+        # MERS
+        scorer = CaseCountScorer(location=LocationName.SAUDI_ARABIA, event_type=EventType.DIS)
+        warn_ = self.mers_warn
+        gsr_ = self.mers_gsr
+        match_list = [("test_2018-04-29", "Disease_Saudi_Arabia_MERS_2018-04-29")]
+        match_list.append(("test_2018-05-06", "Disease_Saudi_Arabia_MERS_2018-05-06"))
+        match_list.append(("test_2018-05-13", "Disease_Saudi_Arabia_MERS_2018-05-13"))
+        match_list.append(("test_2018-05-20", "Disease_Saudi_Arabia_MERS_2018-05-20"))
+        unmatched_warn_list = ["test_2018-05-27", "test_2018-06-03"]
+        unmatched_gsr_list = ["Disease_Saudi_Arabia_MERS_2018-04-22"]
+        result = scorer.match(warn_data=warn_, gsr_data=gsr_)
+        # Unmatched warnings
+        self.assertEqual(unmatched_warn_list, result["Unmatched Warnings"])
+        self.assertEqual(unmatched_gsr_list, result["Unmatched GSR"])
+        self.assertEqual(set(match_list), set(result["Matches"]))
+
+
 
     def test_score(self):
         """
         Tests CaseCountScorer.score method
         :return:
         """
-        scorer = CaseCountScorer(location=LocationName.EGYPT, event_type=EventType.CU)
+        # Egypt Daily CU
+        eg_scorer = CaseCountScorer(location=LocationName.EGYPT, event_type=EventType.CU)
         warn_ = self.eg_daily_warn[-4:]
         gsr_ = self.eg_daily_gsr[-5:]
         expected_precision = 0.75
         expected_recall = 0.60
         expected_qs = 0.25
         expected_qs_ser = [0, 0.25, 0.50]
-        result = scorer.score(warn_, gsr_)
+        result = eg_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Tahrir Weekly CU
+        tahrir_scorer = CaseCountScorer(location=LocationName.TAHRIR, event_type=EventType.CU)
+        warn_ = self.tahrir_weekly_warn
+        gsr_ = self.tahrir_weekly_gsr
+        expected_precision = 5./7
+        expected_recall = 5./7
+        expected_qs = 0.935
+        expected_qs_ser = [0.923, 1, 1, 0.75, 1]
+        result = tahrir_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall, 3)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Jordan Weekly CU
+        jo_scorer = CaseCountScorer(location=LocationName.JORDAN, event_type=EventType.CU)
+        warn_ = self.jo_weekly_warn
+        gsr_ = self.jo_weekly_gsr
+        expected_precision = 5./6
+        expected_recall = 1
+        expected_qs = 1
+        expected_qs_ser = [1, 1, 1, 1, 1]
+        result = jo_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall, 3)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Amman Monthly CU
+        amman_scorer = CaseCountScorer(location=LocationName.AMMAN, event_type=EventType.CU)
+        warn_ = self.amman_monthly_warn
+        gsr_ = self.amman_monthly_gsr
+        expected_precision = 5./6
+        expected_recall = 5./6
+        expected_qs_ser = [1, 16./20, 18./21, 10./13, 18./20]
+        expected_qs = np.mean(expected_qs_ser)
+        result = amman_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Irbid Monthly CU
+        irbid_scorer = CaseCountScorer(location=LocationName.IRBID, event_type=EventType.CU)
+        warn_ = self.irbid_monthly_warn
+        gsr_ = self.irbid_monthly_gsr
+        expected_precision = 5./6
+        expected_recall = 5./10
+        expected_qs_ser = [0.5, 1, 0.5, 1, 0.45]
+        expected_qs = np.mean(expected_qs_ser)
+        result = irbid_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Madaba Monthly CU
+        madaba_scorer = CaseCountScorer(location=LocationName.MADABA, event_type=EventType.CU)
+        warn_ = self.madaba_monthly_warn
+        gsr_ = self.madaba_monthly_gsr
+        expected_precision = 9./10
+        expected_recall = 1
+        expected_qs_ser = [1,1,1,1,1, 0.8, 1, 0, 1]
+        expected_qs = np.mean(expected_qs_ser)
+        result = madaba_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Saudi Arabia MERS
+        mers_scorer = CaseCountScorer(location=LocationName.SAUDI_ARABIA, event_type=EventType.DIS)
+        warn_ = self.mers_warn
+        gsr_ = self.mers_gsr
+        expected_precision = 0.667
+        expected_recall = 0.80
+        expected_qs = 0.8125
+        expected_qs_ser = [1, 0.25, 1, 1]
+        result = mers_scorer.score(warn_, gsr_)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs, 3)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
+        # Mixed event types
+        mixed_warn = self.mers_warn + self.eg_daily_warn[-4:]
+        mixed_gsr = self.mers_gsr + self.eg_daily_gsr[-5:]
+        expected_precision = 0.75
+        expected_recall = 0.60
+        expected_qs = 0.25
+        expected_qs_ser = [0, 0.25, 0.50]
+        result = eg_scorer.score(mixed_warn, mixed_gsr)
         metrics = result["Results"]
         details = result["Details"]
         self.assertAlmostEqual(metrics["Precision"], expected_precision)
         self.assertAlmostEqual(metrics["Recall"], expected_recall)
         self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs)
         self.assertEqual(details["QS Values"], expected_qs_ser)
+        expected_precision = 0.667
+        expected_recall = 0.80
+        expected_qs = 0.8125
+        expected_qs_ser = [1, 0.25, 1, 1]
+        result = mers_scorer.score(mixed_warn, mixed_gsr)
+        metrics = result["Results"]
+        details = result["Details"]
+        self.assertAlmostEqual(metrics["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(metrics["Recall"], expected_recall)
+        self.assertAlmostEqual(metrics[ScoreComponents.QS], expected_qs)
+        for i, qs in enumerate(details["QS Values"]):
+            self.assertAlmostEqual(qs, expected_qs_ser[i], 3)
+
 
     
     def test_fill_out_location(self):
