@@ -16,8 +16,8 @@ from dateutil.parser import parse
 import json
 import os
 
-ES_HOME = os.path.abspath("..")
-RESOURCE_PATH = os.path.join(ES_HOME, "resources")
+EXPRESS_SCORE_HOME = os.path.abspath("..")
+RESOURCE_PATH = os.path.join(EXPRESS_SCORE_HOME, "resources")
 TEST_RESOURCE_PATH = os.path.join(RESOURCE_PATH, "test")
 
 

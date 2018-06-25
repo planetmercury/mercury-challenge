@@ -42,7 +42,7 @@ class JSONField(object):
   EVENT_VALUE = "GSR Case Count"
 
 class EventType(object):
-  CU = 'Non-Violent Civil Unrest'
+  CU = 'Civil Unrest'
   MA = 'Military Action'
   DIS = 'Disease'
 
@@ -54,9 +54,14 @@ class Subtype(object):
 class DiseaseType(object):
   MERS = 'MERS'
 
-class CountryName(object):
+class LocationName(object):
   SAUDI_ARABIA = 'Saudi Arabia'
   EGYPT = 'Egypt'
+  TAHRIR = "Tahrir Square"
+  JORDAN = "Jordan"
+  AMMAN = "Amman"
+  IRBID = "Irbid"
+  MADABA = "Madaba"
 
 class Wildcards(object):
   STATE_ACTOR = "Unspecified"

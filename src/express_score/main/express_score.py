@@ -3,12 +3,14 @@ Module to provide lightweight scoring functions for Mercury Challenge participan
 '''
 
 import sys
+import re
 
 from .schema import (
     JSONField,
     ScoreComponents,
     EventType,
-    Subtype
+    Subtype,
+    LocationName
 )
 
 import datetime
@@ -57,6 +59,7 @@ class Scorer:
     '''
     Base class for all scoring classes.
     '''
+
 
     def __init__(self):
         pass
@@ -135,12 +138,58 @@ class CaseCountScorer(Scorer):
     """
     Scores the case count event types
     """
-    def __init__(self, event_type):
+    LOCATIONS = [LocationName.EGYPT, LocationName.JORDAN, LocationName.SAUDI_ARABIA,
+                 LocationName.TAHRIR, LocationName.AMMAN, LocationName.IRBID, LocationName.MADABA]
+    LOCATION_DICT = dict()
+    LOCATION_DICT[LocationName.EGYPT] = {JSONField.COUNTRY: LocationName.EGYPT}
+    LOCATION_DICT[LocationName.SAUDI_ARABIA] = {JSONField.COUNTRY: LocationName.SAUDI_ARABIA}
+    LOCATION_DICT[LocationName.JORDAN] = {JSONField.COUNTRY: LocationName.JORDAN}
+    LOCATION_DICT[LocationName.TAHRIR] = {JSONField.COUNTRY: LocationName.EGYPT,
+                                          JSONField.CITY: LocationName.TAHRIR}
+    LOCATION_DICT[LocationName.AMMAN] = {JSONField.COUNTRY: LocationName.JORDAN,
+                                         JSONField.STATE: LocationName.AMMAN}
+    LOCATION_DICT[LocationName.IRBID] = {JSONField.COUNTRY: LocationName.JORDAN,
+                                         JSONField.STATE: LocationName.IRBID}
+    LOCATION_DICT[LocationName.MADABA] = {JSONField.COUNTRY: LocationName.JORDAN,
+                                          JSONField.STATE: LocationName.MADABA}
+
+
+    def __init__(self, event_type, location):
         """
         Sets the event type
         :param event_type: Event_Type value
+        :param location: The location being scored
         """
-        self.event_type = event_type
+        details = CaseCountScorer.fill_out_location(event_type=event_type, location=location)
+        self.event_type = details[JSONField.EVENT_TYPE]
+        if JSONField.COUNTRY in details:
+            self.country = details[JSONField.COUNTRY]
+        else:
+            self.country = None
+        if JSONField.STATE in details:
+            self.state = details[JSONField.STATE]
+        else:
+            self.state = None
+        if JSONField.CITY in details:
+            self.city = details[JSONField.CITY]
+        else:
+            self.city = None
+
+    @staticmethod
+    def fill_out_location(location, event_type):
+        """
+        Completes the location specification
+        :param location: Location input
+        :param event_type: Event Type
+        :return: dict with location parameters
+        """
+        out_dict = {JSONField.EVENT_TYPE: event_type}
+        if location in CaseCountScorer.LOCATIONS:
+            loc_dict = CaseCountScorer.LOCATION_DICT[location]
+            for k in loc_dict:
+                out_dict[k] = loc_dict[k]
+
+        return out_dict
 
     def score_one(self, warn_, event_, accuracy_denominator=Defaults.ACCURACY_DENOMINATOR):
         """
@@ -161,7 +210,6 @@ class CaseCountScorer(Scorer):
         out_dict[ScoreComponents.QS] = qs
         return out_dict
 
-
     @staticmethod
     def quality_score(predicted, actual, accuracy_denominator=Defaults.ACCURACY_DENOMINATOR):
         """
@@ -176,6 +224,35 @@ class CaseCountScorer(Scorer):
         qs = 1 - 1.*numerator/denominator
         return qs
 
+    def make_score_df(self, warn_data, gsr_data):
+        """
+        Matches Warning to GSR by event date
+        :param warn_data:
+        :param gsr_data:
+        :return: DataFrame with merged data
+        """
+        warn_df = pd.DataFrame(warn_data)
+        warn_df = warn_df[warn_df[JSONField.EVENT_TYPE] == self.event_type]
+        warn_df = warn_df[warn_df[JSONField.COUNTRY] == self.country]
+        if self.state is not None:
+            warn_df = warn_df[warn_df[JSONField.STATE] == self.state]
+        if self.city is not None:
+            warn_df = warn_df[warn_df[JSONField.CITY] == self.city]
+        gsr_df = pd.DataFrame(gsr_data)
+        gsr_df = gsr_df[gsr_df[JSONField.EVENT_TYPE] == self.event_type]
+        gsr_df = gsr_df[gsr_df[JSONField.COUNTRY] == self.country]
+        if self.state is not None:
+            gsr_df = gsr_df[gsr_df[JSONField.STATE] == self.state]
+        if self.city is not None:
+            gsr_df = gsr_df[gsr_df[JSONField.CITY] == self.city]
+        score_df = pd.merge(left=warn_df, right=gsr_df, on=JSONField.EVENT_DATE, how="outer")
+        score_df["Warning_Case_Count"] = score_df.Case_Count_x
+        score_df["GSR_Case_Count"] = score_df.Case_Count_y
+        drop_cols = [c for c in score_df.columns if re.findall("_x|_y", c)]
+        for c in drop_cols:
+            score_df.drop(c, axis=1, inplace=True)
+        return score_df
+
     def match(self, warn_data, gsr_data):
         """
         Matches Warning to GSR by event date
@@ -183,7 +260,20 @@ class CaseCountScorer(Scorer):
         :param gsr_data:
         :return:
         """
-        pass
+        score_df = self.make_score_df(warn_data, gsr_data)
+        out_dict = dict()
+        unmatched_warn_df = score_df[score_df[JSONField.EVENT_ID].isnull()]
+        unmatched_warn_list = list(unmatched_warn_df[JSONField.WARNING_ID].values)
+        out_dict["Unmatched Warnings"] = unmatched_warn_list
+        unmatched_gsr_df = score_df[score_df[JSONField.WARNING_ID].isnull()]
+        unmatched_gsr_list = list(unmatched_gsr_df[JSONField.EVENT_ID].values)
+        out_dict["Unmatched GSR"] = unmatched_gsr_list
+        matched_df = score_df[~score_df[JSONField.EVENT_ID].isnull()]
+        matched_df = matched_df[~matched_df[JSONField.WARNING_ID].isnull()]
+        match_list = zip(matched_df[JSONField.WARNING_ID].values,
+                         matched_df[JSONField.EVENT_ID].values)
+        out_dict["Matches"] = match_list
+        return out_dict
 
     def score(self, warn_data, gsr_data):
         """
@@ -192,69 +282,31 @@ class CaseCountScorer(Scorer):
         :param gsr_data: List of dicts of GSR events
         :return: Dict with scoring results.
         """
-        score_dict = dict()
-        if self.warnings is None:
-            warn_count = 0
-        else:
-            warn_count = len(self.warnings)
-        if self.gsr_events is None:
-            evt_count = 0
-        else:
-            evt_count = len(self.gsr_events)
-        score_dict["Warning Count"] = warn_count
-        score_dict["Event Count"] = evt_count
-        score_dict["Country"] = self.country
-        score_dict["Start Date"] = self.start_date
-        score_dict["End Date"] = self.end_date
-        score_dict["Event_Type"] = self.event_type
-        if self.warnings is not None:
-            score_dict["Warnings"] = {self.warnings.ix[dd][EVENT_DATE]: int(self.warnings.ix[dd][CASE_COUNT])
-                                      for dd in self.warnings.index}
-        if self.gsr_events is not None:
-            score_dict["GSR"] = {self.gsr_events.ix[dd][EVENT_DATE]: int(self.gsr_events.ix[dd][CASE_COUNT])
-                                 for dd in self.gsr_events.index}
-        if self.warnings is None or self.gsr_events is None:
-            return {'Results': score_dict}
-        else:
-            warnings_df = self.warnings
-            gsr_df = self.gsr_events
-            overlap_warnings = warnings_df[warnings_df[EVENT_DATE].isin(gsr_df[EVENT_DATE])]
-            overlap_warnings.index = overlap_warnings[EVENT_DATE]
-            overlap_gsr = gsr_df[gsr_df[EVENT_DATE].isin(warnings_df[EVENT_DATE])]
-            overlap_gsr.index = overlap_gsr[EVENT_DATE]
-            score_df = pd.DataFrame({"Predicted": overlap_warnings[CASE_COUNT],
-                                     "Actual": overlap_gsr[CASE_COUNT]})
-            score_dict["Match Count"] = len(score_df)
-            time_df = pd.DataFrame({"timestamp": overlap_warnings[JSONField.TIMESTAMP],
-                                    "Event_Date": overlap_gsr[EVENT_DATE]})
-            try:
-                time_df[JSONField.EARLIEST_REPORTED_DATE] = overlap_gsr[JSONField.EARLIEST_REPORTED_DATE]
-            except KeyError:
-                pass
-            if len(score_df) == 0:
-                return {'Results' : score_dict}
-            else:
+        score_df = self.make_score_df(warn_data, gsr_data)
+        matches = self.match(warn_data, gsr_data)
+        out_dict = matches.copy()
+        scorable_df = score_df[~score_df.Warning_ID.isnull()]
+        scorable_df = scorable_df[~scorable_df.Event_ID.isnull()]
+        qs_ser = scorable_df.apply(lambda x: CaseCountScorer.quality_score(x.Warning_Case_Count,
+                                                                           x.GSR_Case_Count),
+                                                      axis=1)
+        mean_qs = qs_ser.mean()
+        result_dict = dict()
+        result_dict[ScoreComponents.QS] = mean_qs
+        n_warn = len(score_df[~score_df.Warning_ID.isnull()])
+        n_gsr = len(score_df[~score_df.Event_ID.isnull()])
+        n_match = len(scorable_df)
+        precision = n_match/n_warn
+        recall = n_match/n_gsr
+        result_dict["Precision"] = precision
+        result_dict["Recall"] = recall
+        out_dict["Results"] = result_dict
+        qs_values = list(qs_ser.values)
+        details_dict = dict()
+        details_dict["QS Values"] = qs_values
+        out_dict["Details"] = details_dict
 
-                score_df[ScoreComponents.QS] = score_df.apply(lambda x: self.quality_score(x["Predicted"],
-                                                                             x["Actual"])\
-                                                                  ["Quality Score"],
-                                                axis=1)
-                if JSONField.EARLIEST_REPORTED_DATE in time_df.columns:
-                    time_df[ScoreComponents.LT] = time_df.apply(lambda x: self.lead_time(x[JSONField.TIMESTAMP],
-                                                                                         x[JSONField.EARLIEST_REPORTED_DATE]),
-                                                  axis=1)
-                else:
-                    time_df[ScoreComponents.LT] = time_df.apply(lambda x: self.lead_time(x[JSONField.TIMESTAMP],
-                                                                                         x[EVENT_DATE]),
-                                                  axis=1)
-                    time_df[ScoreComponents.LT] = time_df[ScoreComponents.LT] + 5
-                score_dict["Precision"] = score_dict["Match Count"]/score_dict["Warning Count"]
-                score_dict["Recall"] = score_dict["Match Count"]/score_dict["Event Count"]
-                score_dict[ScoreComponents.QS] = score_df[ScoreComponents.QS].mean()
-                score_dict[ScoreComponents.LT] = time_df[ScoreComponents.LT].mean()
-
-                return {'Results' : score_dict}
-
+        return out_dict
 
 class MaScorer(Scorer):
     """
