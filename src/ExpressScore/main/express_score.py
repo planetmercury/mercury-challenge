@@ -191,7 +191,8 @@ class CaseCountScorer(Scorer):
 
         return out_dict
 
-    def score_one(self, warn_, event_, accuracy_denominator=Defaults.ACCURACY_DENOMINATOR):
+    @staticmethod
+    def score_one(warn_, event_, accuracy_denominator=Defaults.ACCURACY_DENOMINATOR):
         """
         Scores a single warning against a single GSR event
         :param warn_: dict with warning data
@@ -201,7 +202,7 @@ class CaseCountScorer(Scorer):
         """
         predicted = warn_[JSONField.CASE_COUNT]
         actual = event_[JSONField.CASE_COUNT]
-        qs = self.quality_score(predicted, actual, accuracy_denominator)
+        qs = CaseCountScorer.quality_score(predicted, actual, accuracy_denominator)
         out_dict = dict()
         out_dict[JSONField.WARNING_ID] = warn_[JSONField.WARNING_ID]
         out_dict[JSONField.EVENT_ID] = event_[JSONField.EVENT_ID]
@@ -219,6 +220,12 @@ class CaseCountScorer(Scorer):
         :param accuracy_denominator: The minimum value for scaling differences
         :return: Quality score value
         """
+        if predicted <0 or actual<0:
+            print("Negative case counts are not allowed")
+            return
+        if accuracy_denominator <= 0:
+            print("The accuracy denominator must be positive.")
+            return
         numerator = abs(predicted-actual)
         denominator = max(predicted, actual, accuracy_denominator)
         qs = 1 - 1.*numerator/denominator
@@ -270,8 +277,8 @@ class CaseCountScorer(Scorer):
         out_dict["Unmatched GSR"] = unmatched_gsr_list
         matched_df = score_df[~score_df[JSONField.EVENT_ID].isnull()]
         matched_df = matched_df[~matched_df[JSONField.WARNING_ID].isnull()]
-        match_list = zip(matched_df[JSONField.WARNING_ID].values,
-                         matched_df[JSONField.EVENT_ID].values)
+        match_list = list(zip(matched_df[JSONField.WARNING_ID].values,
+                         matched_df[JSONField.EVENT_ID].values))
         out_dict["Matches"] = match_list
         return out_dict
 
