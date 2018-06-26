@@ -14,3 +14,5 @@
 - Unittests (run from https://github.com/planetmercury/mercury-challenge/tree/master/src/ExpressScore/test)
   - `python test_case_count_scorer.py`
   - `python test_ma_scorer.py`
+
+All code in this package is provided using the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
