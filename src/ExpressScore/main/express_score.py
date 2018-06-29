@@ -27,17 +27,7 @@ import numpy as np
 import pandas as pd
 from geopy.distance import distance
 
-# The next few lines determine which matching algorithm implementation we use.
-# If the cython-munkres implementation we prefer to use it, otherwise we switch to the scikit-learn version.
-try:
-    import dlib
-    use_dlib = True
-except ImportError:
-    try:
-        from munkres import munkres
-    except ImportError:
-        from munkres import Munkres as munkres
-    use_dlib = False
+import dlib
 
 
 class Defaults(object):
@@ -53,6 +43,7 @@ class Defaults(object):
     DIST_BUFFER = MAX_DIST/6.0
     MAX_DATE_DIFF = 4.0
     DATE_BUFFER = 4.0
+    MAX_DATE_PERIOD = 50
 
 
 class Scorer:
@@ -85,7 +76,8 @@ class Scorer:
         out_dict = dict()
         return out_dict()
 
-    def match(self, warn_data, gsr_data):
+    @staticmethod
+    def match(input_matrix, allow_zero_scores=False):
         """
         Matches the warnings to the GSR events
         :param warn_data: List of dicts of warnings
@@ -103,13 +95,16 @@ class Scorer:
         :param max_value: Largest allowable value
         :return: Score from 0.0 to 1.0
         """
-        try:
-            slope = max_value - min_value
-            result = min(result, max_value)
-            result = max(result, min_value)
-            score = 1 - (result - min_value)/slope
-        except ZeroDivisionError:
-            score = 0
+        if min_value == max_value:
+            raise ValueError("Minimum and maximum thresholds must be different")
+        if min_value > max_value:
+            raise ValueError("Minimum threshold must be less than maximum threshold")
+
+        slope = max_value - min_value
+        result = min(result, max_value)
+        result = max(result, min_value)
+        score = 1 - (result - min_value)/slope
+
         return score
 
     @staticmethod
@@ -132,6 +127,86 @@ class Scorer:
              matched_value = int(warn_value in gsr_value)
 
         return matched_value
+
+    @staticmethod
+    def f1(precision, recall):
+        """
+        Computes F1 metric
+        :param precision: Precision
+        :param recall: Recall
+        :return: Harmonic mean of Precision and Recall
+        """
+        if (precision < 0) or (precision > 1):
+            raise ValueError("Precision must be in the range 0.0 to 1.0")
+        if (recall < 0) or (recall > 1):
+            raise ValueError("Recall must be in the range 0.0 to 1.0")
+        if precision == recall == 0:
+            f1_out = 0
+        else:
+            f1_out = 2*precision*recall/(precision+recall)
+        return f1_out
+
+    @staticmethod
+    def make_combination_mats(row_value_list, column_value_list):
+        """
+        Creates dual index matrices for use in other computations.  The warning index matrix will
+        have one row per warning index element, the GSR index matrix will have one column per GSR index element.
+        :return: pair of matrices
+        """
+        n_row = len(row_value_list)
+        n_col = len(column_value_list)
+        row_value_array = np.array(n_col * list(row_value_list))
+        row_value_array = row_value_array.reshape(n_col, n_row)
+        row_value_array = row_value_array.T
+        column_value_array = np.array(n_row * list(column_value_list))
+        column_value_array = column_value_array.reshape(n_row, n_col)
+
+        return row_value_array, column_value_array
+
+    @staticmethod
+    def make_index_mats(row_value_list, column_value_list):
+        """
+        Creates dual index matrices for use in other computations.  The warning index matrix will
+        have one row per warning index element, the GSR index matrix will have one column per GSR index element.
+        :return: pair of matrices
+        """
+        n_row = len(row_value_list)
+        n_col = len(column_value_list)
+        row_value_i_list = list(range(n_row))
+        row_value_i_array = np.array(n_col * row_value_i_list)
+        row_value_i_array = row_value_i_array.reshape(n_col, n_row)
+        row_value_i_array = row_value_i_array.T
+        column_value_i_list = list(range(n_col))
+        column_value_i_array = np.array(n_row * column_value_i_list)
+        column_value_i_array = column_value_i_array.reshape(n_row, n_col)
+
+        return row_value_i_array, column_value_i_array
+
+    @staticmethod
+    def date_diff(warn_date, gsr_date):
+        """
+        Computes date difference based on warning date and event date.
+        :param warn_date: Event_Date in the warning
+        :param gsr_date: Event_Date in the GSR
+        :return: integer, negative values mean the warning was later than the event
+        """
+        gsr_d = parse(gsr_date).date()
+        warn_d = parse(warn_date).date()
+        date_diff = (gsr_d - warn_d).days
+        return date_diff
+
+    @staticmethod
+    def date_score(date_diff, max_diff=Defaults.MAX_DATE_DIFF):
+        """Computes the date score between date1 and date2, with
+        a date_diff of max_diff scoring 0
+        :param max_diff: Maximum allowable time difference
+        :param date_diff: Number of days between actual and warning event dates
+        :return: Float
+        """
+
+        date_diff = np.abs(date_diff)
+        score = Scorer.slope_score(date_diff, 0, max_diff)
+        return score
 
 
 class CaseCountScorer(Scorer):
@@ -315,6 +390,7 @@ class CaseCountScorer(Scorer):
 
         return out_dict
 
+
 class MaScorer(Scorer):
     """
     Scorer for Military Action events
@@ -325,6 +401,13 @@ class MaScorer(Scorer):
     ACTORS = STATE_ACTORS + WILDCARD_ACTORS
     SUBTYPES = [Subtype.CONFLICT, Subtype.FORCE_POSTURE]
 
+    # Precompute all possible date differences
+    warn_dates = np.array(range(Defaults.MAX_DATE_PERIOD))
+    gsr_dates = np.array(range(Defaults.MAX_DATE_PERIOD))
+    dd_index_mats = Scorer.make_index_mats(warn_dates, gsr_dates)
+    all_dd_mat = dd_index_mats[0] - dd_index_mats[1]
+    ds_vfunc = np.vectorize(Scorer.date_score)
+
     def __init__(self, country):
         """
         :param country: The country to be scored
@@ -332,14 +415,66 @@ class MaScorer(Scorer):
         self.event_type = EventType.MA
         self.country = country
 
-    def match(self, warn_data, gsr_data):
+    @staticmethod
+    def match(input_matrix, allow_zero_scores=False):
         """
         Builds match list
-        :param warn_data:
-        :param gsr_data:
+        :param input_matrix: 2 dimensional array of scores
+        :param allow_zero_scores: Should items with a score of 0 be considered to be matched?  Default is False
         :return:
         """
-        pass
+        out_dict = dict()
+        out_dict["Matches"] = []
+        out_dict["Details"] = {"Quality Scores": []}
+        out_dict["Quality Score"] = 0
+        out_dict["Precision"] = 0
+        out_dict["Recall"] = 0
+        out_dict["F1"] = 0
+        warn_id_list = list(input_matrix.index)
+        event_id_list = list(input_matrix.columns)
+        score_matrix = np.array(input_matrix)
+
+        if min(score_matrix.shape) == 0:
+            pass
+        else:
+            if np.max(score_matrix) <= 0:
+                pass
+            else:
+                score_matrix = score_matrix.copy(order="C")
+                row_count, col_count = score_matrix.shape
+                zero_matrix = np.zeros(score_matrix.shape)
+                score_matrix = np.maximum(score_matrix, zero_matrix)
+
+                k_max = max(score_matrix.shape[0], score_matrix.shape[1])
+                score_matrix_square = np.zeros((k_max, k_max))
+                score_matrix_square[:score_matrix.shape[0], :score_matrix.shape[1]] = score_matrix
+
+                assign = dlib.max_cost_assignment(dlib.matrix(score_matrix_square))
+                assign = [(i, assign[i]) for i in range(k_max)]
+
+                assign_scores = np.array([score_matrix_square[x[0], x[1]] for x in assign])
+                assign = np.array(assign)
+
+                #assign = assign[assign_scores > 0]
+
+                if not allow_zero_scores:
+                    assign_scores = np.array([score_matrix_square[x[0], x[1]] for x in assign])
+                    assign = np.array(assign)
+                    assign = assign[assign_scores > 0]
+                assign = list([tuple(x) for x in assign])
+                assign = [(int(x[0]), int(x[1])) for x in assign]
+                assign = [(warn_id_list[a[0]], event_id_list[a[1]]) for a in assign]
+                out_dict["Matches"] = assign
+                scores_ = assign_scores[assign_scores > 0]
+                out_dict["Quality Score"] = np.mean(scores_)
+                out_dict["Details"] = {"Quality Scores": list(scores_)}
+                prec = len(assign)/row_count
+                rec = len(assign)/col_count
+                out_dict["Precision"] = prec
+                out_dict["Recall"] = rec
+                out_dict["F1"] = Scorer.f1(prec, rec)
+
+        return out_dict
 
     @staticmethod
     def score_one(warn_, event_, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
@@ -399,7 +534,8 @@ class MaScorer(Scorer):
             out_dict["Date Difference"] = date_diff
             ls = MaScorer.location_score(warn_lat, warn_long, event_lat, event_long, loc_approx, max_dist, dist_buffer)
             out_dict[ScoreComponents.LS] = ls
-            ds = MaScorer.date_score(warn_event_date, event_event_date, max_date_diff)
+            date_delta = Scorer.date_diff(warn_event_date, event_event_date)
+            ds = Scorer.date_score(date_delta, max_date_diff)
             out_dict[ScoreComponents.DS] = ds
             # Event Subtype
             warn_es = warn_[JSONField.SUBTYPE]
@@ -456,23 +592,6 @@ class MaScorer(Scorer):
         dist_km = dist_km - is_approximate*dist_buffer
         ls = Scorer.slope_score(dist_km, 0, max_dist)
         return ls
-
-    @staticmethod
-    def date_score(warn_date, gsr_date,
-                   max_date_diff=Defaults.MAX_DATE_DIFF):
-        """
-        Computes date score based on warning date and event date.
-        :param warn_date: Event_Date in the warning
-        :param gsr_date: Event_Date in the GSR
-        :param max_date_diff: How many days is considered to be too many?
-        :return: score from 0 to 1.0
-        """
-        gsr_d = parse(gsr_date).date()
-        warn_d = parse(warn_date).date()
-        date_diff = (gsr_d - warn_d).days
-        date_diff = np.abs(date_diff)
-        ds = Scorer.slope_score(date_diff, 0, max_date_diff)
-        return ds
 
     @staticmethod
     def actor_score(warn_actor, gsr_actor, legit_actors=ACTORS,

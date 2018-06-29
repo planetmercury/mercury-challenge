@@ -39,6 +39,80 @@ class ScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result, 0)
         result = Scorer.slope_score(too_high, min_value, max_value)
         self.assertAlmostEqual(result, 0)
+        self.assertRaises(ValueError, Scorer.slope_score, just_right, min_value, min_value)
+        self.assertRaises(ValueError, Scorer.slope_score, just_right, max_value, min_value)
+
+    def test_f1(self):
+        """
+        Tests Scorer.f1
+        :return:
+        """
+        p, r = (0,0)
+        expected = 0
+        result = Scorer.f1(p,r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (1,1)
+        expected = 1
+        result = Scorer.f1(p, r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (1,1)
+        expected = 1
+        result = Scorer.f1(p, r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (.5,.5)
+        expected = .5
+        result = Scorer.f1(p, r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (0,1)
+        expected = 0
+        result = Scorer.f1(p, r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (.25,.75)
+        expected = 0.375
+        result = Scorer.f1(p, r)
+        self.assertAlmostEqual(result, expected, 3)
+
+        p, r = (-.5, 1)
+        self.assertRaises(ValueError, Scorer.f1, p, r)
+
+        p, r = (2,1)
+        self.assertRaises(ValueError, Scorer.f1, p, r)
+
+        p, r = (.5, -.1)
+        self.assertRaises(ValueError, Scorer.f1, p, r)
+
+        p, r = (.5,2)
+        self.assertRaises(ValueError, Scorer.f1, p, r)
+
+    def test_date_diff(self):
+
+        # Test when both are 0
+        warn_date = "2018-06-22"
+        gsr_date_range = pd.date_range("2018-06-17", "2018-06-27")
+        gsr_dates = [d.strftime("%Y-%m-%d") for d in gsr_date_range]
+        expected_values = range(5, -6)
+        for i, d in enumerate(gsr_dates):
+            result = Scorer.date_diff(warn_date, d)
+            expected = expected_values[i]
+            self.assertAlmostEqual(result, expected)
+
+    def test_date_score(self):
+
+        date_diffs = range(-6, 7)
+        results = [Scorer.date_score(dd) for dd in date_diffs]
+        expected = [0, 0, 0, .25, .5, .75, 1, .75, .5, .25, 0, 0, 0]
+        for i, e in enumerate(expected):
+            self.assertAlmostEqual(results[i], e, 3)
+        max_date_diff = 5
+        results = [Scorer.date_score(dd, max_date_diff) for dd in date_diffs]
+        expected = [0, 0, .2, .4, .6, .8, 1, .8, .6, .4, .2, 0, 0]
+        for i, e in enumerate(expected):
+            self.assertAlmostEqual(results[i], e, 3)
 
 class MaScorerTest(unittest.TestCase):
 
@@ -60,18 +134,6 @@ class MaScorerTest(unittest.TestCase):
     result_dict = dict()
     result_dict[JSONField.WARNING_ID] = "test_1"
     result_dict[JSONField.EVENT_ID] = "Disease_Saudi_Arabia_MERS_2016-03-27"
-
-    def test_ds(self):
-
-        # Test when both are 0
-        warn_date = "2018-06-22"
-        gsr_date_range = pd.date_range("2018-06-17", "2018-06-27")
-        gsr_dates = [d.strftime("%Y-%m-%d") for d in gsr_date_range]
-        expected_values = [0, 0] + [(1- np.abs(i)/Defaults.MAX_DATE_DIFF) for i in range(-3, 4)] + [0, 0]
-        for i, d in enumerate(gsr_dates):
-            result = MaScorer.date_score(warn_date, d)
-            expected = expected_values[i]
-            self.assertAlmostEqual(result, expected)
 
     def test_ls(self):
         lat1, long1 = (30.0, 30.0)
@@ -125,7 +187,6 @@ class MaScorerTest(unittest.TestCase):
         result = Scorer.facet_score(warn_value, gsr_value, wildcards)
         self.assertEqual(result, expected)
 
-
     def test_actor_score(self):
         """
         Test MaScorer.actor_score
@@ -162,7 +223,6 @@ class MaScorerTest(unittest.TestCase):
         result = MaScorer.actor_score(warn_value, gsr_value, legits, wildcards)
         self.assertEqual(result, expected)
 
-
     def test_subtype_score(self):
         """
         Test MaScorer.event_subtype_score
@@ -182,10 +242,67 @@ class MaScorerTest(unittest.TestCase):
         result = MaScorer.event_subtype_score(warn_value, gsr_value)
         self.assertEqual(result, expected)
 
-
-
     def test_match(self):
-        pass
+        """
+        Tests MaScorer.match
+        :return:
+        """
+        # Simple Matrix, 3 by 4
+        test_matrix_filename = "test_qs_matrix_1.csv"
+        path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
+        test_mat = pd.read_csv(path_, index_col=0)
+        expected_matches = [("warn_0", "evt_0"), ("warn_1", "evt_1"), ("warn_2", "evt_3")]
+        expected_qs_ser = [4, 3.4, 3.2]
+        expected_qs_mean = np.mean(expected_qs_ser)
+        result = MaScorer.match(input_matrix=test_mat)
+        self.assertEqual(result["Matches"], expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], 1.0)
+        self.assertAlmostEqual(result["Recall"], 0.75)
+        self.assertAlmostEqual(result["F1"], 1.5/1.75)
+        self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
+        # Simple matrix, 4 by 3
+        test_matrix_filename = "test_qs_matrix_2.csv"
+        path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
+        test_mat = pd.read_csv(path_, index_col=0)
+        expected_matches = [("warn_0", "evt_0"), ("warn_1", "evt_1"), ("warn_3", "evt_2")]
+        expected_qs_ser = [4, 3.4, 3]
+        expected_qs_mean = np.mean(expected_qs_ser)
+        result = MaScorer.match(input_matrix=test_mat)
+        self.assertEqual(result["Matches"], expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], 0.75)
+        self.assertAlmostEqual(result["Recall"], 1.00)
+        self.assertAlmostEqual(result["F1"], 1.5/1.75)
+        self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
+        # Null Matrix
+        test_matrix_filename = "test_null_matrix.csv"
+        path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
+        test_mat = pd.read_csv(path_, index_col=0)
+        expected_matches = []
+        expected_qs_ser = []
+        expected_qs_mean = 0
+        result = MaScorer.match(input_matrix=test_mat)
+        self.assertEqual(result["Matches"], expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], 0)
+        self.assertAlmostEqual(result["Recall"], 0)
+        self.assertAlmostEqual(result["F1"], 0)
+        self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
+        # Matrix with negative entries
+        test_matrix_filename = "test_neg_matrix.csv"
+        path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
+        test_mat = pd.read_csv(path_, index_col=0)
+        expected_matches = [("warn_0", "evt_0"), ("warn_2", "evt_2")]
+        expected_qs_ser = [3, 4]
+        expected_qs_mean = 3.5
+        result = MaScorer.match(input_matrix=test_mat)
+        self.assertEqual(result["Matches"], expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], 0.5)
+        self.assertAlmostEqual(result["Recall"], 0.667, 3)
+        self.assertAlmostEqual(result["F1"], 0.667/1.167, 3)
+        self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
 
     def test_score_one_weights(self):
         """
@@ -279,6 +396,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result[ScoreComponents.QS], 3.528, 3)
         self.assertFalse("Notices" in result)
         self.assertFalse("Errors" in result)
+
 
 if __name__ == "__main__":
     unittest.main()
