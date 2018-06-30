@@ -396,6 +396,7 @@ class MaScorer(Scorer):
     Scorer for Military Action events
     """
 
+    # TODO:  Bring in legitimate actors
     STATE_ACTORS = ["Fred", "Ethel"]
     WILDCARD_ACTORS = ["Unspecified"]
     ACTORS = STATE_ACTORS + WILDCARD_ACTORS
@@ -532,7 +533,7 @@ class MaScorer(Scorer):
             date_diff = (gsr_d - warn_d).days
             date_diff = np.abs(date_diff)
             out_dict["Date Difference"] = date_diff
-            ls = MaScorer.location_score(warn_lat, warn_long, event_lat, event_long, loc_approx, max_dist, dist_buffer)
+            ls = MaScorer.location_score(dist, loc_approx, max_dist, dist_buffer)
             out_dict[ScoreComponents.LS] = ls
             date_delta = Scorer.date_diff(warn_event_date, event_event_date)
             ds = Scorer.date_score(date_delta, max_date_diff)
@@ -570,21 +571,17 @@ class MaScorer(Scorer):
         return out_dict
 
     @staticmethod
-    def location_score(lat1, long1, lat2, long2, is_approximate=False,
+    def location_score(dist_km, is_approximate=False,
                        max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER):
         """
         Computes location score based on the distance provided.
-        :param lat1: Latitude of point 1
-        :param long1: Longitude of point 1
-        :param lat2: Latitude of point 2
-        :param long2: Longitude of point 2
+        :param dist_km: How far are the points apart?
         :param is_approximate: Is the reference location approximate?
         :param max_dist: What is the maximum distance allowed?
         :param dist_buffer: For approximate locations, how much do we give credit for?
         :return: score from 0 to 1.0
         """
 
-        dist_km = distance((lat1, long1), (lat2, long2)).km
         if isinstance(is_approximate, str):
             is_approximate = eval(is_approximate)
         is_approximate = int(is_approximate)
@@ -627,3 +624,182 @@ class MaScorer(Scorer):
             ess = Scorer.facet_score(warn_subtype, gsr_subtype)
 
         return ess
+
+
+    @staticmethod
+    def make_dist_mat(warn_list, event_list):
+        """
+        Makes a matrix of distances between the warning locations and the GSR locations
+        :param warn_list: List of JSON-formatted warnings
+        :param event_list: List of JSON-formatted events
+        :return: Matrix of distances
+        """
+
+        warn_loc = [(w[JSONField.LATITUDE], w[JSONField.LONGITUDE]) for w in warn_list]
+        gsr_loc = [(e[JSONField.LATITUDE], e[JSONField.LONGITUDE]) for e in event_list]
+        warn_loc_u = pd.Series(warn_loc).unique()
+        gsr_loc_u = pd.Series(gsr_loc).unique()
+        col_name_list = [gsr_loc_u[list(gsr_loc_u).index(x)] for x in gsr_loc]
+        row_loc_list = [list(warn_loc_u).index(w) for w in warn_loc]
+
+        warn_i_array, gsr_i_array = Scorer.make_index_mats(warn_loc, gsr_loc)
+
+        warn_u_i_array, gsr_u_i_array = Scorer.make_index_mats(warn_loc_u, gsr_loc_u)
+
+        def how_far(i, j):
+            warn_coord = warn_loc_u[i]
+            gsr_coord = gsr_loc_u[j]
+            dist = distance(warn_coord, gsr_coord).km
+            return dist
+
+        how_far_vfunc = np.vectorize(how_far)
+        dist_lookup = how_far_vfunc(warn_u_i_array, gsr_u_i_array)
+        dist_lookup_df = pd.DataFrame(dist_lookup, index=warn_loc_u, columns=gsr_loc_u)
+
+        def lookup_dist(i, j):
+            """
+            Uses lookup table to find distance between warning coords i and gsr coords j
+            """
+            return dist_lookup_df[col_name_list[j]].iloc[row_loc_list[i]]
+
+        lookup_dist_vfunc = np.vectorize(lookup_dist)
+
+        return lookup_dist_vfunc(warn_i_array, gsr_i_array)
+
+    @staticmethod
+    def make_ls_mat(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER):
+        """
+        Makes a matrix of LS values between the warning locations and the GSR locations
+        :param warn_list: List of JSON-formatted warnings
+        :param event_list: List of JSON-formatted events
+        :param max_dist: Maximum distance to still get credit
+        :param dist_buffer: For approximate locations, how much distance is appropriate?
+        :return: Matrix of scores
+        """
+        dist_mat = MaScorer.make_dist_mat(warn_list, event_list)
+        approx_list = [e["Approximate_Location"] for e in event_list]
+        approx_list = [eval(al) for al in approx_list if isinstance(al, str)]
+
+        approx_mat = np.array(approx_list*len(warn_list)).reshape(len(warn_list), len(event_list))
+
+        def ls_func(d, is_approx):
+            """
+            ufunc version of MaScorer.location_score, uses max_dist and dist_buffers
+            :param d: distance to be scored
+            :param is_approx: is the location approximate?
+            :return:
+            """
+            return MaScorer.location_score(d, is_approximate=is_approx, max_dist=max_dist, dist_buffer=dist_buffer)
+
+        ls_vfunc = np.vectorize(ls_func)
+        ls_mat = ls_vfunc(dist_mat, approx_mat)
+        return ls_mat
+
+    @staticmethod
+    def make_ds_mat(warn_list, event_list, max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER_BUFFER):
+        """
+        Makes a matrix of LS values between the warning locations and the GSR locations
+        :param warn_list: List of JSON-formatted warnings
+        :param event_list: List of JSON-formatted events
+        :param max_date_diff: Maximum date difference to still get credit
+        :param date_buffer: How far around the scoring period to make the buffer
+        :return: Matrix of scores
+        """
+        dist_mat = MaScorer.make_dist_mat(warn_list, event_list)
+        approx_list = [e["Approximate_Location"] for e in event_list]
+        approx_list = [eval(al) for al in approx_list if isinstance(al, str)]
+
+        approx_mat = np.array(approx_list*len(warn_list)).reshape(len(warn_list), len(event_list))
+
+        def ls_func(d, is_approx):
+            """
+            ufunc version of MaScorer.location_score, uses max_dist and dist_buffers
+            :param d: distance to be scored
+            :param is_approx: is the location approximate?
+            :return:
+            """
+            return MaScorer.location_score(d, is_approximate=is_approx, max_dist=max_dist, dist_buffer=dist_buffer)
+
+        ls_vfunc = np.vectorize(ls_func)
+        ls_mat = ls_vfunc(dist_mat, approx_mat)
+        return ls_mat
+
+    @staticmethod
+    def make_as_mat(warn_list, event_list):
+        """
+        Makes a matrix of Actor Scores
+        :param warn_list:
+        :param event_list:
+        :return:
+        """
+        pass
+
+    @staticmethod
+    def make_ess_mat(warn_list, event_list):
+        """
+        Makes a matrix of Event Subtype Scores
+        :param warn_list:
+        :param event_list:
+        :return: Matrix
+        """
+        pass
+
+    @staticmethod
+    def make_qs_mat(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
+                    max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER,
+                    ls_weight=Defaults.LS_WEIGHT, ds_weight=Defaults.DS_WEIGHT, ess_weight=Defaults.ESS_WEIGHT,
+                    as_weight=Defaults.AS_WEIGHT):
+        """
+        Computes the Quality Score Matrix
+        :param warn_list:
+        :param event_list:
+        :param max_dist:
+        :param dist_buffer:
+        :param max_date_diff:
+        :param date_buffer:
+        :return: Matrix of pairwise QS values
+        """
+
+        #Check validity of inputs
+        error_list = []
+        if ls_weight < 0:
+            error_list.append("LS Weight must be positive.  Input value: {}".format(ls_weight))
+        if ds_weight < 0:
+            error_list.append("DS Weight must be positive.  Input value: {}".format(ds_weight))
+        if ess_weight < 0:
+            error_list.append("ESS Weight must be positive.  Input value: {}".format(ess_weight))
+        if as_weight < 0:
+            error_list.append("AS Weight must be positive.  Input value: {}".format(as_weight))
+        weight_sum = ls_weight + ds_weight + ess_weight + as_weight
+        if weight_sum <= 0:
+            error_list.append("The sum of the weights must be positive")
+        if max_dist <= 0:
+            error_list.append("Maximum Distance must be positive.  Input value: {}".format(max_dist))
+        if dist_buffer < 0:
+            error_list.append("Distance Buffer must be non-negative.  Input value: {}".format(dist_buffer))
+        if max_date_diff < 0:
+            error_list.append("Maximum Date Difference must be non-negative.  Input value: {}".format(max_date_diff))
+        if date_buffer < 0:
+            error_list.append("Date Buffer must be non-negative.  Input value: {}".format(date_buffer))
+
+        if error_list:
+            error_str = ", ".join(error_list)
+            raise ValueError(error_str)
+
+        # Reweight
+        ls_weight = 4*ls_weight/weight_sum
+        ds_weight = 4*ls_weight/weight_sum
+        ess_weight = 4*ess_weight/weight_sum
+        as_weight = 4*as_weight/weight_sum
+
+        # Compute component score matrices
+        ls_mat = MaScorer.make_ls_mat(warn_list, event_list, max_dist, max_date_diff)
+        ds_mat = MaScorer.make_ds_mat(warn_list, event_list, max_dist, max_date_diff)
+        ess_mat = MaScorer.make_ess_mat(warn_list, event_list)
+        as_mat = MaScorer.make_as_mat(warn_list, event_list)
+
+        qs_mat = ls_weight*ls_mat + ds_weight*ds_mat + ess_weight*ess_mat + as_weight*as_mat
+        qs_mat[ls_mat == 0] = 0
+        qs_mat[ds_mat == 0] = 0
+
+        return qs_mat

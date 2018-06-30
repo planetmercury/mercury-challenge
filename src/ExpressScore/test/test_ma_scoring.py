@@ -95,7 +95,7 @@ class ScorerTest(unittest.TestCase):
         warn_date = "2018-06-22"
         gsr_date_range = pd.date_range("2018-06-17", "2018-06-27")
         gsr_dates = [d.strftime("%Y-%m-%d") for d in gsr_date_range]
-        expected_values = range(5, -6)
+        expected_values = range(-5, 6)
         for i, d in enumerate(gsr_dates):
             result = Scorer.date_diff(warn_date, d)
             expected = expected_values[i]
@@ -113,6 +113,60 @@ class ScorerTest(unittest.TestCase):
         expected = [0, 0, .2, .4, .6, .8, 1, .8, .6, .4, .2, 0, 0]
         for i, e in enumerate(expected):
             self.assertAlmostEqual(results[i], e, 3)
+
+    def test_make_index_mats(self):
+        """
+        Tests Scorer.make_index_mats method
+        :return:
+        """
+        row_names = ["a", "b", "c", "d"]
+        row_indices = list(range(len(row_names)))
+        col_names = ["x", "y", "z"]
+        col_indices = list(range(len(col_names)))
+        row_array = np.array(row_indices*3).reshape(3,4).T
+        col_array = np.array(col_indices*4).reshape(4,3)
+        results = Scorer.make_index_mats(row_names, col_names)
+        try:
+            np.testing.assert_equal(row_array, results[0])
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+        try:
+            np.testing.assert_equal(col_array, results[1])
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+    def test_make_combination_mats(self):
+        """
+        Tests Scorer.make_combination_mats method
+        :return:
+        """
+        row_names = ["a", "b", "c", "d"]
+        col_names = ["x", "y", "z"]
+        row_array = np.array(row_names*3).reshape(3,4).T
+        col_array = np.array(col_names*4).reshape(4,3)
+        results = Scorer.make_combination_mats(row_names, col_names)
+        try:
+            np.testing.assert_equal(row_array, results[0])
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+        try:
+            np.testing.assert_equal(col_array, results[1])
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+
 
 class MaScorerTest(unittest.TestCase):
 
@@ -136,26 +190,135 @@ class MaScorerTest(unittest.TestCase):
     result_dict[JSONField.EVENT_ID] = "Disease_Saudi_Arabia_MERS_2016-03-27"
 
     def test_ls(self):
-        lat1, long1 = (30.0, 30.0)
-        lat2, long2 = (30.0, 30.0)
-        result = MaScorer.location_score(lat1, long1, lat2, long2)
+        result = MaScorer.location_score(0, is_approximate=False)
+        expected = 1.0
+        self.assertAlmostEqual(result, expected)
+        result = MaScorer.location_score(0, is_approximate="False")
         expected = 1.0
         self.assertAlmostEqual(result, expected)
         # 22 km distance
-        lat2 = 30.2
-        result = MaScorer.location_score(lat1, long1, lat2, long2)
+        result = MaScorer.location_score(22)
         expected = 0.78
         self.assertAlmostEqual(result, expected, 2)
-        result = MaScorer.location_score(lat1, long1, lat2, long2, is_approximate=True)
+        result = MaScorer.location_score(22.17, is_approximate=True)
         expected = 0.934
         self.assertAlmostEqual(result, expected, 3)
-        result = MaScorer.location_score(lat1, long1, lat2, long2, max_dist=44.2)
+        result = MaScorer.location_score(22.1, max_dist=44.2)
         expected = 0.50
         self.assertAlmostEqual(result, expected, 2)
-        lat2 = 31.0
-        result = MaScorer.location_score(lat1, long1, lat2, long2)
+        result = MaScorer.location_score(150)
         expected = 0.0
         self.assertAlmostEqual(result, expected)
+
+
+    def test_make_dist_mat(self):
+        """
+        Tests MaScorer.make_dist_mat
+        :return:
+        """
+
+        test_warn_filename = "ma_test_warnings.json"
+        test_warn_path = os.path.join(TEST_RESOURCE_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "ma_test_gsr.json"
+        test_gsr_path = os.path.join(TEST_RESOURCE_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        result = MaScorer.make_dist_mat(test_warnings, test_gsr)
+        expected = np.array([156.672, 156.672, 22.173, 22.173]).reshape(4,1)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+        test_gsr.append(test_warnings[-1])
+        expected = np.array([156.672, 145.956, 156.672, 145.956, 22.173, 0, 22.173, 0]).reshape(4,2)
+        result = MaScorer.make_dist_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+    def test_make_ls_mat(self):
+        """
+        Tests MaScorer.make_ls_mat
+        :return:
+        """
+        test_warn_filename = "ma_test_warnings.json"
+        test_warn_path = os.path.join(TEST_RESOURCE_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "ma_test_gsr.json"
+        test_gsr_path = os.path.join(TEST_RESOURCE_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        expected = np.array([0, 0, 0.778, 0.778]).reshape(4,1)
+        result = MaScorer.make_ls_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+        test_gsr.append(test_warnings[-1])
+        test_gsr[-1]["Approximate_Location"] = "False"
+        expected = np.array([0, 0, 0, 0, 0.778, 1, 0.778, 1]).reshape(4,2)
+        result = MaScorer.make_ls_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+    def test_make_ds_mat(self):
+        """
+        Tests MaScorer.make_ds_mat
+        :return:
+        """
+        if False:
+            test_warn_filename = "ma_test_warnings.json"
+            test_warn_path = os.path.join(TEST_RESOURCE_PATH, test_warn_filename)
+            with open(test_warn_path, "r", encoding="utf8") as f:
+                test_warnings = json.load(f)
+            test_gsr_filename = "ma_test_gsr.json"
+            test_gsr_path = os.path.join(TEST_RESOURCE_PATH, test_gsr_filename)
+            with open(test_gsr_path, "r", encoding="utf8") as f:
+                test_gsr = json.load(f)
+
+            expected = np.array([0, 0, 0, 0]).reshape(4,1)
+            result = MaScorer.make_ds_mat(test_warnings, test_gsr)
+            try:
+                np.testing.assert_allclose(result, expected, 3)
+                test_res = True
+            except AssertionError as e:
+                test_res = False
+                print(repr(e))
+            self.assertTrue(test_res)
+
+    def test_make_ess_mat(self):
+        """
+        Tests MaScorer.make_ess_mat
+        :return:
+        """
+        pass
+
+    def test_make_as_mat(self):
+        """
+        Tests MaScorer.make_as_mat
+        :return:
+        """
+        pass
 
     def test_facet_score(self):
         """
@@ -304,7 +467,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["F1"], 0.667/1.167, 3)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
 
-    def test_score_one_weights(self):
+    def test_score_one(self):
         """
         Test MaScorer.score_one weights input
         :return:
