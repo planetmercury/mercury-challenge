@@ -3,7 +3,9 @@ Module to provide lightweight scoring functions for Mercury Challenge participan
 '''
 
 import sys
+import os
 import re
+import json
 
 from .schema import (
     JSONField,
@@ -44,6 +46,11 @@ class Defaults(object):
     MAX_DATE_DIFF = 4.0
     DATE_BUFFER = 4.0
     MAX_DATE_PERIOD = 50
+    with open(os.path.join("..",
+                           "resources",
+                           "dictionaries",
+                           "state_actor_dictionary.json"), "r", encoding="utf8") as f:
+        LEGIT_ACTORS = json.load(f)["values"]
 
 
 class Scorer:
@@ -398,7 +405,7 @@ class MaScorer(Scorer):
     """
 
     # TODO:  Bring in legitimate actors
-    STATE_ACTORS = ["Fred", "Ethel"]
+    STATE_ACTORS = Defaults.LEGIT_ACTORS
     WILDCARD_ACTORS = ["Unspecified"]
     ACTORS = STATE_ACTORS + WILDCARD_ACTORS
     SUBTYPES = [Subtype.CONFLICT, Subtype.FORCE_POSTURE]
@@ -559,15 +566,27 @@ class MaScorer(Scorer):
             out_dict["Notices"] = notice_list
         return out_dict
 
-    def score(self, warn_data, gsr_data):
+    @staticmethod
+    def score(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
+                    max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER,
+                    ls_weight=Defaults.LS_WEIGHT, ds_weight=Defaults.DS_WEIGHT, ess_weight=Defaults.ESS_WEIGHT,
+                    as_weight=Defaults.AS_WEIGHT):
         """
         Scores the warnings against the GSR
-        :param warn_data: List of dicts with warning data
-        :param gsr_data: List of dicts with event data
+        :param warn_list:
+        :param event_list:
+        :param max_dist:
+        :param dist_buffer:
+        :param max_date_diff:
+        :param date_buffer:
         :return: dict with scoring results
         """
+        qs_mat = MaScorer.make_qs_df(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
+                                     max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER,
+                                     ls_weight=Defaults.LS_WEIGHT, ds_weight=Defaults.DS_WEIGHT, ess_weight=Defaults.ESS_WEIGHT,
+                                     as_weight=Defaults.AS_WEIGHT)
 
-        out_dict = dict()
+        out_dict = MaScorer.match(qs_mat)
 
         return out_dict
 
@@ -756,10 +775,10 @@ class MaScorer(Scorer):
         return ess_mat
 
     @staticmethod
-    def make_qs_mat(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
-                    max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER,
-                    ls_weight=Defaults.LS_WEIGHT, ds_weight=Defaults.DS_WEIGHT, ess_weight=Defaults.ESS_WEIGHT,
-                    as_weight=Defaults.AS_WEIGHT):
+    def make_qs_df(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
+                   max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER,
+                   ls_weight=Defaults.LS_WEIGHT, ds_weight=Defaults.DS_WEIGHT, ess_weight=Defaults.ESS_WEIGHT,
+                   as_weight=Defaults.AS_WEIGHT):
         """
         Computes the Quality Score Matrix
         :param warn_list:
@@ -812,5 +831,8 @@ class MaScorer(Scorer):
         qs_mat = ls_weight*ls_mat + ds_weight*ds_mat + ess_weight*ess_mat + as_weight*as_mat
         qs_mat[ls_mat == 0] = 0
         qs_mat[ds_mat == 0] = 0
+        warn_id_list = [w["Warning_ID"] for w in warn_list]
+        event_id_list = [e["Event_ID"] for e in event_list]
+        qs_df = pd.DataFrame(qs_mat, index=warn_id_list, columns=event_id_list)
 
-        return qs_mat
+        return qs_df

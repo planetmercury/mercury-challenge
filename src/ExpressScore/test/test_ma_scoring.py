@@ -425,7 +425,7 @@ class MaScorerTest(unittest.TestCase):
 
     def test_make_qs_mat(self):
         """
-        Tests MaScorer.make_qs_mat
+        Tests MaScorer.make_qs_df
         :return:
         """
         test_warn_filename = "test_lb_warnings.json"
@@ -439,8 +439,8 @@ class MaScorerTest(unittest.TestCase):
 
         mat_filename = "test_qs_mat.csv"
         mat_path = os.path.join(LB_MA_TEST_PATH, mat_filename)
-        expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
-        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        expected = pd.read_csv(mat_path, index_col=0)
+        result = MaScorer.make_qs_df(test_warnings, test_gsr)
         try:
             np.testing.assert_allclose(result, expected, 3)
             test_res = True
@@ -461,7 +461,7 @@ class MaScorerTest(unittest.TestCase):
         mat_filename = "test_qs_mat.csv"
         mat_path = os.path.join(EG_MA_TEST_PATH, mat_filename)
         expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
-        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        result = MaScorer.make_qs_df(test_warnings, test_gsr)
         try:
             np.testing.assert_allclose(result, expected, 3)
             test_res = True
@@ -482,7 +482,7 @@ class MaScorerTest(unittest.TestCase):
         mat_filename = "test_qs_mat.csv"
         mat_path = os.path.join(SA_MA_TEST_PATH, mat_filename)
         expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
-        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        result = MaScorer.make_qs_df(test_warnings, test_gsr)
         try:
             np.testing.assert_allclose(result, expected, 3)
             test_res = True
@@ -503,7 +503,7 @@ class MaScorerTest(unittest.TestCase):
         mat_filename = "test_qs_mat.csv"
         mat_path = os.path.join(IQ_MA_TEST_PATH, mat_filename)
         expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
-        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        result = MaScorer.make_qs_df(test_warnings, test_gsr)
         try:
             np.testing.assert_allclose(result, expected, 3)
             test_res = True
@@ -596,6 +596,41 @@ class MaScorerTest(unittest.TestCase):
         expected = 0
         result = MaScorer.event_subtype_score(warn_value, gsr_value)
         self.assertEqual(result, expected)
+
+    def test_score(self):
+        """
+        Tests MaScorer.score method
+        :return:
+        """
+
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        result = MaScorer.score(test_warnings, test_gsr)
+        expected_filename = "match_results.json"
+        path_ = os.path.join(LB_MA_TEST_PATH, expected_filename)
+        with open(path_, "r", encoding="utf8") as f:
+            expected = json.load(f)
+        expected_matches = sorted(set([(m["Warning"], m["Event"]) for m in expected["Matches"]]))
+        expected_qs_ser = expected["Details"]["Quality Scores"]
+        expected_qs_mean = expected["Quality Score"]
+        expected_precision = expected["Precision"]
+        expected_recall = expected["Recall"]
+        expected_f1 = expected["F1"]
+        self.assertEqual(sorted(set(result["Matches"])), expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(result["Recall"], expected_recall, 3)
+        self.assertAlmostEqual(result["F1"], expected_f1, 3)
+        for i, qs in enumerate(expected_qs_ser):
+            res_qs = result["Details"]["Quality Scores"][i]
+            self.assertAlmostEqual(res_qs, qs, 3)
 
     def test_match(self):
         """
