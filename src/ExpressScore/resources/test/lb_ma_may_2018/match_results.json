@@ -1,0 +1,20 @@
+{
+  "Matches": [
+    {"Warning": "BR_8", "Event": "MN0"},
+    {"Warning": "BR_12", "Event": "MN3"},
+    {"Warning": "BR_13", "Event": "MN2"},
+    {"Warning": "BR_16", "Event": "MN1"}
+  ],
+  "Details": {
+    "Quality Scores": [
+      3.8209,
+      3.8236,
+      3.50,
+      3.3260
+    ]
+  },
+  "Quality Score": 3.618,
+  "Precision": 0.235,
+  "Recall": 1.000,
+  "F1": 0.381
+}

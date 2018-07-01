@@ -1,0 +1,72 @@
+[
+  {
+    "City": "Najrān",
+    "Country": "Saudi Arabia",
+    "Actor": "Yemeni Military",
+    "timestamp": "2018-05-08T7:53:50.0",
+    "Longitude": 44.1277,
+    "Probability": 0.7851473626,
+    "Warning_ID": "BR_0",
+    "Event_Subtype": "Conflict",
+    "Event_Type": "Military Action",
+    "State": "Najrān",
+    "Latitude": 17.4933,
+    "Event_Date": "2018-05-11"
+  },
+  {
+    "City": "Tārūt",
+    "Country": "Saudi Arabia",
+    "Actor": "Royal Saudi Military",
+    "timestamp": "2018-05-14T12:57:43.0",
+    "Longitude": 50.0369,
+    "Probability": 0.5133582804,
+    "Warning_ID": "BR_1",
+    "Event_Subtype": "Force Posture",
+    "Event_Type": "Military Action",
+    "State": "Eastern Province",
+    "Latitude": 26.5733,
+    "Event_Date": "2018-05-18"
+  },
+  {
+    "City": "Jizan",
+    "Country": "Saudi Arabia",
+    "Actor": "Royal Saudi Military",
+    "timestamp": "2018-05-28T2:31:28.0",
+    "Longitude": 42.5511,
+    "Probability": 0.6457727044,
+    "Warning_ID": "BR_2",
+    "Event_Subtype": "Conflict",
+    "Event_Type": "Military Action",
+    "State": "Jizan",
+    "Latitude": 16.8892,
+    "Event_Date": "2018-05-31"
+  },
+  {
+    "City": "Ajyād",
+    "Country": "Saudi Arabia",
+    "Actor": "Royal Saudi Military",
+    "timestamp": "2018-05-20T1:33:25.0",
+    "Longitude": 39.8336,
+    "Probability": 0.7854633168,
+    "Warning_ID": "BR_3",
+    "Event_Subtype": "Conflict",
+    "Event_Type": "Military Action",
+    "State": "Makkah",
+    "Latitude": 21.4187,
+    "Event_Date": "2018-05-24"
+  },
+  {
+    "City": "Najrān",
+    "Country": "Saudi Arabia",
+    "Actor": "Royal Saudi Military",
+    "timestamp": "2018-05-28T18:18:15.0",
+    "Longitude": 44.1277,
+    "Probability": 0.8507273698,
+    "Warning_ID": "BR_4",
+    "Event_Subtype": "Conflict",
+    "Event_Type": "Military Action",
+    "State": "Najrān",
+    "Latitude": 17.4933,
+    "Event_Date": "2018-05-31"
+  }
+]
