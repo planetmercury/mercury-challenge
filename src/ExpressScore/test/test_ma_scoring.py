@@ -19,6 +19,10 @@ import os
 EXPRESS_SCORE_HOME = os.path.abspath("..")
 RESOURCE_PATH = os.path.join(EXPRESS_SCORE_HOME, "resources")
 TEST_RESOURCE_PATH = os.path.join(RESOURCE_PATH, "test")
+LB_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "lb_ma_may_2018")
+SA_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "sa_ma_may_2018")
+EG_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "eg_ma_may_2018")
+IQ_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "iq_ma_may_2018")
 
 
 class ScorerTest(unittest.TestCase):
@@ -167,7 +171,6 @@ class ScorerTest(unittest.TestCase):
         self.assertTrue(test_res)
 
 
-
 class MaScorerTest(unittest.TestCase):
 
     country = "Egypt"
@@ -246,6 +249,26 @@ class MaScorerTest(unittest.TestCase):
             print(repr(e))
         self.assertTrue(test_res)
 
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+        dist_mat_filename = "test_lb_dist_matrix.csv"
+        dist_mat_path = os.path.join(LB_MA_TEST_PATH, dist_mat_filename)
+        expected = np.genfromtxt(dist_mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_dist_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
     def test_make_ls_mat(self):
         """
         Tests MaScorer.make_ls_mat
@@ -281,44 +304,213 @@ class MaScorerTest(unittest.TestCase):
             print(repr(e))
         self.assertTrue(test_res)
 
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        ls_mat_filename = "test_ls_matrix.csv"
+        ls_mat_path = os.path.join(LB_MA_TEST_PATH, ls_mat_filename)
+        expected = np.genfromtxt(ls_mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_ls_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
     def test_make_ds_mat(self):
         """
         Tests MaScorer.make_ds_mat
         :return:
         """
-        if False:
-            test_warn_filename = "ma_test_warnings.json"
-            test_warn_path = os.path.join(TEST_RESOURCE_PATH, test_warn_filename)
-            with open(test_warn_path, "r", encoding="utf8") as f:
-                test_warnings = json.load(f)
-            test_gsr_filename = "ma_test_gsr.json"
-            test_gsr_path = os.path.join(TEST_RESOURCE_PATH, test_gsr_filename)
-            with open(test_gsr_path, "r", encoding="utf8") as f:
-                test_gsr = json.load(f)
+        test_warn_filename = "ma_test_warnings.json"
+        test_warn_path = os.path.join(TEST_RESOURCE_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "ma_test_gsr.json"
+        test_gsr_path = os.path.join(TEST_RESOURCE_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
 
-            expected = np.array([0, 0, 0, 0]).reshape(4,1)
-            result = MaScorer.make_ds_mat(test_warnings, test_gsr)
-            try:
-                np.testing.assert_allclose(result, expected, 3)
-                test_res = True
-            except AssertionError as e:
-                test_res = False
-                print(repr(e))
-            self.assertTrue(test_res)
+        expected = np.array([0, .75, 0, .75]).reshape(4,1)
+        result = MaScorer.make_ds_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        ds_mat_filename = "test_ds_matrix.csv"
+        ds_mat_path = os.path.join(LB_MA_TEST_PATH, ds_mat_filename)
+        expected = np.genfromtxt(ds_mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_ds_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
 
     def test_make_ess_mat(self):
         """
         Tests MaScorer.make_ess_mat
         :return:
         """
-        pass
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        ess_mat_filename = "test_es_match_matrix.csv"
+        ess_mat_path = os.path.join(LB_MA_TEST_PATH, ess_mat_filename)
+        expected = np.genfromtxt(ess_mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_ess_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
 
     def test_make_as_mat(self):
         """
         Tests MaScorer.make_as_mat
         :return:
         """
-        pass
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        acs_mat_filename = "test_actor_match_matrix.csv"
+        acs_mat_path = os.path.join(LB_MA_TEST_PATH, acs_mat_filename)
+        expected = np.genfromtxt(acs_mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_as_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+    def test_make_qs_mat(self):
+        """
+        Tests MaScorer.make_qs_mat
+        :return:
+        """
+        test_warn_filename = "test_lb_warnings.json"
+        test_warn_path = os.path.join(LB_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_lb_gsr.json"
+        test_gsr_path = os.path.join(LB_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        mat_filename = "test_qs_mat.csv"
+        mat_path = os.path.join(LB_MA_TEST_PATH, mat_filename)
+        expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+        test_warn_filename = "test_cc_warnings.json"
+        test_warn_path = os.path.join(EG_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_cc_gsr.json"
+        test_gsr_path = os.path.join(EG_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        mat_filename = "test_qs_mat.csv"
+        mat_path = os.path.join(EG_MA_TEST_PATH, mat_filename)
+        expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+        test_warn_filename = "test_cc_warnings.json"
+        test_warn_path = os.path.join(SA_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_cc_gsr.json"
+        test_gsr_path = os.path.join(SA_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        mat_filename = "test_qs_mat.csv"
+        mat_path = os.path.join(SA_MA_TEST_PATH, mat_filename)
+        expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+
+        test_warn_filename = "test_cc_warnings.json"
+        test_warn_path = os.path.join(IQ_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings = json.load(f)
+        test_gsr_filename = "test_cc_gsr.json"
+        test_gsr_path = os.path.join(IQ_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+
+        mat_filename = "test_qs_mat.csv"
+        mat_path = os.path.join(IQ_MA_TEST_PATH, mat_filename)
+        expected = np.genfromtxt(mat_path, delimiter=",", skip_header=True)[:, 1:]
+        result = MaScorer.make_qs_mat(test_warnings, test_gsr)
+        try:
+            np.testing.assert_allclose(result, expected, 3)
+            test_res = True
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
 
     def test_facet_score(self):
         """
@@ -466,6 +658,30 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Recall"], 0.667, 3)
         self.assertAlmostEqual(result["F1"], 0.667/1.167, 3)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
+
+        # Matrix with Lebanon data
+        test_matrix_filename = "test_qs_mat.csv"
+        path_ = os.path.join(LB_MA_TEST_PATH, test_matrix_filename)
+        test_mat = pd.read_csv(path_, index_col=0)
+        expected_filename = "match_results.json"
+        path_ = os.path.join(LB_MA_TEST_PATH, expected_filename)
+        with open(path_, "r", encoding="utf8") as f:
+            expected = json.load(f)
+        expected_matches = sorted(set([(m["Warning"], m["Event"]) for m in expected["Matches"]]))
+        expected_qs_ser = expected["Details"]["Quality Scores"]
+        expected_qs_mean = expected["Quality Score"]
+        expected_precision = expected["Precision"]
+        expected_recall = expected["Recall"]
+        expected_f1 = expected["F1"]
+        result = MaScorer.match(input_matrix=test_mat)
+        self.assertEqual(sorted(set(result["Matches"])), expected_matches)
+        self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Precision"], expected_precision, 3)
+        self.assertAlmostEqual(result["Recall"], expected_recall, 3)
+        self.assertAlmostEqual(result["F1"], expected_f1, 3)
+        for i, qs in enumerate(expected_qs_ser):
+            res_qs = result["Details"]["Quality Scores"][i]
+            self.assertAlmostEqual(res_qs, qs, 3)
 
     def test_score_one(self):
         """

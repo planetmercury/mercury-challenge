@@ -108,18 +108,19 @@ class Scorer:
         return score
 
     @staticmethod
-    def facet_score(warn_value, gsr_value, wildcards=[]):
+    def facet_score(warn_value, gsr_value, wildcards=[], gsr_value_delim=";"):
         """
         Sees if warning and GSR match
         :param warn_value: Value from the warning
         :param gsr_value: Value from the event
         :param wildcards: A list of GSR values that match any warning value.
+        :param gsr_value_delim: delimiter in a string for a list of values
         :return: 1 if they match, 0 otherwise.
         """
         if isinstance(gsr_value, (list, tuple)):
             pass
         else:
-            gsr_value = [gsr_value]
+            gsr_value = gsr_value.split(gsr_value_delim)
 
         if len(set(wildcards).intersection(set(gsr_value))) > 0:
             matched_value = 1
@@ -696,7 +697,7 @@ class MaScorer(Scorer):
         return ls_mat
 
     @staticmethod
-    def make_ds_mat(warn_list, event_list, max_date_diff=Defaults.MAX_DATE_DIFF, date_buffer=Defaults.DATE_BUFFER_BUFFER):
+    def make_ds_mat(warn_list, event_list, max_date_diff=Defaults.MAX_DATE_DIFF):
         """
         Makes a matrix of LS values between the warning locations and the GSR locations
         :param warn_list: List of JSON-formatted warnings
@@ -705,24 +706,24 @@ class MaScorer(Scorer):
         :param date_buffer: How far around the scoring period to make the buffer
         :return: Matrix of scores
         """
-        dist_mat = MaScorer.make_dist_mat(warn_list, event_list)
-        approx_list = [e["Approximate_Location"] for e in event_list]
-        approx_list = [eval(al) for al in approx_list if isinstance(al, str)]
+        warn_dates = [w[JSONField.EVENT_DATE] for w in warn_list]
+        event_dates = [e[JSONField.EVENT_DATE] for e in event_list]
+        date_combo_mats = Scorer.make_combination_mats(warn_dates, event_dates)
+        dd_vfunc = np.vectorize(Scorer.date_diff)
+        dd_mat = dd_vfunc(*date_combo_mats)
 
-        approx_mat = np.array(approx_list*len(warn_list)).reshape(len(warn_list), len(event_list))
-
-        def ls_func(d, is_approx):
+        def ds_func(dd):
             """
             ufunc version of MaScorer.location_score, uses max_dist and dist_buffers
             :param d: distance to be scored
             :param is_approx: is the location approximate?
             :return:
             """
-            return MaScorer.location_score(d, is_approximate=is_approx, max_dist=max_dist, dist_buffer=dist_buffer)
+            return Scorer.date_score(dd, max_diff=max_date_diff)
 
-        ls_vfunc = np.vectorize(ls_func)
-        ls_mat = ls_vfunc(dist_mat, approx_mat)
-        return ls_mat
+        ds_vfunc = np.vectorize(ds_func)
+        ds_mat = ds_vfunc(dd_mat)
+        return ds_mat
 
     @staticmethod
     def make_as_mat(warn_list, event_list):
@@ -732,7 +733,12 @@ class MaScorer(Scorer):
         :param event_list:
         :return:
         """
-        pass
+        warn_facet_values = [w["Actor"] for w in warn_list]
+        event_facet_values = [e["Actor"] for e in event_list]
+        combo_mats = Scorer.make_combination_mats(warn_facet_values, event_facet_values)
+        vfunc_ = np.vectorize(Scorer.facet_score)
+        mat_ = vfunc_(*combo_mats)
+        return mat_
 
     @staticmethod
     def make_ess_mat(warn_list, event_list):
@@ -742,7 +748,12 @@ class MaScorer(Scorer):
         :param event_list:
         :return: Matrix
         """
-        pass
+        warn_facet_values = [w["Event_Subtype"] for w in warn_list]
+        event_facet_values = [e["Event_Subtype"] for e in event_list]
+        combo_mats = Scorer.make_combination_mats(warn_facet_values, event_facet_values)
+        es_vfunc = np.vectorize(Scorer.facet_score)
+        ess_mat = es_vfunc(*combo_mats)
+        return ess_mat
 
     @staticmethod
     def make_qs_mat(warn_list, event_list, max_dist=Defaults.MAX_DIST, dist_buffer=Defaults.DIST_BUFFER,
@@ -794,7 +805,7 @@ class MaScorer(Scorer):
 
         # Compute component score matrices
         ls_mat = MaScorer.make_ls_mat(warn_list, event_list, max_dist, max_date_diff)
-        ds_mat = MaScorer.make_ds_mat(warn_list, event_list, max_dist, max_date_diff)
+        ds_mat = MaScorer.make_ds_mat(warn_list, event_list, max_date_diff)
         ess_mat = MaScorer.make_ess_mat(warn_list, event_list)
         as_mat = MaScorer.make_as_mat(warn_list, event_list)
 
