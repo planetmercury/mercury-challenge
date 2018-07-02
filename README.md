@@ -1,5 +1,5 @@
 # mercury-challenge
-Public Repository for the IARPA Mercury Challenge.  Challenge participants should follow this repository to receive notices of code updates and other release information.  The files in this directory are provided for IARPA’s Mercury Challenge.  You can learn about the challenge and register to compete at https://iarpa.gov/challenges/mercury.html.
+Public Repository for the IARPA Mercury Challenge.  Challenge participants should follow this repository to receive notices of code updates and other release information.  The files in this directory are provided for IARPA’s Mercury Challenge.  You can learn about the challenge and register to compete at https://iarpa.gov/challenges/mercury.html.  The discussion forum for the Challenge can be found at <http://apps.topcoder.com/forums//?module=ThreadList&forumID=630604> (login required.)
 
 ## Software
 ### Official Scoring
@@ -15,4 +15,5 @@ The Baserate models make predictions using only ground truth history.  The score
 ### Challenge Handbook
 The Mercury Challenge Handbook and Appendix provide complete documentation for the challenge, including definitions of the several event types and scoring rules.  They can be found in https://github.com/planetmercury/mercury-challenge/blob/master/doc
 ### Jupyter Notebooks for Code Tutorials
-- *CaseCountScorer* Tutorial: https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks/Case%20Count%20Scorer.ipynb
+- *Case Count Scorer* Tutorial: https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks/Case%20Count%20Scorer.ipynb
+- *Military Action Scorer* Tutorial:  https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks/Military%20Action%20Scorer.ipynb
