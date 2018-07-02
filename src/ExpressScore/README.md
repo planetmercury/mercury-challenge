@@ -2,6 +2,7 @@
 **ExpressScorer** is a lightweight scoring application that does not require a Docker installation.  It only performs minimal input validation and it does not compute lead times.
 
 - Documentation:  https://github.com/planetmercury/mercury-challenge/tree/master/src/ExpressScore/notebooks
+- Dependencies:  See <https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/expressscore.yml> for a minimal Anaconda enviroment that will run the code under Python 3.4.
 - Usage:
   - *MaScorer*
     - `from express_score import MaScorer`
