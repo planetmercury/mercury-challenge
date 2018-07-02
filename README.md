@@ -1,10 +1,9 @@
 # mercury-challenge
-Public Repository for the IARPA Mercury Challenge.  Challenge participants should follow this repository to receive notices of code updates and other release information.  The files in this directory are provided for IARPA’s Mercury Challenge.  You can learn about the challenge and register to compete at https://iarpa.gov/challenges/mercury.html.  The discussion forum for the Challenge can be found at <http://apps.topcoder.com/forums//?module=ThreadList&forumID=630604> (login required.)
+Public Repository for the IARPA Mercury Challenge.  Challenge participants should follow this repository to receive notices of code updates and other release information.  The files in this directory are provided for IARPA’s Mercury Challenge.  You can learn about the challenge and register to compete at https://iarpa.gov/challenges/mercury.html.  The discussion forum for the Challenge can be found at <http://apps.topcoder.com/forums//?module=ThreadList&forumID=630604> (login required.)  Addtionally, there will be a live Q&A web session on 12 July.  To register go to <https://eventmanagement.cvent.com/MercuryChallengeQASession> and use the password "Mercury317CQA".
 
 ## Software
 ### Official Scoring
-The official scoring package requires a Docker installation.  This package provides the requisite REST endpoints for warning submission, GSR intake, and scoring requests.
-The official scoring system has been tested on MacOS Sierra and Ubuntu Linux (version).  In our testing it was incompatible with some installations of Windows 7.
+The official scoring package requires a Docker installation.  This package provides the requisite REST endpoints for warning submission, GSR intake, and scoring requests.  This package has not yet been released.
 ### ExpressScore 
 The **ExpressScorer** package provides Challenge participants with a lightweight testing engine that does not require a Docker installation.  The code is found at https://github.com/planetmercury/mercury-challenge/tree/master/src/ExpressScore and tutorial Jupyter notebooks are found at https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks
 **ExpressScore** has been tested on MacOS Sierra and requires Python 3.6 or greater.  It should work with other operating systems and Python 3.x versions but has not been tested with them.
