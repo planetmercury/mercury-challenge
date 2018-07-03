@@ -1,29 +1,29 @@
 name: mc_minimal
 channels:
-- defaults
+  - defaults
 dependencies:
-- ca-certificates=2018.03.07=0
-- dateutil=2.4.1=py34_0
-- intel-openmp=2018.0.3=0
-- mkl=2017.0.4=h1fae6ae_0
-- numpy=1.11.3=py34_0
-- openssl=1.0.2o=h26aff7b_0
-- pandas=0.19.2=np111py34_1
-- pip=9.0.1=py34_1
-- python=3.4.5=0
-- python-dateutil=2.6.1=py34_0
-- pytz=2017.2=py34_0
-- readline=6.2=2
-- setuptools=27.2.0=py34_0
-- six=1.10.0=py34_0
-- sqlite=3.13.0=0
-- tk=8.5.18=0
-- wheel=0.29.0=py34_0
-- xz=5.2.4=h1de35cc_4
-- zlib=1.2.11=hf3cbc9b_2
-- pip:
-  - dlib==19.13.1
-  - geographiclib==1.49
-  - geopy==1.14.0
+  - ca-certificates=2018.03.07
+  - dateutil=2.4.1
+  - intel-openmp=2018.0.3
+  - mkl=2017.0.4
+  - numpy=1.11.3
+  - openssl=1.0.2o
+  - pandas=0.19.2
+  - pip=9.0.1
+  - python=3.4.5
+  - python-dateutil=2.6.1
+  - pytz=2017.2
+  - readline=6.2
+  - setuptools=27.2.0
+  - six=1.10.0
+  - sqlite=3.13.0
+  - tk=8.5.18
+  - wheel=0.29.0
+  - xz=5.2.4
+  - zlib=1.2.11
+  - pip:
+    - dlib==19.13.1
+    - geographiclib==1.49
+    - geopy==1.14.0
 prefix: /anaconda3/envs/mc_minimal
 
