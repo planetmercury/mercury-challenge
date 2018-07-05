@@ -3,24 +3,27 @@ channels:
   - defaults
 dependencies:
   - ca-certificates=2018.03.07
-  - dateutil=2.4.1
+  - icc_rt=2017.0.4
   - intel-openmp=2018.0.3
   - mkl=2017.0.4
   - numpy=1.11.3
   - openssl=1.0.2o
   - pandas=0.19.2
   - pip=9.0.1
-  - python=3.4.5
+  - pyreadline=2.1
+  - python=3.6.5
   - python-dateutil=2.6.1
   - pytz=2017.2
-  - readline=6.2
   - setuptools=27.2.0
   - six=1.10.0
   - sqlite=3.13.0
   - tk=8.5.18
+  - vc=14
+  - vs2015_runtime=14.0.25123
   - wheel=0.29.0
   - xz=5.2.4
   - zlib=1.2.11
+  - cmake=3.11.1
   - pip:
     - dlib==19.13.1
     - geographiclib==1.49
