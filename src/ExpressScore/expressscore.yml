@@ -24,6 +24,5 @@ dependencies:
     - dlib==19.13.1
     - geographiclib==1.49
     - geopy==1.14.0
-    - gnureadline==6.3.8
 prefix: /anaconda3/envs/mc_minimal
 
