@@ -8,6 +8,10 @@ The official scoring package requires a Docker installation.  This package provi
 The **ExpressScorer** package provides Challenge participants with a lightweight testing engine that does not require a Docker installation.  The code is found at https://github.com/planetmercury/mercury-challenge/tree/master/src/ExpressScore and tutorial Jupyter notebooks are found at https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks
 **ExpressScore** has been tested on MacOS Sierra, Windows 7, and Windows 10 and requires Python 3.4 or greater.
 ### Installation
+
+Before beginning, we recommend installing Anaconda (https://www.anaconda.com/download/)
+- Anaconda is a free and open source distribution of the Python and R programming languages for data science and machine learning related applications (large-scale data processing, predictive analytics, scientific computing), that aims to simplify package management and deployment.
+
 #### Windows 7/8/10
 Install Visual Studio Build Tools 2017
 - Installation file found here: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15#
