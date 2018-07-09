@@ -24,7 +24,7 @@ In the terminal of your choice, navigate to src/ExpressScore. </br></br>
 Run `conda env create -f expressscore.yml -v` to install the required dependencies for the ExpressScorer.</br></br>
 Once complete, activate the environment.
 - Run `activate mc_minimal` if on Windows
-- Run `source activate myenv`if on Mac or Linux
+- Run `source activate mc_minimal`if on Mac or Linux
 
 To ensure successful installation, open the **test** directory inside src/ExpressScore and run **test_ma_scoring.py** and **test_case_count_scoring.py**. If all tests pass, congrats! You now have a working ExpressScorer environment.
 
