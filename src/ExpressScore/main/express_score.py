@@ -439,6 +439,7 @@ class MaScorer(Scorer):
         out_dict["Precision"] = 0
         out_dict["Recall"] = 0
         out_dict["F1"] = 0
+        out_dict["Mercury Score"] = 0
         warn_id_list = list(input_matrix.index)
         event_id_list = list(input_matrix.columns)
         score_matrix = np.array(input_matrix)
@@ -482,6 +483,7 @@ class MaScorer(Scorer):
                 out_dict["Precision"] = prec
                 out_dict["Recall"] = rec
                 out_dict["F1"] = Scorer.f1(prec, rec)
+                out_dict["Mercury Score"] = out_dict["Quality Score"]/4.0 + out_dict["F1"]
 
         return out_dict
 

@@ -213,7 +213,6 @@ class MaScorerTest(unittest.TestCase):
         expected = 0.0
         self.assertAlmostEqual(result, expected)
 
-
     def test_make_dist_mat(self):
         """
         Tests MaScorer.make_dist_mat
@@ -395,7 +394,6 @@ class MaScorerTest(unittest.TestCase):
             test_res = False
             print(repr(e))
         self.assertTrue(test_res)
-
 
     def test_make_as_mat(self):
         """
@@ -623,8 +621,10 @@ class MaScorerTest(unittest.TestCase):
         expected_precision = expected["Precision"]
         expected_recall = expected["Recall"]
         expected_f1 = expected["F1"]
+        expected_merc_score = expected["Mercury Score"]
         self.assertEqual(sorted(set(result["Matches"])), expected_matches)
         self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
+        self.assertAlmostEqual(result["Mercury Score"], expected_merc_score, 3)
         self.assertAlmostEqual(result["Precision"], expected_precision, 3)
         self.assertAlmostEqual(result["Recall"], expected_recall, 3)
         self.assertAlmostEqual(result["F1"], expected_f1, 3)
@@ -650,6 +650,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 1.0)
         self.assertAlmostEqual(result["Recall"], 0.75)
         self.assertAlmostEqual(result["F1"], 1.5/1.75)
+        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 1.5/1.75)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
         # Simple matrix, 4 by 3
         test_matrix_filename = "test_qs_matrix_2.csv"
@@ -664,6 +665,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 0.75)
         self.assertAlmostEqual(result["Recall"], 1.00)
         self.assertAlmostEqual(result["F1"], 1.5/1.75)
+        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 1.5/1.75)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
         # Null Matrix
         test_matrix_filename = "test_null_matrix.csv"
@@ -678,6 +680,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 0)
         self.assertAlmostEqual(result["Recall"], 0)
         self.assertAlmostEqual(result["F1"], 0)
+        self.assertAlmostEqual(result["Mercury Score"], 0)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
         # Matrix with negative entries
         test_matrix_filename = "test_neg_matrix.csv"
@@ -692,6 +695,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 0.5)
         self.assertAlmostEqual(result["Recall"], 0.667, 3)
         self.assertAlmostEqual(result["F1"], 0.667/1.167, 3)
+        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 0.667/1.167, 3)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
 
         # Matrix with Lebanon data
@@ -714,6 +718,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], expected_precision, 3)
         self.assertAlmostEqual(result["Recall"], expected_recall, 3)
         self.assertAlmostEqual(result["F1"], expected_f1, 3)
+        self.assertAlmostEqual(result["Mercury Score"], expected["Quality Score"]/4.0 + expected["F1"], 3)
         for i, qs in enumerate(expected_qs_ser):
             res_qs = result["Details"]["Quality Scores"][i]
             self.assertAlmostEqual(res_qs, qs, 3)
