@@ -16,5 +16,6 @@
   "Quality Score": 3.618,
   "Precision": 0.235,
   "Recall": 1.000,
-  "F1": 0.381
+  "F1": 0.381,
+  "Mercury Score": 1.2855
 }
