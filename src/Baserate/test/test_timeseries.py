@@ -69,12 +69,21 @@ class TestTimeseries(unittest.TestCase):
         model = sm.tsa.ARMA(history_ser, order=test_order).fit()
         future_end = parse(start_date) + datetime.timedelta(days=len(hist_values) + 1)
         future_end = future_end.strftime("%Y-%m-%d")
-        expected = model.predict(first_date=future_start, last_date=future_end)
+        expected = model.predict(start=future_start, end=future_end)
+        expected = expected.apply(lambda x: round(x, 0))
+        expected = expected.apply(lambda x: max(x, 0))
         args_ = {"order": test_order}
-        result = arma_predict(history_ser, **args_)
+        result = arma_predict(history_ser, n_ahead=2, **args_)["Predictions"]
         try:
             pd.testing.assert_series_equal(expected, result)
             test_res = True
+        except AttributeError:
+            try:
+                pd.util.testing.assert_series_equal(expected, result)
+                test_res=True
+            except AssertionError as e:
+                test_res=False
+                print(repr(e))
         except AssertionError as e:
             test_res = False
             print(repr(e))
