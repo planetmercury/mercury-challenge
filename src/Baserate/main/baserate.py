@@ -45,11 +45,11 @@ from .scoring import(
   WARNING_ID
 )
 from .timeseries import (
-  ewma_predict,
-  arma_predict,
-  naive_predict,
-  status_quo_predict,
-  hist_avg_predict
+    ewma_predict,
+    arima_predict,
+    naive_predict,
+    status_quo_predict,
+    hist_avg_predict
   )
 
 
@@ -415,7 +415,7 @@ class CivilUnrestBaserate(Baserate):
 class CaseCountBaserate(Baserate):
 
     model_name_dict = {ewma_predict: "EWMA",
-                       arma_predict: "ARMA",
+                       arima_predict: "ARMA",
                        naive_predict: "Naive",
                        status_quo_predict: "Status Quo",
                        hist_avg_predict: "Historical Averages"}

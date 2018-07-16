@@ -54,9 +54,9 @@ class TestTimeseries(unittest.TestCase):
             print(repr(e))
         self.assertTrue(test_res)
 
-    def test_arma_predict(self):
+    def test_arima_predict(self):
         """
-        Tests timeseries.arma_predict
+        Tests timeseries.arima_predict
         :return:
         """
         start_date = "2018-07-01"
@@ -72,8 +72,25 @@ class TestTimeseries(unittest.TestCase):
         expected = model.predict(start=future_start, end=future_end)
         expected = expected.apply(lambda x: round(x, 0))
         expected = expected.apply(lambda x: max(x, 0))
-        args_ = {"order": test_order}
-        result = arma_predict(history_ser, n_ahead=2, **args_)["Predictions"]
+        result = arima_predict(history_ser, order=test_order, n_ahead=2)["Predictions"]
+        try:
+            pd.testing.assert_series_equal(expected, result)
+            test_res = True
+        except AttributeError:
+            try:
+                pd.util.testing.assert_series_equal(expected, result)
+                test_res=True
+            except AssertionError as e:
+                test_res=False
+                print(repr(e))
+        except AssertionError as e:
+            test_res = False
+            print(repr(e))
+        self.assertTrue(test_res)
+        expected = model.predict(start=future_start, end=future_end, dynamic=True)
+        expected = expected.apply(lambda x: round(x, 0))
+        expected = expected.apply(lambda x: max(x, 0))
+        result = arima_predict(history_ser, order=test_order, n_ahead=2)["Predictions"]
         try:
             pd.testing.assert_series_equal(expected, result)
             test_res = True
@@ -309,3 +326,14 @@ class TestTimeseries(unittest.TestCase):
         test_dd = parse("2018-07-02")
         result = convert_to_refday(test_dd, 2)
         self.assertEqual(expected, result)
+
+    def test_mean_squared_error(self):
+        """
+        Tests timeseries.mean_squared_error
+        :return:
+        """
+        predicted = [1, 4, 6]
+        actual = [2, 3, 8]
+        expected = 2.0
+        result = mean_squared_error(predicted, actual)
+        self.assertEqual(result, expected)

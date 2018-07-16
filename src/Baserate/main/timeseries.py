@@ -11,6 +11,11 @@ import statsmodels.api as sm
 import datetime
 from dateutil.parser import parse
 
+import sys
+sys.path.append("../..")
+#from ExpressScore.main.express_score import CaseCountScorer
+
+
 
 # The REFERENCE_WEEKDAY is used to anchor ISO Weeks.
 # The value in icews_properties.json, 2, corresponds to Wednesday.
@@ -39,44 +44,31 @@ def ewma_predict(history_ser, halflife=1, n_ahead=1):
     return {"Predictions":predict_ser, "Model": "EWMA", "Model_Params": "Halflife {0}".format(halflife)}
 
 
-def arma_predict(history_ser, verbose=False,
-                 n_ahead=1, dynamic=False,
-                 **arma_args):
+def arima_predict(history_ser, order, verbose=False,
+                  n_ahead=1, dynamic=True):
     """
     Fits an ARMA model of the given order
-    :param dynamic: Argument for the predict method of ARMA
-    :param n_ahead: how far ahead to predict
     :param history_ser: Series of past values
     :param order: Order of the ARMA model
+    :param dynamic: Argument for the predict method of ARMA, default True
+    :param n_ahead: how far ahead to predict
     :param verbose: Print some details
     :returns: Non-negative integer prediction
     """
-    if not arma_args:
-        arma_args = {"trend": "nc",
-                     "max_ar": 4, "max_ma": 4}
-    else:
-        if "trend" not in arma_args:
-            arma_args["trend"] = "nc"
-    if "order" not in arma_args:
-        result = sm.tsa.stattools.arma_order_select_ic(history_ser,
-                                                       **arma_args)
-        arma_args["order"] = result.bic_min_order
-    if verbose:
-        print("Fitting ARMA with order {0}".format(arma_args["order"]))
-    model = sm.tsa.ARMA(history_ser,
-                        order=arma_args["order"]).fit()
+    model = sm.tsa.ARIMA(history_ser,
+                        order=order).fit()
     if verbose:
         print(model.summary())
 
     pred_dates = future_dates(history_ser.index, n_ahead)
-    first_date = str(pred_dates[0].date())
+    first_date = str(pred_dates[1].date())
     last_date = str(pred_dates[-1].date())
     predict_ser = model.predict(first_date, last_date, dynamic=dynamic)
     predict_ser = predict_ser.apply(lambda x: round(x, 0))
     predict_ser = predict_ser.apply(lambda x: max(x, 0.0))
 
-    return {"Predictions": predict_ser.iloc[1:], "Model": "ARMA",
-            "Model_Params": "Order ({0}, {1})".format(*arma_args["order"])}
+    return {"Predictions": predict_ser, "Model": "ARMA",
+            "Model_Params": "Order ({0}, {1})".format(*order)}
 
 
 def future_dates(dt_index, n_ahead=1):
@@ -172,7 +164,7 @@ def hist_avg_predict(history_ser, n_ahead=1, freq=52):
 
 def extrapolate(history_ser, predict_method, n_ahead=1, **predict_args):
     value_ser = history_ser.copy()
-    if predict_method == arma_predict and "order" not in predict_args:
+    if predict_method == arima_predict and "order" not in predict_args:
         # Fit the existing data and determine the best order
         result = sm.tsa.stattools.arma_order_select_ic(value_ser,
                                                        **predict_args)
@@ -276,3 +268,64 @@ def convert_to_refday(dd, refday=REFERENCE_WEEKDAY):
     ref_date = iso_to_gregorian(*ref_iso)
     return ref_date
 
+
+def mean_squared_error(predicted, actual):
+    """
+    Computes the mean squared error
+    :param predicted: Predictions
+    :param actual: Truth
+    :return: MSE value
+    """
+    errors = [predicted[i] - actual[i] for i in range(len(predicted))]
+    error_sq = [e*e for e in errors]
+    mse = sum(error_sq)/len(error_sq)
+    return mse[0]
+
+
+def evaluate_arima_model(X, arima_order, err_func=mean_squared_error):
+    """
+    Evaluate an ARIMA model for given order.  Copied from https://machinelearningmastery.com/grid-search-arima-hyperparameters-with-python.html
+    :param X: Time series to fit
+    :param arima_order: (p,d,q) model parameters
+    :return: Mean Squared Error
+    """
+    train_size = int(len(X)*2.0/3)
+    train, test = X[:train_size], X[train_size:]
+    history = [t for t in train]
+    predictions = list()
+    for t in range(len(test)):
+        model = sm.tsa.ARIMA(history, order=arima_order)
+        model_fit = model.fit(disp=0)
+        yhat = model_fit.forecast()[0]
+        predictions.append(yhat)
+        history.append(test[t])
+
+    # Calculate out of sample error
+    error_ = err_func(test, predictions)
+    return error_
+
+
+def evaluate_models(dataset, p_values, d_values, q_values, err_func=mean_squared_error):
+    """
+    Evaluates a collection of ARIMA models across a parameter space.  Copied from https://machinelearningmastery.com/grid-search-arima-hyperparameters-with-python.html
+    :param dataset: set to be fit
+    :param p_values: AR
+    :param d_values: Diff
+    :param q_values: MA
+    :param err_func: Name of the method to be used to compute error
+    :return: best fit
+    """
+    dataset = dataset.astype("float32")
+    best_score, best_cfg = float("inf"), None
+    for p in p_values:
+        for d in d_values:
+            for q in q_values:
+                order = (p,d,q)
+                try:
+                    error_ = evaluate_arima_model(dataset, order, err_func)
+                    if error_ < best_score:
+                        best_score, best_cfg = error_, order
+                        print("ARIMA ", order, "MSE = {:.3f}".format(mse))
+                except:
+                    continue
+    print("Final Best ARIMA ", best_cfg, "MSE = {:.3f}".format(best_score))
