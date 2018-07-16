@@ -1,0 +1,60 @@
+{
+  "payload": [
+    {
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 0,
+      "timestamp": "2017-12-01T13:51:50.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-12-03",
+      "Event_Date": "2017-12-03"
+    },
+    {
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 3,
+      "timestamp": "2017-12-08T3:9:47.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-12-10",
+      "Event_Date": "2017-12-10"
+    },
+    {
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 0,
+      "timestamp": "2017-12-15T21:50:21.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-12-17",
+      "Event_Date": "2017-12-17"
+    },
+    {
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 3,
+      "timestamp": "2017-12-22T18:39:24.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-12-24",
+      "Event_Date": "2017-12-24"
+    },
+    {
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 0,
+      "timestamp": "2017-12-29T15:20:41.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-12-31",
+      "Event_Date": "2017-12-31"
+    }
+  ],
+  "performer_id": "BR_Test"
+}
