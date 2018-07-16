@@ -1,0 +1,41 @@
+{
+  "performer": "BR_Test",
+  "payload": [
+    {
+      "Probability": 0.5,
+      "Model_Params": "Order (1, 0)",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 6,
+      "timestamp": "2016-04-01T4:47:34.0",
+      "Warning_ID": "Baserate Disease Saudi Arabia 2016-04-03",
+      "Event_Date": "2016-04-03"
+    },
+    {
+      "Probability": 0.5,
+      "Model_Params": "Order (1, 0)",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 5,
+      "timestamp": "2016-04-08T10:7:51.0",
+      "Warning_ID": "Baserate Disease Saudi Arabia 2016-04-10",
+      "Event_Date": "2016-04-10"
+    },
+    {
+      "Probability": 0.5,
+      "Model_Params": "Order (1, 0)",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 3,
+      "timestamp": "2016-04-22T13:35:47.0",
+      "Warning_ID": "Baserate Disease Saudi Arabia 2016-04-24",
+      "Event_Date": "2016-04-24"
+    }
+  ]
+}
