@@ -1,0 +1,65 @@
+{
+  "payload": [
+    {
+      "Probability": 0.75,
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 4,
+      "timestamp": "2017-03-27T1:39:53.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-04-02",
+      "Event_Date": "2017-04-02"
+    },
+    {
+      "Probability": 0.75,
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 1,
+      "timestamp": "2017-04-03T3:25:11.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-04-09",
+      "Event_Date": "2017-04-09"
+    },
+    {
+      "Probability": 0.75,
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 4,
+      "timestamp": "2017-04-10T6:31:32.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-04-16",
+      "Event_Date": "2017-04-16"
+    },
+    {
+      "Probability": 0.75,
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 3,
+      "timestamp": "2017-04-17T14:4:18.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-04-23",
+      "Event_Date": "2017-04-23"
+    },
+    {
+      "Probability": 0.75,
+      "Model_Params": "Period 52, Halflife 1",
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "Historical Average Weighted By Recent Trend",
+      "Case_Count": 2,
+      "timestamp": "2017-04-24T21:30:24.0",
+      "Warning_ID": "BR_Test Disease Saudi Arabia 2017-04-30",
+      "Event_Date": "2017-04-30"
+    }
+  ],
+  "performer_id": "BR_Test"
+}

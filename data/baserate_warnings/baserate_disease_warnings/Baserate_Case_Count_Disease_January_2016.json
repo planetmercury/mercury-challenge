@@ -1,0 +1,60 @@
+{
+  "payload": [
+    {
+      "Probability": 0.5,
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 4,
+      "timestamp": "2016-01-01T0:0:0.1",
+      "Warning_ID": "R Disease Saudi Arabia 2016-01-03",
+      "Event_Date": "2016-01-03"
+    },
+    {
+      "Probability": 0.5,
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 5,
+      "timestamp": "2016-01-01T0:0:0.1",
+      "Warning_ID": "R Disease Saudi Arabia 2016-01-10",
+      "Event_Date": "2016-01-10"
+    },
+    {
+      "Probability": 0.5,
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 6,
+      "timestamp": "2016-01-01T0:0:0.1",
+      "Warning_ID": "R Disease Saudi Arabia 2016-01-17",
+      "Event_Date": "2016-01-17"
+    },
+    {
+      "Probability": 0.5,
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 6,
+      "timestamp": "2016-01-01T0:0:0.1",
+      "Warning_ID": "R Disease Saudi Arabia 2016-01-24",
+      "Event_Date": "2016-01-24"
+    },
+    {
+      "Probability": 0.5,
+      "Country": "Saudi Arabia",
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Model": "ARMA",
+      "Case_Count": 7,
+      "timestamp": "2016-01-01T0:0:0.1",
+      "Warning_ID": "R Disease Saudi Arabia 2016-01-31",
+      "Event_Date": "2016-01-31"
+    }
+  ],
+  "performer_id": "BR_Test"
+}

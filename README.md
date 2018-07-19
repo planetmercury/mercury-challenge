@@ -19,6 +19,15 @@ Install Visual Studio Build Tools 2017
 - Depending on which Windows version you're on, ensure that the proper SDK is checked.
   - **Windows 10 SDK** for Windows 10
   - **Windows 8.1 SDK and UCRT SDK** for Windows 7 & 8
+
+#### Linux
+
+Installing **CMake** is required before continuing. 
+  - If using Ubuntu, run `apt-get install cmake`. </br>
+  - If using Centos/RHEL, run `yum install cmake`. </br>
+  - You can also build CMake from source by following the instructions here: https://cmake.org/install/
+
+
 #### All Platforms
 In the terminal of your choice, navigate to src/ExpressScore. </br></br>
 Run `conda env create -f expressscore.yml -v` to install the required dependencies for the ExpressScorer.</br></br>
