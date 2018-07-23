@@ -10,17 +10,50 @@ import numpy as np
 import statsmodels.api as sm
 import datetime
 from dateutil.parser import parse
+from sklearn.metrics import mean_squared_error
 
 import sys
 sys.path.append("../..")
-#from ExpressScore.main.express_score import CaseCountScorer
+from ExpressScore.main.express_score import (
+    CaseCountScorer,
+    Defaults
+)
 
+
+def mean_qs_error(predicted, actual, accuracy_denominator=Defaults.ACCURACY_DENOMINATOR):
+    """
+    Computes an error based on the CaseCountScorer.quality_score metric
+    :param predicted: List of predicted values
+    :param actual: List of actual values
+    :param accuracy_denominator: Scaling factor
+    :return: Mean of 1 - QS
+    """
+
+    if len(predicted) != len(actual):
+        raise ValueError("We need the same number of predicted and actual values")
+    else:
+        value_zip = zip(predicted, actual)
+        errors = [(1-CaseCountScorer.quality_score(p, a, accuracy_denominator=accuracy_denominator))
+                   for (p,a) in value_zip]
+        mean_error = np.mean(errors)
+
+    return mean_error
+
+
+class TsDefaults:
+    """
+    Stores default values
+    """
+
+    ERROR_FUNCTION = mean_qs_error
+    P_MAX = 4
+    D_MAX = 1
+    Q_MAX = 4
 
 
 # The REFERENCE_WEEKDAY is used to anchor ISO Weeks.
 # The value in icews_properties.json, 2, corresponds to Wednesday.
 REFERENCE_WEEKDAY = 3
-
 
 def ewma_predict(history_ser, halflife=1, n_ahead=1):
     """
@@ -79,15 +112,25 @@ def future_dates(dt_index, n_ahead=1):
 
     first_date = dt_index[-1]
 
-    if dt_index.freqstr[0] == "W":
-        last_date = first_date + datetime.timedelta(7 * n_ahead)
+    if dt_index.freqstr is None:
+        # Then we have to infer the time step size
+        use_freq = "W-SUN"
+        use_delta=7
+
+    elif dt_index.freqstr[0] == "W":
+        use_delta = 7
+        use_freq = dt_index.freq
 
     else:
-        last_date = first_date + datetime.timedelta(n_ahead)
+        use_delta = 1
+        use_freq = dt_index.freq
+
+    last_date = first_date + datetime.timedelta(use_delta*n_ahead)
 
     future_dates = pd.date_range(first_date, last_date,
                                  freq=dt_index.freq)
-    return pd.DatetimeIndex(start=dt_index[-1], freq=dt_index.freq, periods=n_ahead+1)
+    return pd.DatetimeIndex(start=dt_index[-1], freq=use_freq, periods=n_ahead+1)
+
 
 
 def status_quo_predict(history_ser, n_ahead=1):
@@ -269,43 +312,65 @@ def convert_to_refday(dd, refday=REFERENCE_WEEKDAY):
     return ref_date
 
 
-def mean_squared_error(predicted, actual):
+def antilog_err_func(err_func, predicted, actual, offset=1):
     """
-    Computes the mean squared error
-    :param predicted: Predictions
-    :param actual: Truth
-    :return: MSE value
+    Applies err_func to predicted and actual after taking antilog
+    :param err_func: A function that computes error
+    :param predicted: predicted values
+    :param actual: actual values
+    :param offset: amount to be subtracted to convert to original scale
+    :return: Error value
     """
-    errors = [predicted[i] - actual[i] for i in range(len(predicted))]
-    error_sq = [e*e for e in errors]
-    mse = sum(error_sq)/len(error_sq)
-    return mse[0]
+    antilog_predicted = pd.Series(predicted).apply(lambda x: np.exp(x) - offset)
+    antilog_predicted = antilog_predicted.apply(lambda x: round(x, 0))
+    antilog_predicted = antilog_predicted.apply(lambda x: max(x, 0))
+    antilog_actual = pd.Series(actual).apply(lambda x: np.exp(x) - offset)
+    antilog_actual = antilog_actual.apply(lambda x: np.exp(x) - offset)
+    antilog_actual = antilog_actual.apply(lambda x: np.exp(x) - offset)
+    return err_func(antilog_predicted, antilog_actual)
 
 
-def evaluate_arima_model(X, arima_order, err_func=mean_squared_error):
+def evaluate_arima_model(X, arima_order, err_func=TsDefaults.ERROR_FUNCTION, verbose=False):
     """
     Evaluate an ARIMA model for given order.  Copied from https://machinelearningmastery.com/grid-search-arima-hyperparameters-with-python.html
     :param X: Time series to fit
     :param arima_order: (p,d,q) model parameters
+    :param err_func: How do we measure errors?  Default uses the Quality Score deficit
     :return: Mean Squared Error
     """
+    out_dict = dict()
+    error_ = float("inf")
+    out_dict["Model_Params"] = []
+    out_dict["Order"] = arima_order
     train_size = int(len(X)*2.0/3)
     train, test = X[:train_size], X[train_size:]
     history = [t for t in train]
     predictions = list()
-    for t in range(len(test)):
-        model = sm.tsa.ARIMA(history, order=arima_order)
-        model_fit = model.fit(disp=0)
-        yhat = model_fit.forecast()[0]
-        predictions.append(yhat)
-        history.append(test[t])
+    try:
+        for t in range(len(test)):
+            model = sm.tsa.ARIMA(history, order=arima_order)
+            model_fit = model.fit(disp=0)
+            yhat = model_fit.forecast()[0]
+            yhat = int(round(yhat[0], 0))
+            yhat = max(yhat, 0)
+            predictions.append(yhat)
+            history.append(test[t])
 
-    # Calculate out of sample error
-    error_ = err_func(test, predictions)
-    return error_
+        # Calculate out of sample error
+        error_ = err_func(test, predictions)
+        out_dict["Model_Params"] = model_fit.params
+    except (ValueError, np.linalg.LinAlgError) as e:
+        if verbose:
+            print(repr(e))
+        else:
+            pass
+    out_dict["Error"] = error_
+    return out_dict
 
 
-def evaluate_models(dataset, p_values, d_values, q_values, err_func=mean_squared_error):
+def evaluate_models(dataset, p_values=range(TsDefaults.P_MAX+1), d_values=range(TsDefaults.D_MAX+1),
+                    q_values=range(TsDefaults.Q_MAX+1), err_func=TsDefaults.ERROR_FUNCTION,
+                    verbose=False):
     """
     Evaluates a collection of ARIMA models across a parameter space.  Copied from https://machinelearningmastery.com/grid-search-arima-hyperparameters-with-python.html
     :param dataset: set to be fit
@@ -313,19 +378,53 @@ def evaluate_models(dataset, p_values, d_values, q_values, err_func=mean_squared
     :param d_values: Diff
     :param q_values: MA
     :param err_func: Name of the method to be used to compute error
+    :param verbose:  How much output to pring
     :return: best fit
     """
+    out_dict = dict()
     dataset = dataset.astype("float32")
     best_score, best_cfg = float("inf"), None
     for p in p_values:
         for d in d_values:
             for q in q_values:
                 order = (p,d,q)
-                try:
-                    error_ = evaluate_arima_model(dataset, order, err_func)
-                    if error_ < best_score:
-                        best_score, best_cfg = error_, order
-                        print("ARIMA ", order, "MSE = {:.3f}".format(mse))
-                except:
-                    continue
-    print("Final Best ARIMA ", best_cfg, "MSE = {:.3f}".format(best_score))
+                if verbose:
+                    print("Order: ", order)
+                model_eval = evaluate_arima_model(dataset, order, err_func, verbose=verbose)
+                error_ = model_eval["Error"]
+                current_params = model_eval["Model_Params"]
+                if verbose: print(error_)
+                if error_ < best_score:
+                    best_score, best_cfg, model_params = error_, order, current_params
+                    if isinstance(best_score, list):
+                        best_score = best_score[-1]
+                    if verbose:
+                        print(best_score)
+                        print("New leader in the clubhouse: ARIMA ", order, "Mean Error = {:.3f}".format(best_score))
+    if verbose:
+        print("Final Best ARIMA ", best_cfg, "Mean Error = {:.3f}".format(best_score))
+    out_dict["Order"] = best_cfg
+    out_dict["Model_Params"] = model_params
+    out_dict["Error"] = best_score
+
+    return out_dict
+
+
+def one_step_ahead_forecast(train, test, order):
+    """
+    Computes forecasts one step ahead incrementally
+    :param train: Training series
+    :param test:  Test series
+    :param order:  A model specification order
+    :return: Series of predictions
+    """
+    preds = []
+    train_ = train.copy()
+    for i, t in enumerate(test.index):
+        model = sm.tsa.ARIMA(endog=train_, order=order)
+        model_fit = model.fit(disp=False)
+        predict = model_fit.forecast(steps=1)[0][0]
+        preds.append(predict)
+        train_ = pd.concat((train_, test[t:t]))
+    pred_ser = pd.Series(preds, index=test.index)
+    return pred_ser

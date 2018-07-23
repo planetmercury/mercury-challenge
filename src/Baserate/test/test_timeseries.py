@@ -295,7 +295,6 @@ class TestTimeseries(unittest.TestCase):
         result = isoweek_to_gregorian(test_iso)
         self.assertEqual(expected, result)
 
-
     def test_convert_to_refday(self):
         """
         Tests timeseries.convert_to_refday
@@ -327,13 +326,30 @@ class TestTimeseries(unittest.TestCase):
         result = convert_to_refday(test_dd, 2)
         self.assertEqual(expected, result)
 
-    def test_mean_squared_error(self):
+    def test_mean_qs_error(self):
         """
-        Tests timeseries.mean_squared_error
+        Tests Mean QS Error function
         :return:
         """
-        predicted = [1, 4, 6]
-        actual = [2, 3, 8]
-        expected = 2.0
-        result = mean_squared_error(predicted, actual)
-        self.assertEqual(result, expected)
+        expected = 0
+        pred = [2, 3, 4]
+        act = [2, 3, 4]
+        result = mean_qs_error(pred, act)
+        self.assertEqual(expected, result)
+        expected = 0.25
+        pred = [1, 2, 3]
+        act = [2, 3, 4]
+        result = mean_qs_error(pred, act)
+        self.assertEqual(expected, result)
+        expected = 0.7/3.0
+        pred = [0, 3, 5]
+        act = [2, 3, 4]
+        result = mean_qs_error(pred, act)
+        self.assertEqual(expected, result)
+
+    def test_antilog_err_func(self):
+        """
+        Tests antilog_err_func method
+        :return:
+        """
+        pass

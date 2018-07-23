@@ -31,6 +31,8 @@ from geopy.distance import distance
 
 import dlib
 
+SRC_HOME = os.path.abspath("../..")
+ES_HOME = os.path.abspath(os.path.join(SRC_HOME, "ExpressScore"))
 
 class Defaults(object):
     """
@@ -46,7 +48,7 @@ class Defaults(object):
     MAX_DATE_DIFF = 4.0
     DATE_BUFFER = 4.0
     MAX_DATE_PERIOD = 50
-    with open(os.path.join("..",
+    with open(os.path.join(ES_HOME,
                            "resources",
                            "dictionaries",
                            "state_actor_dictionary.json"), "r", encoding="utf8") as f:
