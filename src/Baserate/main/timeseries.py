@@ -132,11 +132,11 @@ def future_dates(dt_index, n_ahead=1):
     return pd.DatetimeIndex(start=dt_index[-1], freq=use_freq, periods=n_ahead+1)
 
 
-
 def status_quo_predict(history_ser, n_ahead=1):
     """
     Fits a constant model
     :param history_ser: Series of past values
+    :param n_ahead: How many steps ahead to predict
     :returns: Non-negative integer prediction
     """
 
@@ -165,18 +165,18 @@ def naive_predict(history_ser, n_ahead=1, level=0):
     return {"Predictions":predict_ser, "Model": "Naive", "Model_Params": "Constant Level {0}".format(level)}
 
 
-def hist_avg_predict(history_ser, n_ahead=1, freq=52):
+def hist_avg_predict(history_ser, n_ahead=1, season_freq=52):
     """
     Computes the historical averages for a series modulo the frequency
-    :param in_ser: A list of values
+    :param history_ser: A list of values
     :param n_ahead: How many predictions to generate
-    :param freq: The length of the season to be studied
+    :param season_freq: The length of the season to be studied
     :returns: List of historical averages
     """
-    if len(history_ser) < freq:
+    if len(history_ser) < season_freq:
         # No history to use, just take the EWMA
          raise ValueError("Not enough elements in the history")
-    elif n_ahead > freq:
+    elif n_ahead > season_freq:
         # Trying to predict too far ahead
         raise ValueError("Trying to predict farther ahead than the periodicity")
     else:
@@ -186,14 +186,14 @@ def hist_avg_predict(history_ser, n_ahead=1, freq=52):
         popable_values = hist_values.copy()
         rev_values = [popable_values.pop() for v in hist_values]
         curr_comp_values = [v for i,v in enumerate(rev_values[1:])
-                            if i%(freq) == freq-1]
+                            if i % (season_freq) == season_freq - 1]
         curr_comp_level = np.mean(curr_comp_values)
         scale = curr_level/curr_comp_level
         predictions = []
         for k in range(1, n_ahead+1):
-            modulus = (len(hist_values) + k) % freq
+            modulus = (len(hist_values) + k) % season_freq
             comp_values = [v for i,v in enumerate(hist_values)
-                           if (i+1)%freq == modulus]
+                           if (i+1) % season_freq == modulus]
             comp_level = np.mean(comp_values)
             predictions.append(comp_level*scale)
 
@@ -201,7 +201,7 @@ def hist_avg_predict(history_ser, n_ahead=1, freq=52):
         pred_dates = future_dates(history_ser.index, n_ahead)[1:]
         predictions.index=pred_dates
         out_dict = {"Predictions": predictions, "Model": "Historical Average Weighted By Recent Trend",
-                    "Model_Params": "Period {0}".format(freq)}
+                    "Model_Params": "Period {0}".format(season_freq)}
         return out_dict
 
 
