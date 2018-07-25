@@ -8,7 +8,7 @@
     "Probability": 0.5458124337,
     "Warning_ID": "BR_0",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muḩāfaz̧at Būr Sa‘īd",
     "Latitude": 31.2522,
     "Event_Date": "2018-05-30"
@@ -22,7 +22,7 @@
     "Probability": 0.6021332004,
     "Warning_ID": "BR_1",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Jīzah",
     "Latitude": 29.85,
     "Event_Date": "2018-05-12"
@@ -36,7 +36,7 @@
     "Probability": 0.8985272414,
     "Warning_ID": "BR_2",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Jīzah",
     "Latitude": 30.031,
     "Event_Date": "2018-05-12"
@@ -50,7 +50,7 @@
     "Probability": 0.6771363666,
     "Warning_ID": "BR_3",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muḩāfaz̧at al Gharbīyah",
     "Latitude": 30.9706,
     "Event_Date": "2018-05-09"
@@ -64,7 +64,7 @@
     "Probability": 0.6740695531,
     "Warning_ID": "BR_4",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-06"
@@ -78,7 +78,7 @@
     "Probability": 0.7800316091,
     "Warning_ID": "BR_5",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-01"
@@ -92,7 +92,7 @@
     "Probability": 0.6407405688,
     "Warning_ID": "BR_6",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-03"
@@ -106,7 +106,7 @@
     "Probability": 0.7487801492,
     "Warning_ID": "BR_7",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-05"
@@ -120,7 +120,7 @@
     "Probability": 0.5174704654,
     "Warning_ID": "BR_8",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Eastern Province",
     "Latitude": 30.7,
     "Event_Date": "2018-05-07"
@@ -134,7 +134,7 @@
     "Probability": 0.7055803784,
     "Warning_ID": "BR_9",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-23"
@@ -148,7 +148,7 @@
     "Probability": 0.6547971241,
     "Warning_ID": "BR_10",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-17"
@@ -162,7 +162,7 @@
     "Probability": 0.7869373681,
     "Warning_ID": "BR_11",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Asyūţ",
     "Latitude": 27.181,
     "Event_Date": "2018-05-14"
@@ -176,7 +176,7 @@
     "Probability": 0.9156871588,
     "Warning_ID": "BR_12",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-24"
@@ -190,7 +190,7 @@
     "Probability": 0.7181653868,
     "Warning_ID": "BR_13",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "South Sinai",
     "Latitude": 29.0,
     "Event_Date": "2018-05-09"
@@ -204,7 +204,7 @@
     "Probability": 0.6518558298,
     "Warning_ID": "BR_14",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Minyā",
     "Latitude": 28.6484,
     "Event_Date": "2018-05-31"
@@ -218,7 +218,7 @@
     "Probability": 0.8706280592,
     "Warning_ID": "BR_15",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Jīzah",
     "Latitude": 29.6197,
     "Event_Date": "2018-05-02"
@@ -232,7 +232,7 @@
     "Probability": 0.7219559646,
     "Warning_ID": "BR_16",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "South Sinai",
     "Latitude": 29.0,
     "Event_Date": "2018-05-05"
@@ -246,7 +246,7 @@
     "Probability": 0.633916224,
     "Warning_ID": "BR_17",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-26"
@@ -260,7 +260,7 @@
     "Probability": 0.6483976225,
     "Warning_ID": "BR_18",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-08"
@@ -274,7 +274,7 @@
     "Probability": 0.7471250209,
     "Warning_ID": "BR_19",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Jīzah",
     "Latitude": 29.9,
     "Event_Date": "2018-05-10"
@@ -288,7 +288,7 @@
     "Probability": 0.8351088503,
     "Warning_ID": "BR_20",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-22"
@@ -302,7 +302,7 @@
     "Probability": 0.9969918063,
     "Warning_ID": "BR_21",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-12"
@@ -316,7 +316,7 @@
     "Probability": 0.8148753672,
     "Warning_ID": "BR_22",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-19"
@@ -330,7 +330,7 @@
     "Probability": 0.643099995,
     "Warning_ID": "BR_23",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-13"
@@ -344,7 +344,7 @@
     "Probability": 0.9406354354,
     "Warning_ID": "BR_24",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Eastern Province",
     "Latitude": 30.4204,
     "Event_Date": "2018-05-07"
@@ -358,7 +358,7 @@
     "Probability": 0.5941405014,
     "Warning_ID": "BR_25",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muḩāfaz̧at ad Daqahlīyah",
     "Latitude": 31.1,
     "Event_Date": "2018-05-22"
@@ -372,7 +372,7 @@
     "Probability": 0.7782621534,
     "Warning_ID": "BR_26",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Eastern Province",
     "Latitude": 30.2964,
     "Event_Date": "2018-05-21"
@@ -386,7 +386,7 @@
     "Probability": 0.605242576,
     "Warning_ID": "BR_27",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muḩāfaz̧at al Qāhirah",
     "Latitude": 30.0798,
     "Event_Date": "2018-05-12"
@@ -400,7 +400,7 @@
     "Probability": 0.6936228544,
     "Warning_ID": "BR_28",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-05"
@@ -414,7 +414,7 @@
     "Probability": 0.9274457873,
     "Warning_ID": "BR_29",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Eastern Province",
     "Latitude": 30.7,
     "Event_Date": "2018-05-18"
@@ -428,7 +428,7 @@
     "Probability": 0.935279976,
     "Warning_ID": "BR_30",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muḩāfaz̧at Būr Sa‘īd",
     "Latitude": 31.2565,
     "Event_Date": "2018-05-05"
@@ -442,7 +442,7 @@
     "Probability": 0.5716999376,
     "Warning_ID": "BR_31",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.196,
     "Event_Date": "2018-05-04"
@@ -456,7 +456,7 @@
     "Probability": 0.5810688435,
     "Warning_ID": "BR_32",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 31.1316,
     "Event_Date": "2018-05-29"
@@ -470,7 +470,7 @@
     "Probability": 0.5072575054,
     "Warning_ID": "BR_33",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-15"
@@ -484,7 +484,7 @@
     "Probability": 0.9291406447,
     "Warning_ID": "BR_34",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Shamāl Sīnāʼ",
     "Latitude": 30.5,
     "Event_Date": "2018-05-01"

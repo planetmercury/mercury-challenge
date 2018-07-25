@@ -43,7 +43,7 @@ class JSONField(object):
 
 class EventType(object):
   CU = 'Civil Unrest'
-  MA = 'Military Action'
+  MA = 'Military Activity'
   DIS = 'Disease'
 
 

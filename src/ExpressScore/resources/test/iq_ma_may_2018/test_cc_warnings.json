@@ -8,7 +8,7 @@
     "Probability": 0.6682906558,
     "Warning_ID": "BR_0",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-12"
@@ -22,7 +22,7 @@
     "Probability": 0.671224316,
     "Warning_ID": "BR_1",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-12"
@@ -36,7 +36,7 @@
     "Probability": 0.5778558843,
     "Warning_ID": "BR_2",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2937,
     "Event_Date": "2018-05-20"
@@ -50,7 +50,7 @@
     "Probability": 0.7545354961,
     "Warning_ID": "BR_3",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3424,
     "Event_Date": "2018-05-02"
@@ -64,7 +64,7 @@
     "Probability": 0.750077395,
     "Warning_ID": "BR_4",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-23"
@@ -78,7 +78,7 @@
     "Probability": 0.5716746475,
     "Warning_ID": "BR_5",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-30"
@@ -92,7 +92,7 @@
     "Probability": 0.9817640295,
     "Warning_ID": "BR_6",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3,
     "Event_Date": "2018-05-07"
@@ -106,7 +106,7 @@
     "Probability": 0.9832564122,
     "Warning_ID": "BR_7",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-12"
@@ -120,7 +120,7 @@
     "Probability": 0.6546028023,
     "Warning_ID": "BR_8",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7069,
     "Event_Date": "2018-05-10"
@@ -134,7 +134,7 @@
     "Probability": 0.8026722059,
     "Warning_ID": "BR_9",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3814,
     "Event_Date": "2018-05-28"
@@ -148,7 +148,7 @@
     "Probability": 0.930849439,
     "Warning_ID": "BR_10",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3232,
     "Event_Date": "2018-05-28"
@@ -162,7 +162,7 @@
     "Probability": 0.5823790673,
     "Warning_ID": "BR_11",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.6729,
     "Event_Date": "2018-05-17"
@@ -176,7 +176,7 @@
     "Probability": 0.837968328,
     "Warning_ID": "BR_12",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3814,
     "Event_Date": "2018-05-02"
@@ -190,7 +190,7 @@
     "Probability": 0.8801059734,
     "Warning_ID": "BR_13",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-01"
@@ -204,7 +204,7 @@
     "Probability": 0.7126960402,
     "Warning_ID": "BR_14",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-15"
@@ -218,7 +218,7 @@
     "Probability": 0.6849085734,
     "Warning_ID": "BR_15",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.8833,
     "Event_Date": "2018-05-21"
@@ -232,7 +232,7 @@
     "Probability": 0.5999860693,
     "Warning_ID": "BR_16",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2791,
     "Event_Date": "2018-05-10"
@@ -246,7 +246,7 @@
     "Probability": 0.7635346293,
     "Warning_ID": "BR_17",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.42,
     "Event_Date": "2018-05-01"
@@ -260,7 +260,7 @@
     "Probability": 0.9414825615,
     "Warning_ID": "BR_18",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3452,
     "Event_Date": "2018-05-26"
@@ -274,7 +274,7 @@
     "Probability": 0.5837131343,
     "Warning_ID": "BR_19",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.1953,
     "Event_Date": "2018-05-02"
@@ -288,7 +288,7 @@
     "Probability": 0.7295415521,
     "Warning_ID": "BR_20",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4681,
     "Event_Date": "2018-05-28"
@@ -302,7 +302,7 @@
     "Probability": 0.5758075229,
     "Warning_ID": "BR_21",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4845,
     "Event_Date": "2018-05-18"
@@ -316,7 +316,7 @@
     "Probability": 0.6398440394,
     "Warning_ID": "BR_22",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.4167,
     "Event_Date": "2018-05-13"
@@ -330,7 +330,7 @@
     "Probability": 0.7283539764,
     "Warning_ID": "BR_23",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.2583,
     "Event_Date": "2018-05-23"
@@ -344,7 +344,7 @@
     "Probability": 0.5600449181,
     "Warning_ID": "BR_24",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-31"
@@ -358,7 +358,7 @@
     "Probability": 0.9015883832,
     "Warning_ID": "BR_25",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6924,
     "Event_Date": "2018-05-12"
@@ -372,7 +372,7 @@
     "Probability": 0.7271646611,
     "Warning_ID": "BR_26",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Bābil",
     "Latitude": 32.35,
     "Event_Date": "2018-05-11"
@@ -386,7 +386,7 @@
     "Probability": 0.5694939124,
     "Warning_ID": "BR_27",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3658,
     "Event_Date": "2018-05-28"
@@ -400,7 +400,7 @@
     "Probability": 0.742259175,
     "Warning_ID": "BR_28",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0,
     "Event_Date": "2018-05-11"
@@ -414,7 +414,7 @@
     "Probability": 0.7318868459,
     "Warning_ID": "BR_29",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-03"
@@ -428,7 +428,7 @@
     "Probability": 0.6605185344,
     "Warning_ID": "BR_30",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.7535,
     "Event_Date": "2018-05-12"
@@ -442,7 +442,7 @@
     "Probability": 0.9561982314,
     "Warning_ID": "BR_31",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.7988,
     "Event_Date": "2018-05-01"
@@ -456,7 +456,7 @@
     "Probability": 0.5385243054,
     "Warning_ID": "BR_32",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-16"
@@ -470,7 +470,7 @@
     "Probability": 0.8699024367,
     "Warning_ID": "BR_33",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-08"
@@ -484,7 +484,7 @@
     "Probability": 0.6404880607,
     "Warning_ID": "BR_34",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-03"
@@ -498,7 +498,7 @@
     "Probability": 0.5651597425,
     "Warning_ID": "BR_35",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.0207,
     "Event_Date": "2018-05-14"
@@ -512,7 +512,7 @@
     "Probability": 0.742042837,
     "Warning_ID": "BR_36",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6455,
     "Event_Date": "2018-05-02"
@@ -526,7 +526,7 @@
     "Probability": 0.6286491353,
     "Warning_ID": "BR_37",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.6493,
     "Event_Date": "2018-05-03"
@@ -540,7 +540,7 @@
     "Probability": 0.7020919863,
     "Warning_ID": "BR_38",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-17"
@@ -554,7 +554,7 @@
     "Probability": 0.6918703536,
     "Warning_ID": "BR_39",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-08"
@@ -568,7 +568,7 @@
     "Probability": 0.5248716225,
     "Warning_ID": "BR_40",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.8107,
     "Event_Date": "2018-05-22"
@@ -582,7 +582,7 @@
     "Probability": 0.5650673108,
     "Warning_ID": "BR_41",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-12"
@@ -596,7 +596,7 @@
     "Probability": 0.7891799703,
     "Warning_ID": "BR_42",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6963,
     "Event_Date": "2018-05-02"
@@ -610,7 +610,7 @@
     "Probability": 0.9435551813,
     "Warning_ID": "BR_43",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3379,
     "Event_Date": "2018-05-12"
@@ -624,7 +624,7 @@
     "Probability": 0.8015882282,
     "Warning_ID": "BR_44",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.2754,
     "Event_Date": "2018-05-06"
@@ -638,7 +638,7 @@
     "Probability": 0.5015482793,
     "Warning_ID": "BR_45",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-03"
@@ -652,7 +652,7 @@
     "Probability": 0.6943539671,
     "Warning_ID": "BR_46",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1003,
     "Event_Date": "2018-05-03"
@@ -666,7 +666,7 @@
     "Probability": 0.6000199576,
     "Warning_ID": "BR_47",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Bābil",
     "Latitude": 32.4637,
     "Event_Date": "2018-05-21"
@@ -680,7 +680,7 @@
     "Probability": 0.5328505262,
     "Warning_ID": "BR_48",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4206,
     "Event_Date": "2018-05-21"
@@ -694,7 +694,7 @@
     "Probability": 0.8388461873,
     "Warning_ID": "BR_49",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3179,
     "Event_Date": "2018-05-11"
@@ -708,7 +708,7 @@
     "Probability": 0.5225838548,
     "Warning_ID": "BR_50",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2597,
     "Event_Date": "2018-05-20"
@@ -722,7 +722,7 @@
     "Probability": 0.5052105319,
     "Warning_ID": "BR_51",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-02"
@@ -736,7 +736,7 @@
     "Probability": 0.7938960961,
     "Warning_ID": "BR_52",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0,
     "Event_Date": "2018-05-27"
@@ -750,7 +750,7 @@
     "Probability": 0.726172595,
     "Warning_ID": "BR_53",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2709,
     "Event_Date": "2018-05-25"
@@ -764,7 +764,7 @@
     "Probability": 0.6105745823,
     "Warning_ID": "BR_54",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-22"
@@ -778,7 +778,7 @@
     "Probability": 0.6279525531,
     "Warning_ID": "BR_55",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-09"
@@ -792,7 +792,7 @@
     "Probability": 0.6854487912,
     "Warning_ID": "BR_56",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-15"
@@ -806,7 +806,7 @@
     "Probability": 0.5638440953,
     "Warning_ID": "BR_57",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.375,
     "Event_Date": "2018-05-18"
@@ -820,7 +820,7 @@
     "Probability": 0.6029952888,
     "Warning_ID": "BR_58",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0167,
     "Event_Date": "2018-05-22"
@@ -834,7 +834,7 @@
     "Probability": 0.6522130459,
     "Warning_ID": "BR_59",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3442,
     "Event_Date": "2018-05-08"
@@ -848,7 +848,7 @@
     "Probability": 0.9307218159,
     "Warning_ID": "BR_60",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-25"
@@ -862,7 +862,7 @@
     "Probability": 0.7108079417,
     "Warning_ID": "BR_61",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3556,
     "Event_Date": "2018-05-15"
@@ -876,7 +876,7 @@
     "Probability": 0.6450433143,
     "Warning_ID": "BR_62",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4186,
     "Event_Date": "2018-05-08"
@@ -890,7 +890,7 @@
     "Probability": 0.9819461671,
     "Warning_ID": "BR_63",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-11"
@@ -904,7 +904,7 @@
     "Probability": 0.9221869039,
     "Warning_ID": "BR_64",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3909,
     "Event_Date": "2018-05-12"
@@ -918,7 +918,7 @@
     "Probability": 0.8952946459,
     "Warning_ID": "BR_65",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3209,
     "Event_Date": "2018-05-21"
@@ -932,7 +932,7 @@
     "Probability": 0.9886378581,
     "Warning_ID": "BR_66",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.356,
     "Event_Date": "2018-05-20"
@@ -946,7 +946,7 @@
     "Probability": 0.789222159,
     "Warning_ID": "BR_67",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4759,
     "Event_Date": "2018-05-21"
@@ -960,7 +960,7 @@
     "Probability": 0.5108361174,
     "Warning_ID": "BR_68",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1172,
     "Event_Date": "2018-05-16"
@@ -974,7 +974,7 @@
     "Probability": 0.5180120227,
     "Warning_ID": "BR_69",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2663,
     "Event_Date": "2018-05-07"
@@ -988,7 +988,7 @@
     "Probability": 0.6858060348,
     "Warning_ID": "BR_70",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-27"
@@ -1002,7 +1002,7 @@
     "Probability": 0.6825696624,
     "Warning_ID": "BR_71",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.5279,
     "Event_Date": "2018-05-20"
@@ -1016,7 +1016,7 @@
     "Probability": 0.605443409,
     "Warning_ID": "BR_72",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.1084,
     "Event_Date": "2018-05-20"
@@ -1030,7 +1030,7 @@
     "Probability": 0.8507667928,
     "Warning_ID": "BR_73",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4334,
     "Event_Date": "2018-05-22"
@@ -1044,7 +1044,7 @@
     "Probability": 0.9704046514,
     "Warning_ID": "BR_74",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3301,
     "Event_Date": "2018-05-26"
@@ -1058,7 +1058,7 @@
     "Probability": 0.8429638149,
     "Warning_ID": "BR_75",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3214,
     "Event_Date": "2018-05-27"
@@ -1072,7 +1072,7 @@
     "Probability": 0.8553649298,
     "Warning_ID": "BR_76",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-14"
@@ -1086,7 +1086,7 @@
     "Probability": 0.9709597654,
     "Warning_ID": "BR_77",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-02"
@@ -1100,7 +1100,7 @@
     "Probability": 0.5138226211,
     "Warning_ID": "BR_78",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-07"
@@ -1114,7 +1114,7 @@
     "Probability": 0.603722599,
     "Warning_ID": "BR_79",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-15"
@@ -1128,7 +1128,7 @@
     "Probability": 0.9640006025,
     "Warning_ID": "BR_80",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3179,
     "Event_Date": "2018-05-09"
@@ -1142,7 +1142,7 @@
     "Probability": 0.918256109,
     "Warning_ID": "BR_81",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-02"
@@ -1156,7 +1156,7 @@
     "Probability": 0.8377585515,
     "Warning_ID": "BR_82",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-23"
@@ -1170,7 +1170,7 @@
     "Probability": 0.9543210915,
     "Warning_ID": "BR_83",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4681,
     "Event_Date": "2018-05-31"
@@ -1184,7 +1184,7 @@
     "Probability": 0.5496935843,
     "Warning_ID": "BR_84",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.3207,
     "Event_Date": "2018-05-17"
@@ -1198,7 +1198,7 @@
     "Probability": 0.8116529646,
     "Warning_ID": "BR_85",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-29"
@@ -1212,7 +1212,7 @@
     "Probability": 0.5220780828,
     "Warning_ID": "BR_86",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3,
     "Event_Date": "2018-05-28"
@@ -1226,7 +1226,7 @@
     "Probability": 0.615769538,
     "Warning_ID": "BR_87",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.565,
     "Event_Date": "2018-05-07"
@@ -1240,7 +1240,7 @@
     "Probability": 0.5853928635,
     "Warning_ID": "BR_88",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-03"
@@ -1254,7 +1254,7 @@
     "Probability": 0.8998644089,
     "Warning_ID": "BR_89",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3366,
     "Event_Date": "2018-05-29"
@@ -1268,7 +1268,7 @@
     "Probability": 0.6072141907,
     "Warning_ID": "BR_90",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-28"
@@ -1282,7 +1282,7 @@
     "Probability": 0.7498815652,
     "Warning_ID": "BR_91",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0586,
     "Event_Date": "2018-05-30"
@@ -1296,7 +1296,7 @@
     "Probability": 0.6595181747,
     "Warning_ID": "BR_92",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-28"
@@ -1310,7 +1310,7 @@
     "Probability": 0.9976932782,
     "Warning_ID": "BR_93",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.4328,
     "Event_Date": "2018-05-22"
@@ -1324,7 +1324,7 @@
     "Probability": 0.7268543298,
     "Warning_ID": "BR_94",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3149,
     "Event_Date": "2018-05-31"
@@ -1338,7 +1338,7 @@
     "Probability": 0.7728257693,
     "Warning_ID": "BR_95",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-17"
@@ -1352,7 +1352,7 @@
     "Probability": 0.8845143189,
     "Warning_ID": "BR_96",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.8881,
     "Event_Date": "2018-05-10"
@@ -1366,7 +1366,7 @@
     "Probability": 0.7329618108,
     "Warning_ID": "BR_97",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.423,
     "Event_Date": "2018-05-14"
@@ -1380,7 +1380,7 @@
     "Probability": 0.9691252479,
     "Warning_ID": "BR_98",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0833,
     "Event_Date": "2018-05-19"
@@ -1394,7 +1394,7 @@
     "Probability": 0.6063798442,
     "Warning_ID": "BR_99",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3209,
     "Event_Date": "2018-05-27"
@@ -1408,7 +1408,7 @@
     "Probability": 0.8021033874,
     "Warning_ID": "BR_100",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.05,
     "Event_Date": "2018-05-16"
@@ -1422,7 +1422,7 @@
     "Probability": 0.5879646284,
     "Warning_ID": "BR_101",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-18"
@@ -1436,7 +1436,7 @@
     "Probability": 0.6323142742,
     "Warning_ID": "BR_102",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6739,
     "Event_Date": "2018-05-26"
@@ -1450,7 +1450,7 @@
     "Probability": 0.649934919,
     "Warning_ID": "BR_103",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4205,
     "Event_Date": "2018-05-03"
@@ -1464,7 +1464,7 @@
     "Probability": 0.9609923871,
     "Warning_ID": "BR_104",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.394,
     "Event_Date": "2018-05-14"
@@ -1478,7 +1478,7 @@
     "Probability": 0.7746015497,
     "Warning_ID": "BR_105",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3606,
     "Event_Date": "2018-05-12"
@@ -1492,7 +1492,7 @@
     "Probability": 0.5429192807,
     "Warning_ID": "BR_106",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Wāsiţ",
     "Latitude": 32.75,
     "Event_Date": "2018-05-24"
@@ -1506,7 +1506,7 @@
     "Probability": 0.843696231,
     "Warning_ID": "BR_107",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3515,
     "Event_Date": "2018-05-09"
@@ -1520,7 +1520,7 @@
     "Probability": 0.684312608,
     "Warning_ID": "BR_108",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 35.8021,
     "Event_Date": "2018-05-25"
@@ -1534,7 +1534,7 @@
     "Probability": 0.832142152,
     "Warning_ID": "BR_109",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-19"
@@ -1548,7 +1548,7 @@
     "Probability": 0.6038700763,
     "Warning_ID": "BR_110",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.8625,
     "Event_Date": "2018-05-08"
@@ -1562,7 +1562,7 @@
     "Probability": 0.9054752941,
     "Warning_ID": "BR_111",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6924,
     "Event_Date": "2018-05-23"
@@ -1576,7 +1576,7 @@
     "Probability": 0.850442653,
     "Warning_ID": "BR_112",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3547,
     "Event_Date": "2018-05-19"
@@ -1590,7 +1590,7 @@
     "Probability": 0.8025849182,
     "Warning_ID": "BR_113",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4023,
     "Event_Date": "2018-05-02"
@@ -1604,7 +1604,7 @@
     "Probability": 0.8810898234,
     "Warning_ID": "BR_114",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.8881,
     "Event_Date": "2018-05-29"
@@ -1618,7 +1618,7 @@
     "Probability": 0.545606511,
     "Warning_ID": "BR_115",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-02"
@@ -1632,7 +1632,7 @@
     "Probability": 0.6841198886,
     "Warning_ID": "BR_116",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 32.4204,
     "Event_Date": "2018-05-03"
@@ -1646,7 +1646,7 @@
     "Probability": 0.9109028503,
     "Warning_ID": "BR_117",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-03"
@@ -1660,7 +1660,7 @@
     "Probability": 0.7248433144,
     "Warning_ID": "BR_118",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-15"
@@ -1674,7 +1674,7 @@
     "Probability": 0.6519054922,
     "Warning_ID": "BR_119",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.5292,
     "Event_Date": "2018-05-01"
@@ -1688,7 +1688,7 @@
     "Probability": 0.9758421073,
     "Warning_ID": "BR_120",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Qādisīyah",
     "Latitude": 31.8065,
     "Event_Date": "2018-05-21"
@@ -1702,7 +1702,7 @@
     "Probability": 0.7355064771,
     "Warning_ID": "BR_121",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-11"
@@ -1716,7 +1716,7 @@
     "Probability": 0.9698952109,
     "Warning_ID": "BR_122",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3423,
     "Event_Date": "2018-05-05"
@@ -1730,7 +1730,7 @@
     "Probability": 0.9399062784,
     "Warning_ID": "BR_123",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.5729,
     "Event_Date": "2018-05-02"
@@ -1744,7 +1744,7 @@
     "Probability": 0.5725165127,
     "Warning_ID": "BR_124",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-09"
@@ -1758,7 +1758,7 @@
     "Probability": 0.8073724627,
     "Warning_ID": "BR_125",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0167,
     "Event_Date": "2018-05-08"
@@ -1772,7 +1772,7 @@
     "Probability": 0.5516241952,
     "Warning_ID": "BR_126",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-09"
@@ -1786,7 +1786,7 @@
     "Probability": 0.9747419746,
     "Warning_ID": "BR_127",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 35.5396,
     "Event_Date": "2018-05-03"
@@ -1800,7 +1800,7 @@
     "Probability": 0.8261775002,
     "Warning_ID": "BR_128",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2513,
     "Event_Date": "2018-05-06"
@@ -1814,7 +1814,7 @@
     "Probability": 0.7944376106,
     "Warning_ID": "BR_129",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2602,
     "Event_Date": "2018-05-21"
@@ -1828,7 +1828,7 @@
     "Probability": 0.6205438122,
     "Warning_ID": "BR_130",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3556,
     "Event_Date": "2018-05-28"
@@ -1842,7 +1842,7 @@
     "Probability": 0.5996754925,
     "Warning_ID": "BR_131",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-12"
@@ -1856,7 +1856,7 @@
     "Probability": 0.5579119783,
     "Warning_ID": "BR_132",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3098,
     "Event_Date": "2018-05-27"
@@ -1870,7 +1870,7 @@
     "Probability": 0.6919082599,
     "Warning_ID": "BR_133",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.2754,
     "Event_Date": "2018-05-28"
@@ -1884,7 +1884,7 @@
     "Probability": 0.9217639977,
     "Warning_ID": "BR_134",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4327,
     "Event_Date": "2018-05-05"
@@ -1898,7 +1898,7 @@
     "Probability": 0.505485695,
     "Warning_ID": "BR_135",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-25"
@@ -1912,7 +1912,7 @@
     "Probability": 0.9376224942,
     "Warning_ID": "BR_136",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-16"
@@ -1926,7 +1926,7 @@
     "Probability": 0.9989471804,
     "Warning_ID": "BR_137",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1004,
     "Event_Date": "2018-05-02"
@@ -1940,7 +1940,7 @@
     "Probability": 0.667107391,
     "Warning_ID": "BR_138",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.9786,
     "Event_Date": "2018-05-12"
@@ -1954,7 +1954,7 @@
     "Probability": 0.6155226484,
     "Warning_ID": "BR_139",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-28"
@@ -1968,7 +1968,7 @@
     "Probability": 0.7713718459,
     "Warning_ID": "BR_140",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.1953,
     "Event_Date": "2018-05-20"
@@ -1982,7 +1982,7 @@
     "Probability": 0.9578273628,
     "Warning_ID": "BR_141",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.6763,
     "Event_Date": "2018-05-18"
@@ -1996,7 +1996,7 @@
     "Probability": 0.5154535512,
     "Warning_ID": "BR_142",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.6567,
     "Event_Date": "2018-05-22"
@@ -2010,7 +2010,7 @@
     "Probability": 0.5108469487,
     "Warning_ID": "BR_143",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2395,
     "Event_Date": "2018-05-15"
@@ -2024,7 +2024,7 @@
     "Probability": 0.6622298155,
     "Warning_ID": "BR_144",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-16"
@@ -2038,7 +2038,7 @@
     "Probability": 0.9058308643,
     "Warning_ID": "BR_145",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.6679,
     "Event_Date": "2018-05-20"
@@ -2052,7 +2052,7 @@
     "Probability": 0.9332400952,
     "Warning_ID": "BR_146",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.7126,
     "Event_Date": "2018-05-05"
@@ -2066,7 +2066,7 @@
     "Probability": 0.5947838872,
     "Warning_ID": "BR_147",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-30"
@@ -2080,7 +2080,7 @@
     "Probability": 0.5414663014,
     "Warning_ID": "BR_148",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.5448,
     "Event_Date": "2018-05-05"
@@ -2094,7 +2094,7 @@
     "Probability": 0.9257282096,
     "Warning_ID": "BR_149",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2395,
     "Event_Date": "2018-05-17"
@@ -2108,7 +2108,7 @@
     "Probability": 0.7618834161,
     "Warning_ID": "BR_150",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Basra Governorate",
     "Latitude": 31.0014,
     "Event_Date": "2018-05-03"
@@ -2122,7 +2122,7 @@
     "Probability": 0.6041209872,
     "Warning_ID": "BR_151",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-26"
@@ -2136,7 +2136,7 @@
     "Probability": 0.6714955236,
     "Warning_ID": "BR_152",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.7968,
     "Event_Date": "2018-05-11"
@@ -2150,7 +2150,7 @@
     "Probability": 0.8846277127,
     "Warning_ID": "BR_153",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Karbalāʼ",
     "Latitude": 32.616,
     "Event_Date": "2018-05-14"
@@ -2164,7 +2164,7 @@
     "Probability": 0.9041318017,
     "Warning_ID": "BR_154",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0048,
     "Event_Date": "2018-05-01"
@@ -2178,7 +2178,7 @@
     "Probability": 0.7413183286,
     "Warning_ID": "BR_155",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-06"
@@ -2192,7 +2192,7 @@
     "Probability": 0.9504779777,
     "Warning_ID": "BR_156",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2523,
     "Event_Date": "2018-05-27"
@@ -2206,7 +2206,7 @@
     "Probability": 0.9761801082,
     "Warning_ID": "BR_157",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-28"
@@ -2220,7 +2220,7 @@
     "Probability": 0.6626508998,
     "Warning_ID": "BR_158",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4245,
     "Event_Date": "2018-05-26"
@@ -2234,7 +2234,7 @@
     "Probability": 0.9811890097,
     "Warning_ID": "BR_159",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-07"
@@ -2248,7 +2248,7 @@
     "Probability": 0.7213870205,
     "Warning_ID": "BR_160",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2937,
     "Event_Date": "2018-05-25"
@@ -2262,7 +2262,7 @@
     "Probability": 0.7331187907,
     "Warning_ID": "BR_161",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.1936,
     "Event_Date": "2018-05-25"
@@ -2276,7 +2276,7 @@
     "Probability": 0.6920908007,
     "Warning_ID": "BR_162",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.904,
     "Event_Date": "2018-05-02"
@@ -2290,7 +2290,7 @@
     "Probability": 0.5258699439,
     "Warning_ID": "BR_163",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.129,
     "Event_Date": "2018-05-17"
@@ -2304,7 +2304,7 @@
     "Probability": 0.9651794097,
     "Warning_ID": "BR_164",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.8107,
     "Event_Date": "2018-05-27"
@@ -2318,7 +2318,7 @@
     "Probability": 0.9204702499,
     "Warning_ID": "BR_165",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3343,
     "Event_Date": "2018-05-30"
@@ -2332,7 +2332,7 @@
     "Probability": 0.9044722952,
     "Warning_ID": "BR_166",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.6366,
     "Event_Date": "2018-05-31"
@@ -2346,7 +2346,7 @@
     "Probability": 0.5507722791,
     "Warning_ID": "BR_167",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 34.9133,
     "Event_Date": "2018-05-13"
@@ -2360,7 +2360,7 @@
     "Probability": 0.7661018208,
     "Warning_ID": "BR_168",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2262,
     "Event_Date": "2018-05-09"
@@ -2374,7 +2374,7 @@
     "Probability": 0.7690005493,
     "Warning_ID": "BR_169",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-06"
@@ -2388,7 +2388,7 @@
     "Probability": 0.9226381625,
     "Warning_ID": "BR_170",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.3207,
     "Event_Date": "2018-05-27"
@@ -2402,7 +2402,7 @@
     "Probability": 0.6266271631,
     "Warning_ID": "BR_171",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-15"
@@ -2416,7 +2416,7 @@
     "Probability": 0.6691100696,
     "Warning_ID": "BR_172",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.327,
     "Event_Date": "2018-05-09"
@@ -2430,7 +2430,7 @@
     "Probability": 0.8012594393,
     "Warning_ID": "BR_173",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-24"
@@ -2444,7 +2444,7 @@
     "Probability": 0.5463927228,
     "Warning_ID": "BR_174",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3442,
     "Event_Date": "2018-05-07"
@@ -2458,7 +2458,7 @@
     "Probability": 0.6235382577,
     "Warning_ID": "BR_175",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.6763,
     "Event_Date": "2018-05-26"
@@ -2472,7 +2472,7 @@
     "Probability": 0.6153676151,
     "Warning_ID": "BR_176",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-18"
@@ -2486,7 +2486,7 @@
     "Probability": 0.8341743888,
     "Warning_ID": "BR_177",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0833,
     "Event_Date": "2018-05-14"
@@ -2500,7 +2500,7 @@
     "Probability": 0.9112927661,
     "Warning_ID": "BR_178",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2731,
     "Event_Date": "2018-05-20"
@@ -2514,7 +2514,7 @@
     "Probability": 0.6808871469,
     "Warning_ID": "BR_179",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2395,
     "Event_Date": "2018-05-12"
@@ -2528,7 +2528,7 @@
     "Probability": 0.6509824832,
     "Warning_ID": "BR_180",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4206,
     "Event_Date": "2018-05-21"
@@ -2542,7 +2542,7 @@
     "Probability": 0.6388397075,
     "Warning_ID": "BR_181",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2259,
     "Event_Date": "2018-05-31"
@@ -2556,7 +2556,7 @@
     "Probability": 0.7322425924,
     "Warning_ID": "BR_182",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0131,
     "Event_Date": "2018-05-25"
@@ -2570,7 +2570,7 @@
     "Probability": 0.8244704047,
     "Warning_ID": "BR_183",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-29"
@@ -2584,7 +2584,7 @@
     "Probability": 0.5866290825,
     "Warning_ID": "BR_184",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "As Sulaymānīyah",
     "Latitude": 35.7167,
     "Event_Date": "2018-05-31"
@@ -2598,7 +2598,7 @@
     "Probability": 0.5128047913,
     "Warning_ID": "BR_185",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.6807,
     "Event_Date": "2018-05-31"
@@ -2612,7 +2612,7 @@
     "Probability": 0.6189343764,
     "Warning_ID": "BR_186",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3039,
     "Event_Date": "2018-05-16"
@@ -2626,7 +2626,7 @@
     "Probability": 0.9275560702,
     "Warning_ID": "BR_187",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-08"
@@ -2640,7 +2640,7 @@
     "Probability": 0.9254648416,
     "Warning_ID": "BR_188",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-01"
@@ -2654,7 +2654,7 @@
     "Probability": 0.8749622337,
     "Warning_ID": "BR_189",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-24"
@@ -2668,7 +2668,7 @@
     "Probability": 0.5911694887,
     "Warning_ID": "BR_190",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-07"
@@ -2682,7 +2682,7 @@
     "Probability": 0.8159095939,
     "Warning_ID": "BR_191",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3379,
     "Event_Date": "2018-05-30"
@@ -2696,7 +2696,7 @@
     "Probability": 0.5990808712,
     "Warning_ID": "BR_192",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.8663,
     "Event_Date": "2018-05-19"
@@ -2710,7 +2710,7 @@
     "Probability": 0.9515869199,
     "Warning_ID": "BR_193",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6739,
     "Event_Date": "2018-05-24"
@@ -2724,7 +2724,7 @@
     "Probability": 0.5397833801,
     "Warning_ID": "BR_194",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-22"
@@ -2738,7 +2738,7 @@
     "Probability": 0.6484792492,
     "Warning_ID": "BR_195",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3248,
     "Event_Date": "2018-05-13"
@@ -2752,7 +2752,7 @@
     "Probability": 0.7071447575,
     "Warning_ID": "BR_196",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0843,
     "Event_Date": "2018-05-22"
@@ -2766,7 +2766,7 @@
     "Probability": 0.5463241093,
     "Warning_ID": "BR_197",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-08"
@@ -2780,7 +2780,7 @@
     "Probability": 0.9925410559,
     "Warning_ID": "BR_198",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-27"
@@ -2794,7 +2794,7 @@
     "Probability": 0.7527926639,
     "Warning_ID": "BR_199",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.5292,
     "Event_Date": "2018-05-30"
@@ -2808,7 +2808,7 @@
     "Probability": 0.7284741753,
     "Warning_ID": "BR_200",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.8512,
     "Event_Date": "2018-05-11"
@@ -2822,7 +2822,7 @@
     "Probability": 0.7949588451,
     "Warning_ID": "BR_201",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-07"
@@ -2836,7 +2836,7 @@
     "Probability": 0.7910824647,
     "Warning_ID": "BR_202",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0,
     "Event_Date": "2018-05-19"
@@ -2850,7 +2850,7 @@
     "Probability": 0.5706858553,
     "Warning_ID": "BR_203",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-10"
@@ -2864,7 +2864,7 @@
     "Probability": 0.9160442707,
     "Warning_ID": "BR_204",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-02"
@@ -2878,7 +2878,7 @@
     "Probability": 0.5022913759,
     "Warning_ID": "BR_205",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-07"
@@ -2892,7 +2892,7 @@
     "Probability": 0.6947993822,
     "Warning_ID": "BR_206",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.6782,
     "Event_Date": "2018-05-22"
@@ -2906,7 +2906,7 @@
     "Probability": 0.5216993791,
     "Warning_ID": "BR_207",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.5127,
     "Event_Date": "2018-05-18"
@@ -2920,7 +2920,7 @@
     "Probability": 0.9760158146,
     "Warning_ID": "BR_208",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6739,
     "Event_Date": "2018-05-31"
@@ -2934,7 +2934,7 @@
     "Probability": 0.7847984175,
     "Warning_ID": "BR_209",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2262,
     "Event_Date": "2018-05-25"
@@ -2948,7 +2948,7 @@
     "Probability": 0.8592819598,
     "Warning_ID": "BR_210",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-26"
@@ -2962,7 +2962,7 @@
     "Probability": 0.9540042261,
     "Warning_ID": "BR_211",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-29"
@@ -2976,7 +2976,7 @@
     "Probability": 0.8994014442,
     "Warning_ID": "BR_212",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-17"
@@ -2990,7 +2990,7 @@
     "Probability": 0.8552993257,
     "Warning_ID": "BR_213",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-23"
@@ -3004,7 +3004,7 @@
     "Probability": 0.7740871363,
     "Warning_ID": "BR_214",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Qādisīyah",
     "Latitude": 31.9954,
     "Event_Date": "2018-05-23"
@@ -3018,7 +3018,7 @@
     "Probability": 0.6204633759,
     "Warning_ID": "BR_215",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.6493,
     "Event_Date": "2018-05-29"
@@ -3032,7 +3032,7 @@
     "Probability": 0.8061533366,
     "Warning_ID": "BR_216",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.6366,
     "Event_Date": "2018-05-31"
@@ -3046,7 +3046,7 @@
     "Probability": 0.8882776727,
     "Warning_ID": "BR_217",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-26"
@@ -3060,7 +3060,7 @@
     "Probability": 0.668802248,
     "Warning_ID": "BR_218",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.1303,
     "Event_Date": "2018-05-19"
@@ -3074,7 +3074,7 @@
     "Probability": 0.5387858725,
     "Warning_ID": "BR_219",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.7484,
     "Event_Date": "2018-05-24"
@@ -3088,7 +3088,7 @@
     "Probability": 0.9171945445,
     "Warning_ID": "BR_220",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2937,
     "Event_Date": "2018-05-21"
@@ -3102,7 +3102,7 @@
     "Probability": 0.7509861604,
     "Warning_ID": "BR_221",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.9686,
     "Event_Date": "2018-05-14"
@@ -3116,7 +3116,7 @@
     "Probability": 0.8328983539,
     "Warning_ID": "BR_222",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3343,
     "Event_Date": "2018-05-09"
@@ -3130,7 +3130,7 @@
     "Probability": 0.599273976,
     "Warning_ID": "BR_223",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.9282,
     "Event_Date": "2018-05-29"
@@ -3144,7 +3144,7 @@
     "Probability": 0.7350909557,
     "Warning_ID": "BR_224",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 34.9779,
     "Event_Date": "2018-05-02"
@@ -3158,7 +3158,7 @@
     "Probability": 0.5926328572,
     "Warning_ID": "BR_225",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7256,
     "Event_Date": "2018-05-18"
@@ -3172,7 +3172,7 @@
     "Probability": 0.864549088,
     "Warning_ID": "BR_226",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-24"
@@ -3186,7 +3186,7 @@
     "Probability": 0.5303223776,
     "Warning_ID": "BR_227",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2377,
     "Event_Date": "2018-05-25"
@@ -3200,7 +3200,7 @@
     "Probability": 0.7818989767,
     "Warning_ID": "BR_228",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Karbalāʼ",
     "Latitude": 32.616,
     "Event_Date": "2018-05-11"
@@ -3214,7 +3214,7 @@
     "Probability": 0.9208915056,
     "Warning_ID": "BR_229",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2919,
     "Event_Date": "2018-05-15"
@@ -3228,7 +3228,7 @@
     "Probability": 0.9525251469,
     "Warning_ID": "BR_230",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-19"
@@ -3242,7 +3242,7 @@
     "Probability": 0.615390138,
     "Warning_ID": "BR_231",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.1571,
     "Event_Date": "2018-05-15"
@@ -3256,7 +3256,7 @@
     "Probability": 0.665291245,
     "Warning_ID": "BR_232",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-12"
@@ -3270,7 +3270,7 @@
     "Probability": 0.5404360846,
     "Warning_ID": "BR_233",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-30"
@@ -3284,7 +3284,7 @@
     "Probability": 0.7254003291,
     "Warning_ID": "BR_234",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-08"
@@ -3298,7 +3298,7 @@
     "Probability": 0.5601045655,
     "Warning_ID": "BR_235",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-19"
@@ -3312,7 +3312,7 @@
     "Probability": 0.6495387002,
     "Warning_ID": "BR_236",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6739,
     "Event_Date": "2018-05-24"
@@ -3326,7 +3326,7 @@
     "Probability": 0.5183154915,
     "Warning_ID": "BR_237",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-15"
@@ -3340,7 +3340,7 @@
     "Probability": 0.862510622,
     "Warning_ID": "BR_238",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-24"
@@ -3354,7 +3354,7 @@
     "Probability": 0.799086338,
     "Warning_ID": "BR_239",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.6333,
     "Event_Date": "2018-05-01"
@@ -3368,7 +3368,7 @@
     "Probability": 0.5977829696,
     "Warning_ID": "BR_240",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.0051,
     "Event_Date": "2018-05-12"
@@ -3382,7 +3382,7 @@
     "Probability": 0.9727812492,
     "Warning_ID": "BR_241",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4941,
     "Event_Date": "2018-05-04"
@@ -3396,7 +3396,7 @@
     "Probability": 0.5187975867,
     "Warning_ID": "BR_242",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.695,
     "Event_Date": "2018-05-16"
@@ -3410,7 +3410,7 @@
     "Probability": 0.9701489395,
     "Warning_ID": "BR_243",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-22"
@@ -3424,7 +3424,7 @@
     "Probability": 0.6750464774,
     "Warning_ID": "BR_244",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.0298,
     "Event_Date": "2018-05-17"
@@ -3438,7 +3438,7 @@
     "Probability": 0.9828366096,
     "Warning_ID": "BR_245",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2395,
     "Event_Date": "2018-05-30"
@@ -3452,7 +3452,7 @@
     "Probability": 0.668075569,
     "Warning_ID": "BR_246",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-02"
@@ -3466,7 +3466,7 @@
     "Probability": 0.9040825936,
     "Warning_ID": "BR_247",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.0528,
     "Event_Date": "2018-05-20"
@@ -3480,7 +3480,7 @@
     "Probability": 0.6954735558,
     "Warning_ID": "BR_248",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 32.9666,
     "Event_Date": "2018-05-11"
@@ -3494,7 +3494,7 @@
     "Probability": 0.89376659,
     "Warning_ID": "BR_249",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2304,
     "Event_Date": "2018-05-26"
@@ -3508,7 +3508,7 @@
     "Probability": 0.9513068509,
     "Warning_ID": "BR_250",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-15"
@@ -3522,7 +3522,7 @@
     "Probability": 0.7094430796,
     "Warning_ID": "BR_251",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-28"
@@ -3536,7 +3536,7 @@
     "Probability": 0.9122251361,
     "Warning_ID": "BR_252",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-07"
@@ -3550,7 +3550,7 @@
     "Probability": 0.9110138733,
     "Warning_ID": "BR_253",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4232,
     "Event_Date": "2018-05-25"
@@ -3564,7 +3564,7 @@
     "Probability": 0.9187282279,
     "Warning_ID": "BR_254",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.8512,
     "Event_Date": "2018-05-02"
@@ -3578,7 +3578,7 @@
     "Probability": 0.6371413489,
     "Warning_ID": "BR_255",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.327,
     "Event_Date": "2018-05-16"
@@ -3592,7 +3592,7 @@
     "Probability": 0.8179208088,
     "Warning_ID": "BR_256",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.404,
     "Event_Date": "2018-05-01"
@@ -3606,7 +3606,7 @@
     "Probability": 0.856431139,
     "Warning_ID": "BR_257",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3454,
     "Event_Date": "2018-05-15"
@@ -3620,7 +3620,7 @@
     "Probability": 0.7939856799,
     "Warning_ID": "BR_258",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0337,
     "Event_Date": "2018-05-07"
@@ -3634,7 +3634,7 @@
     "Probability": 0.7025494761,
     "Warning_ID": "BR_259",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.7396,
     "Event_Date": "2018-05-02"
@@ -3648,7 +3648,7 @@
     "Probability": 0.9283107006,
     "Warning_ID": "BR_260",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-08"
@@ -3662,7 +3662,7 @@
     "Probability": 0.6832639676,
     "Warning_ID": "BR_261",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-08"
@@ -3676,7 +3676,7 @@
     "Probability": 0.7598065292,
     "Warning_ID": "BR_262",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-01"
@@ -3690,7 +3690,7 @@
     "Probability": 0.885594141,
     "Warning_ID": "BR_263",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-14"
@@ -3704,7 +3704,7 @@
     "Probability": 0.8113498705,
     "Warning_ID": "BR_264",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3963,
     "Event_Date": "2018-05-04"
@@ -3718,7 +3718,7 @@
     "Probability": 0.6163173213,
     "Warning_ID": "BR_265",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.285,
     "Event_Date": "2018-05-07"
@@ -3732,7 +3732,7 @@
     "Probability": 0.7493948937,
     "Warning_ID": "BR_266",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-24"
@@ -3746,7 +3746,7 @@
     "Probability": 0.9646918972,
     "Warning_ID": "BR_267",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-02"
@@ -3760,7 +3760,7 @@
     "Probability": 0.5021056258,
     "Warning_ID": "BR_268",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-23"
@@ -3774,7 +3774,7 @@
     "Probability": 0.6874291641,
     "Warning_ID": "BR_269",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2395,
     "Event_Date": "2018-05-10"
@@ -3788,7 +3788,7 @@
     "Probability": 0.7421930101,
     "Warning_ID": "BR_270",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3682,
     "Event_Date": "2018-05-05"
@@ -3802,7 +3802,7 @@
     "Probability": 0.5854159929,
     "Warning_ID": "BR_271",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7256,
     "Event_Date": "2018-05-05"
@@ -3816,7 +3816,7 @@
     "Probability": 0.5992560215,
     "Warning_ID": "BR_272",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3255,
     "Event_Date": "2018-05-06"
@@ -3830,7 +3830,7 @@
     "Probability": 0.5772854227,
     "Warning_ID": "BR_273",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2259,
     "Event_Date": "2018-05-07"
@@ -3844,7 +3844,7 @@
     "Probability": 0.7258772597,
     "Warning_ID": "BR_274",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.6722,
     "Event_Date": "2018-05-07"
@@ -3858,7 +3858,7 @@
     "Probability": 0.517270608,
     "Warning_ID": "BR_275",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2629,
     "Event_Date": "2018-05-20"
@@ -3872,7 +3872,7 @@
     "Probability": 0.9078103058,
     "Warning_ID": "BR_276",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-01"
@@ -3886,7 +3886,7 @@
     "Probability": 0.6887349882,
     "Warning_ID": "BR_277",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.4285,
     "Event_Date": "2018-05-01"
@@ -3900,7 +3900,7 @@
     "Probability": 0.6568874741,
     "Warning_ID": "BR_278",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3667,
     "Event_Date": "2018-05-26"
@@ -3914,7 +3914,7 @@
     "Probability": 0.5919928652,
     "Warning_ID": "BR_279",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-31"
@@ -3928,7 +3928,7 @@
     "Probability": 0.5889982967,
     "Warning_ID": "BR_280",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2259,
     "Event_Date": "2018-05-23"
@@ -3942,7 +3942,7 @@
     "Probability": 0.6881809199,
     "Warning_ID": "BR_281",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "As Sulaymānīyah",
     "Latitude": 35.9667,
     "Event_Date": "2018-05-20"
@@ -3956,7 +3956,7 @@
     "Probability": 0.9943525477,
     "Warning_ID": "BR_282",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3179,
     "Event_Date": "2018-05-23"
@@ -3970,7 +3970,7 @@
     "Probability": 0.7773019365,
     "Warning_ID": "BR_283",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-06"
@@ -3984,7 +3984,7 @@
     "Probability": 0.7041193646,
     "Warning_ID": "BR_284",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.2449,
     "Event_Date": "2018-05-12"
@@ -3998,7 +3998,7 @@
     "Probability": 0.9572801589,
     "Warning_ID": "BR_285",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3883,
     "Event_Date": "2018-05-09"
@@ -4012,7 +4012,7 @@
     "Probability": 0.811869033,
     "Warning_ID": "BR_286",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3922,
     "Event_Date": "2018-05-06"
@@ -4026,7 +4026,7 @@
     "Probability": 0.742371393,
     "Warning_ID": "BR_287",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-13"
@@ -4040,7 +4040,7 @@
     "Probability": 0.9165518871,
     "Warning_ID": "BR_288",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3682,
     "Event_Date": "2018-05-12"
@@ -4054,7 +4054,7 @@
     "Probability": 0.9631179994,
     "Warning_ID": "BR_289",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "As Sulaymānīyah",
     "Latitude": 35.8274,
     "Event_Date": "2018-05-15"
@@ -4068,7 +4068,7 @@
     "Probability": 0.7809944849,
     "Warning_ID": "BR_290",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-22"
@@ -4082,7 +4082,7 @@
     "Probability": 0.569719228,
     "Warning_ID": "BR_291",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1003,
     "Event_Date": "2018-05-29"
@@ -4096,7 +4096,7 @@
     "Probability": 0.694830196,
     "Warning_ID": "BR_292",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.0189,
     "Event_Date": "2018-05-28"
@@ -4110,7 +4110,7 @@
     "Probability": 0.9818747756,
     "Warning_ID": "BR_293",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-08"
@@ -4124,7 +4124,7 @@
     "Probability": 0.5161583969,
     "Warning_ID": "BR_294",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.8107,
     "Event_Date": "2018-05-20"
@@ -4138,7 +4138,7 @@
     "Probability": 0.6098256256,
     "Warning_ID": "BR_295",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7273,
     "Event_Date": "2018-05-28"
@@ -4152,7 +4152,7 @@
     "Probability": 0.5626061765,
     "Warning_ID": "BR_296",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6739,
     "Event_Date": "2018-05-26"
@@ -4166,7 +4166,7 @@
     "Probability": 0.6546089834,
     "Warning_ID": "BR_297",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-02"
@@ -4180,7 +4180,7 @@
     "Probability": 0.746639347,
     "Warning_ID": "BR_298",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.9686,
     "Event_Date": "2018-05-16"
@@ -4194,7 +4194,7 @@
     "Probability": 0.719126593,
     "Warning_ID": "BR_299",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3297,
     "Event_Date": "2018-05-16"
@@ -4208,7 +4208,7 @@
     "Probability": 0.6452787581,
     "Warning_ID": "BR_300",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.1953,
     "Event_Date": "2018-05-08"
@@ -4222,7 +4222,7 @@
     "Probability": 0.8809198993,
     "Warning_ID": "BR_301",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-24"
@@ -4236,7 +4236,7 @@
     "Probability": 0.617506838,
     "Warning_ID": "BR_302",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2296,
     "Event_Date": "2018-05-17"
@@ -4250,7 +4250,7 @@
     "Probability": 0.9386377763,
     "Warning_ID": "BR_303",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.6513,
     "Event_Date": "2018-05-23"
@@ -4264,7 +4264,7 @@
     "Probability": 0.9973516745,
     "Warning_ID": "BR_304",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-08"
@@ -4278,7 +4278,7 @@
     "Probability": 0.8813126621,
     "Warning_ID": "BR_305",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-05"
@@ -4292,7 +4292,7 @@
     "Probability": 0.8751555411,
     "Warning_ID": "BR_306",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.3044,
     "Event_Date": "2018-05-14"
@@ -4306,7 +4306,7 @@
     "Probability": 0.5695277064,
     "Warning_ID": "BR_307",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4877,
     "Event_Date": "2018-05-14"
@@ -4320,7 +4320,7 @@
     "Probability": 0.7924889141,
     "Warning_ID": "BR_308",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.1959,
     "Event_Date": "2018-05-11"
@@ -4334,7 +4334,7 @@
     "Probability": 0.5102003274,
     "Warning_ID": "BR_309",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2584,
     "Event_Date": "2018-05-19"
@@ -4348,7 +4348,7 @@
     "Probability": 0.706338751,
     "Warning_ID": "BR_310",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2761,
     "Event_Date": "2018-05-29"
@@ -4362,7 +4362,7 @@
     "Probability": 0.6397147783,
     "Warning_ID": "BR_311",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-14"
@@ -4376,7 +4376,7 @@
     "Probability": 0.7760798222,
     "Warning_ID": "BR_312",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-19"
@@ -4390,7 +4390,7 @@
     "Probability": 0.6310069096,
     "Warning_ID": "BR_313",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3958,
     "Event_Date": "2018-05-18"
@@ -4404,7 +4404,7 @@
     "Probability": 0.5746257687,
     "Warning_ID": "BR_314",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-03"
@@ -4418,7 +4418,7 @@
     "Probability": 0.8745314589,
     "Warning_ID": "BR_315",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-13"
@@ -4432,7 +4432,7 @@
     "Probability": 0.5396205013,
     "Warning_ID": "BR_316",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Dhi Qar",
     "Latitude": 30.7806,
     "Event_Date": "2018-05-30"
@@ -4446,7 +4446,7 @@
     "Probability": 0.5279774422,
     "Warning_ID": "BR_317",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.9799,
     "Event_Date": "2018-05-22"
@@ -4460,7 +4460,7 @@
     "Probability": 0.8328674931,
     "Warning_ID": "BR_318",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-22"
@@ -4474,7 +4474,7 @@
     "Probability": 0.6657900041,
     "Warning_ID": "BR_319",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.2395,
     "Event_Date": "2018-05-27"
@@ -4488,7 +4488,7 @@
     "Probability": 0.6632051668,
     "Warning_ID": "BR_320",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-04"
@@ -4502,7 +4502,7 @@
     "Probability": 0.7305016139,
     "Warning_ID": "BR_321",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.9786,
     "Event_Date": "2018-05-05"
@@ -4516,7 +4516,7 @@
     "Probability": 0.7086443503,
     "Warning_ID": "BR_322",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-23"
@@ -4530,7 +4530,7 @@
     "Probability": 0.7860460518,
     "Warning_ID": "BR_323",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7644,
     "Event_Date": "2018-05-03"
@@ -4544,7 +4544,7 @@
     "Probability": 0.9041690268,
     "Warning_ID": "BR_324",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.245,
     "Event_Date": "2018-05-20"
@@ -4558,7 +4558,7 @@
     "Probability": 0.7766022671,
     "Warning_ID": "BR_325",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-18"
@@ -4572,7 +4572,7 @@
     "Probability": 0.9921065896,
     "Warning_ID": "BR_326",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3525,
     "Event_Date": "2018-05-26"
@@ -4586,7 +4586,7 @@
     "Probability": 0.8792637647,
     "Warning_ID": "BR_327",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.1348,
     "Event_Date": "2018-05-24"
@@ -4600,7 +4600,7 @@
     "Probability": 0.6575294549,
     "Warning_ID": "BR_328",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3056,
     "Event_Date": "2018-05-20"
@@ -4614,7 +4614,7 @@
     "Probability": 0.908301815,
     "Warning_ID": "BR_329",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3343,
     "Event_Date": "2018-05-22"
@@ -4628,7 +4628,7 @@
     "Probability": 0.6420123693,
     "Warning_ID": "BR_330",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Wāsiţ",
     "Latitude": 32.9256,
     "Event_Date": "2018-05-12"
@@ -4642,7 +4642,7 @@
     "Probability": 0.6711664467,
     "Warning_ID": "BR_331",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.8444,
     "Event_Date": "2018-05-08"
@@ -4656,7 +4656,7 @@
     "Probability": 0.673030023,
     "Warning_ID": "BR_332",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3209,
     "Event_Date": "2018-05-19"
@@ -4670,7 +4670,7 @@
     "Probability": 0.9139252143,
     "Warning_ID": "BR_333",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6169,
     "Event_Date": "2018-05-08"
@@ -4684,7 +4684,7 @@
     "Probability": 0.934706261,
     "Warning_ID": "BR_334",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.736,
     "Event_Date": "2018-05-26"
@@ -4698,7 +4698,7 @@
     "Probability": 0.7229569378,
     "Warning_ID": "BR_335",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3977,
     "Event_Date": "2018-05-14"
@@ -4712,7 +4712,7 @@
     "Probability": 0.7003402158,
     "Warning_ID": "BR_336",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.6942,
     "Event_Date": "2018-05-10"
@@ -4726,7 +4726,7 @@
     "Probability": 0.6388076844,
     "Warning_ID": "BR_337",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0048,
     "Event_Date": "2018-05-08"
@@ -4740,7 +4740,7 @@
     "Probability": 0.6590761469,
     "Warning_ID": "BR_338",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2799,
     "Event_Date": "2018-05-19"
@@ -4754,7 +4754,7 @@
     "Probability": 0.7229966797,
     "Warning_ID": "BR_339",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3812,
     "Event_Date": "2018-05-12"
@@ -4768,7 +4768,7 @@
     "Probability": 0.7485645589,
     "Warning_ID": "BR_340",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2919,
     "Event_Date": "2018-05-14"
@@ -4782,7 +4782,7 @@
     "Probability": 0.6679638921,
     "Warning_ID": "BR_341",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4845,
     "Event_Date": "2018-05-06"
@@ -4796,7 +4796,7 @@
     "Probability": 0.6471782274,
     "Warning_ID": "BR_342",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.5127,
     "Event_Date": "2018-05-21"
@@ -4810,7 +4810,7 @@
     "Probability": 0.7456740838,
     "Warning_ID": "BR_343",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3959,
     "Event_Date": "2018-05-19"
@@ -4824,7 +4824,7 @@
     "Probability": 0.9596819301,
     "Warning_ID": "BR_344",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-19"
@@ -4838,7 +4838,7 @@
     "Probability": 0.7626062836,
     "Warning_ID": "BR_345",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3206,
     "Event_Date": "2018-05-04"
@@ -4852,7 +4852,7 @@
     "Probability": 0.6934270631,
     "Warning_ID": "BR_346",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4277,
     "Event_Date": "2018-05-18"
@@ -4866,7 +4866,7 @@
     "Probability": 0.8014049474,
     "Warning_ID": "BR_347",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3253,
     "Event_Date": "2018-05-15"
@@ -4880,7 +4880,7 @@
     "Probability": 0.672632228,
     "Warning_ID": "BR_348",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3883,
     "Event_Date": "2018-05-04"
@@ -4894,7 +4894,7 @@
     "Probability": 0.7880448273,
     "Warning_ID": "BR_349",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.9977,
     "Event_Date": "2018-05-07"
@@ -4908,7 +4908,7 @@
     "Probability": 0.8378587427,
     "Warning_ID": "BR_350",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-02"
@@ -4922,7 +4922,7 @@
     "Probability": 0.9829840571,
     "Warning_ID": "BR_351",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.161,
     "Event_Date": "2018-05-13"
@@ -4936,7 +4936,7 @@
     "Probability": 0.5139170158,
     "Warning_ID": "BR_352",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0167,
     "Event_Date": "2018-05-16"
@@ -4950,7 +4950,7 @@
     "Probability": 0.5863612723,
     "Warning_ID": "BR_353",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.7988,
     "Event_Date": "2018-05-22"
@@ -4964,7 +4964,7 @@
     "Probability": 0.6003013919,
     "Warning_ID": "BR_354",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0337,
     "Event_Date": "2018-05-25"
@@ -4978,7 +4978,7 @@
     "Probability": 0.7765188173,
     "Warning_ID": "BR_355",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-07"
@@ -4992,7 +4992,7 @@
     "Probability": 0.9271097818,
     "Warning_ID": "BR_356",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.5,
     "Event_Date": "2018-05-09"
@@ -5006,7 +5006,7 @@
     "Probability": 0.8022244134,
     "Warning_ID": "BR_357",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-21"
@@ -5020,7 +5020,7 @@
     "Probability": 0.8207877288,
     "Warning_ID": "BR_358",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2709,
     "Event_Date": "2018-05-10"
@@ -5034,7 +5034,7 @@
     "Probability": 0.7911826705,
     "Warning_ID": "BR_359",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-14"
@@ -5048,7 +5048,7 @@
     "Probability": 0.993202105,
     "Warning_ID": "BR_360",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-13"
@@ -5062,7 +5062,7 @@
     "Probability": 0.8989228878,
     "Warning_ID": "BR_361",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2671,
     "Event_Date": "2018-05-16"
@@ -5076,7 +5076,7 @@
     "Probability": 0.9285305308,
     "Warning_ID": "BR_362",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3,
     "Event_Date": "2018-05-08"
@@ -5090,7 +5090,7 @@
     "Probability": 0.9180036944,
     "Warning_ID": "BR_363",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.351,
     "Event_Date": "2018-05-01"
@@ -5104,7 +5104,7 @@
     "Probability": 0.566508586,
     "Warning_ID": "BR_364",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-17"
@@ -5118,7 +5118,7 @@
     "Probability": 0.8866122507,
     "Warning_ID": "BR_365",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.7027,
     "Event_Date": "2018-05-19"
@@ -5132,7 +5132,7 @@
     "Probability": 0.8301297167,
     "Warning_ID": "BR_366",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7,
     "Event_Date": "2018-05-16"
@@ -5146,7 +5146,7 @@
     "Probability": 0.8213940265,
     "Warning_ID": "BR_367",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-02"
@@ -5160,7 +5160,7 @@
     "Probability": 0.8629295292,
     "Warning_ID": "BR_368",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2259,
     "Event_Date": "2018-05-20"
@@ -5174,7 +5174,7 @@
     "Probability": 0.5179426205,
     "Warning_ID": "BR_369",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3492,
     "Event_Date": "2018-05-10"
@@ -5188,7 +5188,7 @@
     "Probability": 0.6097317932,
     "Warning_ID": "BR_370",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-20"
@@ -5202,7 +5202,7 @@
     "Probability": 0.6132641199,
     "Warning_ID": "BR_371",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.857,
     "Event_Date": "2018-05-02"
@@ -5216,7 +5216,7 @@
     "Probability": 0.8374503518,
     "Warning_ID": "BR_372",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.5729,
     "Event_Date": "2018-05-26"
@@ -5230,7 +5230,7 @@
     "Probability": 0.9915858348,
     "Warning_ID": "BR_373",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.342,
     "Event_Date": "2018-05-30"
@@ -5244,7 +5244,7 @@
     "Probability": 0.8494565832,
     "Warning_ID": "BR_374",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-16"
@@ -5258,7 +5258,7 @@
     "Probability": 0.7471870119,
     "Warning_ID": "BR_375",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 36.5281,
     "Event_Date": "2018-05-03"
@@ -5272,7 +5272,7 @@
     "Probability": 0.6305862172,
     "Warning_ID": "BR_376",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.8572,
     "Event_Date": "2018-05-22"
@@ -5286,7 +5286,7 @@
     "Probability": 0.7639309343,
     "Warning_ID": "BR_377",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.7167,
     "Event_Date": "2018-05-06"
@@ -5300,7 +5300,7 @@
     "Probability": 0.9868465454,
     "Warning_ID": "BR_378",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-07"
@@ -5314,7 +5314,7 @@
     "Probability": 0.6023258456,
     "Warning_ID": "BR_379",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-29"
@@ -5328,7 +5328,7 @@
     "Probability": 0.5169315918,
     "Warning_ID": "BR_380",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-05"
@@ -5342,7 +5342,7 @@
     "Probability": 0.9799707376,
     "Warning_ID": "BR_381",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4063,
     "Event_Date": "2018-05-28"
@@ -5356,7 +5356,7 @@
     "Probability": 0.7138166802,
     "Warning_ID": "BR_382",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3856,
     "Event_Date": "2018-05-10"
@@ -5370,7 +5370,7 @@
     "Probability": 0.5754078528,
     "Warning_ID": "BR_383",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.1642,
     "Event_Date": "2018-05-19"
@@ -5384,7 +5384,7 @@
     "Probability": 0.8286853986,
     "Warning_ID": "BR_384",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7256,
     "Event_Date": "2018-05-09"
@@ -5398,7 +5398,7 @@
     "Probability": 0.916463624,
     "Warning_ID": "BR_385",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4157,
     "Event_Date": "2018-05-21"
@@ -5412,7 +5412,7 @@
     "Probability": 0.9037983991,
     "Warning_ID": "BR_386",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3632,
     "Event_Date": "2018-05-12"
@@ -5426,7 +5426,7 @@
     "Probability": 0.6036004254,
     "Warning_ID": "BR_387",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.5292,
     "Event_Date": "2018-05-23"
@@ -5440,7 +5440,7 @@
     "Probability": 0.9389993319,
     "Warning_ID": "BR_388",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.8881,
     "Event_Date": "2018-05-24"
@@ -5454,7 +5454,7 @@
     "Probability": 0.5793508636,
     "Warning_ID": "BR_389",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.4285,
     "Event_Date": "2018-05-30"
@@ -5468,7 +5468,7 @@
     "Probability": 0.9734132513,
     "Warning_ID": "BR_390",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.4096,
     "Event_Date": "2018-05-29"
@@ -5482,7 +5482,7 @@
     "Probability": 0.6695354402,
     "Warning_ID": "BR_391",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-09"
@@ -5496,7 +5496,7 @@
     "Probability": 0.8681938087,
     "Warning_ID": "BR_392",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-30"
@@ -5510,7 +5510,7 @@
     "Probability": 0.7780866827,
     "Warning_ID": "BR_393",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4845,
     "Event_Date": "2018-05-13"
@@ -5524,7 +5524,7 @@
     "Probability": 0.9263217513,
     "Warning_ID": "BR_394",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Muhafazat al Anbar",
     "Latitude": 33.67,
     "Event_Date": "2018-05-08"
@@ -5538,7 +5538,7 @@
     "Probability": 0.5938282322,
     "Warning_ID": "BR_395",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.7449,
     "Event_Date": "2018-05-10"
@@ -5552,7 +5552,7 @@
     "Probability": 0.6517213754,
     "Warning_ID": "BR_396",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3922,
     "Event_Date": "2018-05-28"
@@ -5566,7 +5566,7 @@
     "Probability": 0.6779448549,
     "Warning_ID": "BR_397",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.85,
     "Event_Date": "2018-05-03"
@@ -5580,7 +5580,7 @@
     "Probability": 0.5200041502,
     "Warning_ID": "BR_398",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.327,
     "Event_Date": "2018-05-22"
@@ -5594,7 +5594,7 @@
     "Probability": 0.5416319573,
     "Warning_ID": "BR_399",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.0077,
     "Event_Date": "2018-05-10"
@@ -5608,7 +5608,7 @@
     "Probability": 0.5287698185,
     "Warning_ID": "BR_400",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0996,
     "Event_Date": "2018-05-31"
@@ -5622,7 +5622,7 @@
     "Probability": 0.7259947413,
     "Warning_ID": "BR_401",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 37.0191,
     "Event_Date": "2018-05-09"
@@ -5636,7 +5636,7 @@
     "Probability": 0.5385560351,
     "Warning_ID": "BR_402",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-01"
@@ -5650,7 +5650,7 @@
     "Probability": 0.523938983,
     "Warning_ID": "BR_403",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3024,
     "Event_Date": "2018-05-28"
@@ -5664,7 +5664,7 @@
     "Probability": 0.9074979449,
     "Warning_ID": "BR_404",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-09"
@@ -5678,7 +5678,7 @@
     "Probability": 0.6782664654,
     "Warning_ID": "BR_405",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.1953,
     "Event_Date": "2018-05-14"
@@ -5692,7 +5692,7 @@
     "Probability": 0.5715765218,
     "Warning_ID": "BR_406",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Basra Governorate",
     "Latitude": 31.0155,
     "Event_Date": "2018-05-23"
@@ -5706,7 +5706,7 @@
     "Probability": 0.7721468243,
     "Warning_ID": "BR_407",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.6756,
     "Event_Date": "2018-05-26"
@@ -5720,7 +5720,7 @@
     "Probability": 0.5162511416,
     "Warning_ID": "BR_408",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.3702,
     "Event_Date": "2018-05-16"
@@ -5734,7 +5734,7 @@
     "Probability": 0.9161575073,
     "Warning_ID": "BR_409",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-27"
@@ -5748,7 +5748,7 @@
     "Probability": 0.9220442225,
     "Warning_ID": "BR_410",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0,
     "Event_Date": "2018-05-20"
@@ -5762,7 +5762,7 @@
     "Probability": 0.9434994824,
     "Warning_ID": "BR_411",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.2513,
     "Event_Date": "2018-05-20"
@@ -5776,7 +5776,7 @@
     "Probability": 0.7923458596,
     "Warning_ID": "BR_412",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3831,
     "Event_Date": "2018-05-10"
@@ -5790,7 +5790,7 @@
     "Probability": 0.8119760852,
     "Warning_ID": "BR_413",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-02"
@@ -5804,7 +5804,7 @@
     "Probability": 0.9289527502,
     "Warning_ID": "BR_414",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3836,
     "Event_Date": "2018-05-18"
@@ -5818,7 +5818,7 @@
     "Probability": 0.7661988181,
     "Warning_ID": "BR_415",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-22"
@@ -5832,7 +5832,7 @@
     "Probability": 0.5171253632,
     "Warning_ID": "BR_416",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.8625,
     "Event_Date": "2018-05-26"
@@ -5846,7 +5846,7 @@
     "Probability": 0.6494828995,
     "Warning_ID": "BR_417",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-05"
@@ -5860,7 +5860,7 @@
     "Probability": 0.9354574776,
     "Warning_ID": "BR_418",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4477,
     "Event_Date": "2018-05-22"
@@ -5874,7 +5874,7 @@
     "Probability": 0.7747122967,
     "Warning_ID": "BR_419",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.1959,
     "Event_Date": "2018-05-27"
@@ -5888,7 +5888,7 @@
     "Probability": 0.683825775,
     "Warning_ID": "BR_420",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.1571,
     "Event_Date": "2018-05-21"
@@ -5902,7 +5902,7 @@
     "Probability": 0.904109366,
     "Warning_ID": "BR_421",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.1757,
     "Event_Date": "2018-05-06"
@@ -5916,7 +5916,7 @@
     "Probability": 0.938866163,
     "Warning_ID": "BR_422",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.2259,
     "Event_Date": "2018-05-07"
@@ -5930,7 +5930,7 @@
     "Probability": 0.9943202073,
     "Warning_ID": "BR_423",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0,
     "Event_Date": "2018-05-29"
@@ -5944,7 +5944,7 @@
     "Probability": 0.9227607063,
     "Warning_ID": "BR_424",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Wāsiţ",
     "Latitude": 32.75,
     "Event_Date": "2018-05-13"
@@ -5958,7 +5958,7 @@
     "Probability": 0.9674063628,
     "Warning_ID": "BR_425",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1489,
     "Event_Date": "2018-05-25"
@@ -5972,7 +5972,7 @@
     "Probability": 0.6639730446,
     "Warning_ID": "BR_426",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3507,
     "Event_Date": "2018-05-17"
@@ -5986,7 +5986,7 @@
     "Probability": 0.779314247,
     "Warning_ID": "BR_427",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-11"
@@ -6000,7 +6000,7 @@
     "Probability": 0.7478605097,
     "Warning_ID": "BR_428",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.1673,
     "Event_Date": "2018-05-19"
@@ -6014,7 +6014,7 @@
     "Probability": 0.6391446071,
     "Warning_ID": "BR_429",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.7988,
     "Event_Date": "2018-05-21"
@@ -6028,7 +6028,7 @@
     "Probability": 0.6410913532,
     "Warning_ID": "BR_430",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3649,
     "Event_Date": "2018-05-22"
@@ -6042,7 +6042,7 @@
     "Probability": 0.706091771,
     "Warning_ID": "BR_431",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-19"
@@ -6056,7 +6056,7 @@
     "Probability": 0.6426866353,
     "Warning_ID": "BR_432",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2476,
     "Event_Date": "2018-05-24"
@@ -6070,7 +6070,7 @@
     "Probability": 0.7563838083,
     "Warning_ID": "BR_433",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3697,
     "Event_Date": "2018-05-16"
@@ -6084,7 +6084,7 @@
     "Probability": 0.6453169722,
     "Warning_ID": "BR_434",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-15"
@@ -6098,7 +6098,7 @@
     "Probability": 0.8304944652,
     "Warning_ID": "BR_435",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.1196,
     "Event_Date": "2018-05-17"
@@ -6112,7 +6112,7 @@
     "Probability": 0.6280853925,
     "Warning_ID": "BR_436",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.4315,
     "Event_Date": "2018-05-05"
@@ -6126,7 +6126,7 @@
     "Probability": 0.9145912055,
     "Warning_ID": "BR_437",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-20"
@@ -6140,7 +6140,7 @@
     "Probability": 0.8118163555,
     "Warning_ID": "BR_438",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.3333,
     "Event_Date": "2018-05-18"
@@ -6154,7 +6154,7 @@
     "Probability": 0.8545852973,
     "Warning_ID": "BR_439",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3682,
     "Event_Date": "2018-05-15"
@@ -6168,7 +6168,7 @@
     "Probability": 0.8649635175,
     "Warning_ID": "BR_440",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 32.4204,
     "Event_Date": "2018-05-24"
@@ -6182,7 +6182,7 @@
     "Probability": 0.6239534109,
     "Warning_ID": "BR_441",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.6121,
     "Event_Date": "2018-05-16"
@@ -6196,7 +6196,7 @@
     "Probability": 0.7182378972,
     "Warning_ID": "BR_442",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 34.836,
     "Event_Date": "2018-05-21"
@@ -6210,7 +6210,7 @@
     "Probability": 0.7398690091,
     "Warning_ID": "BR_443",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Dhi Qar",
     "Latitude": 31.4091,
     "Event_Date": "2018-05-26"
@@ -6224,7 +6224,7 @@
     "Probability": 0.8449927677,
     "Warning_ID": "BR_444",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9114,
     "Event_Date": "2018-05-10"
@@ -6238,7 +6238,7 @@
     "Probability": 0.9219321064,
     "Warning_ID": "BR_445",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-09"
@@ -6252,7 +6252,7 @@
     "Probability": 0.5682732537,
     "Warning_ID": "BR_446",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-29"
@@ -6266,7 +6266,7 @@
     "Probability": 0.8757185475,
     "Warning_ID": "BR_447",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3883,
     "Event_Date": "2018-05-15"
@@ -6280,7 +6280,7 @@
     "Probability": 0.5189898155,
     "Warning_ID": "BR_448",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1942,
     "Event_Date": "2018-05-15"
@@ -6294,7 +6294,7 @@
     "Probability": 0.6288105554,
     "Warning_ID": "BR_449",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.2355,
     "Event_Date": "2018-05-02"
@@ -6308,7 +6308,7 @@
     "Probability": 0.93262442,
     "Warning_ID": "BR_450",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4025,
     "Event_Date": "2018-05-14"
@@ -6322,7 +6322,7 @@
     "Probability": 0.8930382404,
     "Warning_ID": "BR_451",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6924,
     "Event_Date": "2018-05-11"
@@ -6336,7 +6336,7 @@
     "Probability": 0.947918186,
     "Warning_ID": "BR_452",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-26"
@@ -6350,7 +6350,7 @@
     "Probability": 0.9843336848,
     "Warning_ID": "BR_453",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-25"
@@ -6364,7 +6364,7 @@
     "Probability": 0.901137904,
     "Warning_ID": "BR_454",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3259,
     "Event_Date": "2018-05-31"
@@ -6378,7 +6378,7 @@
     "Probability": 0.580630689,
     "Warning_ID": "BR_455",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.9146,
     "Event_Date": "2018-05-29"
@@ -6392,7 +6392,7 @@
     "Probability": 0.7737604575,
     "Warning_ID": "BR_456",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.431,
     "Event_Date": "2018-05-03"
@@ -6406,7 +6406,7 @@
     "Probability": 0.9206488545,
     "Warning_ID": "BR_457",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 34.9697,
     "Event_Date": "2018-05-27"
@@ -6420,7 +6420,7 @@
     "Probability": 0.7129173323,
     "Warning_ID": "BR_458",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.1936,
     "Event_Date": "2018-05-07"
@@ -6434,7 +6434,7 @@
     "Probability": 0.8803210603,
     "Warning_ID": "BR_459",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-20"
@@ -6448,7 +6448,7 @@
     "Probability": 0.993367227,
     "Warning_ID": "BR_460",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-25"
@@ -6462,7 +6462,7 @@
     "Probability": 0.5017127909,
     "Warning_ID": "BR_461",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-13"
@@ -6476,7 +6476,7 @@
     "Probability": 0.6239383378,
     "Warning_ID": "BR_462",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.269,
     "Event_Date": "2018-05-29"
@@ -6490,7 +6490,7 @@
     "Probability": 0.7738851453,
     "Warning_ID": "BR_463",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3255,
     "Event_Date": "2018-05-14"
@@ -6504,7 +6504,7 @@
     "Probability": 0.9662382035,
     "Warning_ID": "BR_464",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7243,
     "Event_Date": "2018-05-26"
@@ -6518,7 +6518,7 @@
     "Probability": 0.5385329099,
     "Warning_ID": "BR_465",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3591,
     "Event_Date": "2018-05-26"
@@ -6532,7 +6532,7 @@
     "Probability": 0.5782596045,
     "Warning_ID": "BR_466",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.9341,
     "Event_Date": "2018-05-12"
@@ -6546,7 +6546,7 @@
     "Probability": 0.7096401902,
     "Warning_ID": "BR_467",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.6366,
     "Event_Date": "2018-05-02"
@@ -6560,7 +6560,7 @@
     "Probability": 0.7736004402,
     "Warning_ID": "BR_468",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0894,
     "Event_Date": "2018-05-13"
@@ -6574,7 +6574,7 @@
     "Probability": 0.5478075596,
     "Warning_ID": "BR_469",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.2449,
     "Event_Date": "2018-05-12"
@@ -6588,7 +6588,7 @@
     "Probability": 0.761689029,
     "Warning_ID": "BR_470",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-09"
@@ -6602,7 +6602,7 @@
     "Probability": 0.8038927931,
     "Warning_ID": "BR_471",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.0676,
     "Event_Date": "2018-05-03"
@@ -6616,7 +6616,7 @@
     "Probability": 0.768236394,
     "Warning_ID": "BR_472",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 35.9629,
     "Event_Date": "2018-05-19"
@@ -6630,7 +6630,7 @@
     "Probability": 0.6923422589,
     "Warning_ID": "BR_473",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3894,
     "Event_Date": "2018-05-06"
@@ -6644,7 +6644,7 @@
     "Probability": 0.5859001033,
     "Warning_ID": "BR_474",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.3491,
     "Event_Date": "2018-05-12"
@@ -6658,7 +6658,7 @@
     "Probability": 0.5358705477,
     "Warning_ID": "BR_475",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.4263,
     "Event_Date": "2018-05-29"
@@ -6672,7 +6672,7 @@
     "Probability": 0.5346648806,
     "Warning_ID": "BR_476",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0426,
     "Event_Date": "2018-05-03"
@@ -6686,7 +6686,7 @@
     "Probability": 0.5433555708,
     "Warning_ID": "BR_477",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.6924,
     "Event_Date": "2018-05-03"
@@ -6700,7 +6700,7 @@
     "Probability": 0.5510865883,
     "Warning_ID": "BR_478",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.8572,
     "Event_Date": "2018-05-15"
@@ -6714,7 +6714,7 @@
     "Probability": 0.734395184,
     "Warning_ID": "BR_479",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2937,
     "Event_Date": "2018-05-02"
@@ -6728,7 +6728,7 @@
     "Probability": 0.5157306461,
     "Warning_ID": "BR_480",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Arbīl",
     "Latitude": 35.6453,
     "Event_Date": "2018-05-15"
@@ -6742,7 +6742,7 @@
     "Probability": 0.5786993742,
     "Warning_ID": "BR_481",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3682,
     "Event_Date": "2018-05-07"
@@ -6756,7 +6756,7 @@
     "Probability": 0.963639292,
     "Warning_ID": "BR_482",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.271,
     "Event_Date": "2018-05-06"
@@ -6770,7 +6770,7 @@
     "Probability": 0.6627276301,
     "Warning_ID": "BR_483",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-14"
@@ -6784,7 +6784,7 @@
     "Probability": 0.9539939837,
     "Warning_ID": "BR_484",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.6326,
     "Event_Date": "2018-05-18"
@@ -6798,7 +6798,7 @@
     "Probability": 0.8685109487,
     "Warning_ID": "BR_485",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.7256,
     "Event_Date": "2018-05-22"
@@ -6812,7 +6812,7 @@
     "Probability": 0.9144050905,
     "Warning_ID": "BR_486",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.3262,
     "Event_Date": "2018-05-30"
@@ -6826,7 +6826,7 @@
     "Probability": 0.9204854203,
     "Warning_ID": "BR_487",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.5,
     "Event_Date": "2018-05-08"
@@ -6840,7 +6840,7 @@
     "Probability": 0.969822845,
     "Warning_ID": "BR_488",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.2536,
     "Event_Date": "2018-05-18"
@@ -6854,7 +6854,7 @@
     "Probability": 0.8920680683,
     "Warning_ID": "BR_489",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.4206,
     "Event_Date": "2018-05-15"
@@ -6868,7 +6868,7 @@
     "Probability": 0.7137708139,
     "Warning_ID": "BR_490",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-10"
@@ -6882,7 +6882,7 @@
     "Probability": 0.814154688,
     "Warning_ID": "BR_491",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3587,
     "Event_Date": "2018-05-04"
@@ -6896,7 +6896,7 @@
     "Probability": 0.5912370413,
     "Warning_ID": "BR_492",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.287,
     "Event_Date": "2018-05-06"
@@ -6910,7 +6910,7 @@
     "Probability": 0.8813981317,
     "Warning_ID": "BR_493",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-09"
@@ -6924,7 +6924,7 @@
     "Probability": 0.8230116079,
     "Warning_ID": "BR_494",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Bābil",
     "Latitude": 32.3922,
     "Event_Date": "2018-05-07"
@@ -6938,7 +6938,7 @@
     "Probability": 0.8167497207,
     "Warning_ID": "BR_495",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 34.4823,
     "Event_Date": "2018-05-07"
@@ -6952,7 +6952,7 @@
     "Probability": 0.6954946431,
     "Warning_ID": "BR_496",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-26"
@@ -6966,7 +6966,7 @@
     "Probability": 0.9254767204,
     "Warning_ID": "BR_497",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3831,
     "Event_Date": "2018-05-06"
@@ -6980,7 +6980,7 @@
     "Probability": 0.8834332317,
     "Warning_ID": "BR_498",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "As Sulaymānīyah",
     "Latitude": 36.2267,
     "Event_Date": "2018-05-27"
@@ -6994,7 +6994,7 @@
     "Probability": 0.6701957208,
     "Warning_ID": "BR_499",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3791,
     "Event_Date": "2018-05-24"
@@ -7008,7 +7008,7 @@
     "Probability": 0.7922923301,
     "Warning_ID": "BR_500",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.5294,
     "Event_Date": "2018-05-12"
@@ -7022,7 +7022,7 @@
     "Probability": 0.6128005846,
     "Warning_ID": "BR_501",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "-",
     "Latitude": 36.0672,
     "Event_Date": "2018-05-25"
@@ -7036,7 +7036,7 @@
     "Probability": 0.6586829294,
     "Warning_ID": "BR_502",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-06"
@@ -7050,7 +7050,7 @@
     "Probability": 0.666898138,
     "Warning_ID": "BR_503",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.2629,
     "Event_Date": "2018-05-11"
@@ -7064,7 +7064,7 @@
     "Probability": 0.6559727244,
     "Warning_ID": "BR_504",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-29"
@@ -7078,7 +7078,7 @@
     "Probability": 0.8495463963,
     "Warning_ID": "BR_505",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.7484,
     "Event_Date": "2018-05-11"
@@ -7092,7 +7092,7 @@
     "Probability": 0.8645050124,
     "Warning_ID": "BR_506",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-13"
@@ -7106,7 +7106,7 @@
     "Probability": 0.8940195928,
     "Warning_ID": "BR_507",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.5241,
     "Event_Date": "2018-05-09"
@@ -7120,7 +7120,7 @@
     "Probability": 0.6201773172,
     "Warning_ID": "BR_508",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-27"
@@ -7134,7 +7134,7 @@
     "Probability": 0.7157168756,
     "Warning_ID": "BR_509",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.4328,
     "Event_Date": "2018-05-30"
@@ -7148,7 +7148,7 @@
     "Probability": 0.9078739817,
     "Warning_ID": "BR_510",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.2336,
     "Event_Date": "2018-05-16"
@@ -7162,7 +7162,7 @@
     "Probability": 0.8440997922,
     "Warning_ID": "BR_511",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Basra Governorate",
     "Latitude": 30.4477,
     "Event_Date": "2018-05-27"
@@ -7176,7 +7176,7 @@
     "Probability": 0.8175906313,
     "Warning_ID": "BR_512",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9291,
     "Event_Date": "2018-05-04"
@@ -7190,7 +7190,7 @@
     "Probability": 0.9184775355,
     "Warning_ID": "BR_513",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 35.3336,
     "Event_Date": "2018-05-16"
@@ -7204,7 +7204,7 @@
     "Probability": 0.7065283101,
     "Warning_ID": "BR_514",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-22"
@@ -7218,7 +7218,7 @@
     "Probability": 0.9587031219,
     "Warning_ID": "BR_515",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Mayorality of Baghdad",
     "Latitude": 33.3406,
     "Event_Date": "2018-05-18"
@@ -7232,7 +7232,7 @@
     "Probability": 0.7793010616,
     "Warning_ID": "BR_516",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7481,
     "Event_Date": "2018-05-19"
@@ -7246,7 +7246,7 @@
     "Probability": 0.5362940054,
     "Warning_ID": "BR_517",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0996,
     "Event_Date": "2018-05-18"
@@ -7260,7 +7260,7 @@
     "Probability": 0.8531226357,
     "Warning_ID": "BR_518",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-13"
@@ -7274,7 +7274,7 @@
     "Probability": 0.7926461411,
     "Warning_ID": "BR_519",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 34.0337,
     "Event_Date": "2018-05-01"
@@ -7288,7 +7288,7 @@
     "Probability": 0.9835637554,
     "Warning_ID": "BR_520",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.335,
     "Event_Date": "2018-05-29"
@@ -7302,7 +7302,7 @@
     "Probability": 0.7733950721,
     "Warning_ID": "BR_521",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Diyālá",
     "Latitude": 33.7466,
     "Event_Date": "2018-05-23"
@@ -7316,7 +7316,7 @@
     "Probability": 0.7712704681,
     "Warning_ID": "BR_522",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Anbar",
     "Latitude": 33.8514,
     "Event_Date": "2018-05-10"
@@ -7330,7 +7330,7 @@
     "Probability": 0.9258616566,
     "Warning_ID": "BR_523",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 34.8588,
     "Event_Date": "2018-05-14"
@@ -7344,7 +7344,7 @@
     "Probability": 0.5271915533,
     "Warning_ID": "BR_524",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Salah ad Din Governorate",
     "Latitude": 34.9825,
     "Event_Date": "2018-05-09"
@@ -7358,7 +7358,7 @@
     "Probability": 0.9215606037,
     "Warning_ID": "BR_525",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.0833,
     "Event_Date": "2018-05-24"
@@ -7372,7 +7372,7 @@
     "Probability": 0.9831891757,
     "Warning_ID": "BR_526",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Nīnawá",
     "Latitude": 36.3379,
     "Event_Date": "2018-05-31"
@@ -7386,7 +7386,7 @@
     "Probability": 0.7918294824,
     "Warning_ID": "BR_527",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "At Taʼmīm",
     "Latitude": 35.4681,
     "Event_Date": "2018-05-17"
@@ -7400,7 +7400,7 @@
     "Probability": 0.8245010369,
     "Warning_ID": "BR_528",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Al Muthanná",
     "Latitude": 30.25,
     "Event_Date": "2018-05-11"

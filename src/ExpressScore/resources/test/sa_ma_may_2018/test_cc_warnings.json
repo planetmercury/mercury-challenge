@@ -8,7 +8,7 @@
     "Probability": 0.7851473626,
     "Warning_ID": "BR_0",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Najrān",
     "Latitude": 17.4933,
     "Event_Date": "2018-05-11"
@@ -22,7 +22,7 @@
     "Probability": 0.5133582804,
     "Warning_ID": "BR_1",
     "Event_Subtype": "Force Posture",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Eastern Province",
     "Latitude": 26.5733,
     "Event_Date": "2018-05-18"
@@ -36,7 +36,7 @@
     "Probability": 0.6457727044,
     "Warning_ID": "BR_2",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Jizan",
     "Latitude": 16.8892,
     "Event_Date": "2018-05-31"
@@ -50,7 +50,7 @@
     "Probability": 0.7854633168,
     "Warning_ID": "BR_3",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Makkah",
     "Latitude": 21.4187,
     "Event_Date": "2018-05-24"
@@ -64,7 +64,7 @@
     "Probability": 0.8507273698,
     "Warning_ID": "BR_4",
     "Event_Subtype": "Conflict",
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "State": "Najrān",
     "Latitude": 17.4933,
     "Event_Date": "2018-05-31"
