@@ -1,6 +1,6 @@
 [
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.1794,
     "Actor": "Hezbollah",
     "timestamp": "2018-05-07T16:40:34.0",
@@ -14,7 +14,7 @@
     "Event_Subtype": "Conflict"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.4367,
     "Actor": "Lebanese General Security",
     "timestamp": "2018-05-11T22:13:26.0",
@@ -28,7 +28,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.3444,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-20T6:17:28.0",
@@ -42,7 +42,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.0,
     "Actor": "Lebanese General Security",
     "timestamp": "2018-05-20T21:40:50.0",
@@ -56,7 +56,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 33.3978,
     "Actor": "Syrian Arab Military",
     "timestamp": "2018-05-16T9:59:19.0",
@@ -70,7 +70,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.2589,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-16T20:29:15.0",
@@ -84,7 +84,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.2031,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-09T10:46:51.0",
@@ -98,7 +98,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.1794,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-19T22:24:5.0",
@@ -112,7 +112,7 @@
     "Event_Subtype": "Conflict"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.2717,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-09T1:2:45.0",
@@ -126,7 +126,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 33.1753,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-11T9:35:49.0",
@@ -140,7 +140,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.3974,
     "Actor": "Lebanese General Security",
     "timestamp": "2018-05-15T2:34:4.0",
@@ -154,7 +154,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.3442,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-15T4:1:46.0",
@@ -168,7 +168,7 @@
     "Event_Subtype": "Conflict"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.0422,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-15T15:53:50.0",
@@ -182,7 +182,7 @@
     "Event_Subtype": "Conflict"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.4367,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-17T21:23:15.0",
@@ -196,7 +196,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.1794,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-11T8:48:34.0",
@@ -210,7 +210,7 @@
     "Event_Subtype": "Force Posture"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.2519,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-08T20:38:13.0",
@@ -224,7 +224,7 @@
     "Event_Subtype": "Conflict"
   },
   {
-    "Event_Type": "Military Action",
+    "Event_Type": "Military Activity",
     "Latitude": 34.2186,
     "Actor": "Lebanese Military",
     "timestamp": "2018-05-19T8:55:33.0",
