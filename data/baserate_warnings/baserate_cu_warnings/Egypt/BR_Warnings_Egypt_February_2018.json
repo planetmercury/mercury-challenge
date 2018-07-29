@@ -1,0 +1,593 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-01",
+      "Case_Count": 3.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-01",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-02",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-02",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-03",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-03",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-04",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-04",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-05",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-05",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-06",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-06",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-07",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-07",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-08",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-08",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-09",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-09",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-10",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-10",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-11",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-11",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-12",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-12",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-13",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-13",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-14",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-14",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-15",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-15",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-16",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-16",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-17",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-17",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-18",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-18",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-19",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-19",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-20",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-20",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-21",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-21",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-22",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-22",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-23",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-23",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-24",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-24",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-25",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-25",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-26",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-26",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-27",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-27",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-02-28",
+      "Case_Count": 2.0,
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-02-28",
+      "Model_Details": {
+        "Order": [
+          2,
+          0,
+          1
+        ],
+        "Model_Params": [
+          5.348368567013427,
+          1.3043697162287806,
+          -0.3267554866621827,
+          -0.8888925988013819
+        ],
+        "Error": 0.4152948681735336
+      }
+    }
+  ]
+}

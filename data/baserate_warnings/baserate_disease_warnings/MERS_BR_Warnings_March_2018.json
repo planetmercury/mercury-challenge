@@ -1,0 +1,37 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-03-04",
+      "Case_Count": 7.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-03-04",
+      "Model_Details": "Historical Average Model"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-03-11",
+      "Case_Count": 7.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-03-11",
+      "Model_Details": "Historical Average Model"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-03-18",
+      "Case_Count": 14.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-03-18",
+      "Model_Details": "Historical Average Model"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-03-25",
+      "Case_Count": 17.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-03-25",
+      "Model_Details": "Historical Average Model"
+    }
+  ]
+}
