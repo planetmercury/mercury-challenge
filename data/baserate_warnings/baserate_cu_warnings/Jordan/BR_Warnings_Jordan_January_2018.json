@@ -1,0 +1,115 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-01-03",
+      "Case_Count": 8.0,
+      "Country": "Jordan",
+      "Warning_ID": "BR_CU_Jordan_2018-01-03",
+      "Model_Details": {
+        "Order": [
+          4,
+          0,
+          0
+        ],
+        "Model_Params": [
+          11.027921685059578,
+          0.4502484516492988,
+          -0.15446368628884596,
+          0.06735044515885791,
+          -0.03486694497046559
+        ],
+        "Error": 0.44692563630220655
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-01-10",
+      "Case_Count": 10.0,
+      "Country": "Jordan",
+      "Warning_ID": "BR_CU_Jordan_2018-01-10",
+      "Model_Details": {
+        "Order": [
+          4,
+          0,
+          0
+        ],
+        "Model_Params": [
+          11.027921685059578,
+          0.4502484516492988,
+          -0.15446368628884596,
+          0.06735044515885791,
+          -0.03486694497046559
+        ],
+        "Error": 0.44692563630220655
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-01-17",
+      "Case_Count": 10.0,
+      "Country": "Jordan",
+      "Warning_ID": "BR_CU_Jordan_2018-01-17",
+      "Model_Details": {
+        "Order": [
+          4,
+          0,
+          0
+        ],
+        "Model_Params": [
+          11.027921685059578,
+          0.4502484516492988,
+          -0.15446368628884596,
+          0.06735044515885791,
+          -0.03486694497046559
+        ],
+        "Error": 0.44692563630220655
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-01-24",
+      "Case_Count": 10.0,
+      "Country": "Jordan",
+      "Warning_ID": "BR_CU_Jordan_2018-01-24",
+      "Model_Details": {
+        "Order": [
+          4,
+          0,
+          0
+        ],
+        "Model_Params": [
+          11.027921685059578,
+          0.4502484516492988,
+          -0.15446368628884596,
+          0.06735044515885791,
+          -0.03486694497046559
+        ],
+        "Error": 0.44692563630220655
+      }
+    },
+    {
+      "Event_Type": "Civil Unrest",
+      "Event_Date": "2018-01-31",
+      "Case_Count": 10.0,
+      "Country": "Jordan",
+      "Warning_ID": "BR_CU_Jordan_2018-01-31",
+      "Model_Details": {
+        "Order": [
+          4,
+          0,
+          0
+        ],
+        "Model_Params": [
+          11.027921685059578,
+          0.4502484516492988,
+          -0.15446368628884596,
+          0.06735044515885791,
+          -0.03486694497046559
+        ],
+        "Error": 0.44692563630220655
+      }
+    }
+  ]
+}
