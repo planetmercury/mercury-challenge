@@ -4,7 +4,7 @@
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-01-03",
-      "Case_Count": 8.0,
+      "Case_Count": 17.0,
       "Country": "Jordan",
       "Warning_ID": "BR_CU_Jordan_2018-01-03",
       "Model_Details": {
@@ -26,7 +26,7 @@
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-01-10",
-      "Case_Count": 10.0,
+      "Case_Count": 15.0,
       "Country": "Jordan",
       "Warning_ID": "BR_CU_Jordan_2018-01-10",
       "Model_Details": {
@@ -48,7 +48,7 @@
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-01-17",
-      "Case_Count": 10.0,
+      "Case_Count": 13.0,
       "Country": "Jordan",
       "Warning_ID": "BR_CU_Jordan_2018-01-17",
       "Model_Details": {
@@ -70,7 +70,7 @@
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-01-24",
-      "Case_Count": 10.0,
+      "Case_Count": 12.0,
       "Country": "Jordan",
       "Warning_ID": "BR_CU_Jordan_2018-01-24",
       "Model_Details": {
@@ -92,7 +92,7 @@
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-01-31",
-      "Case_Count": 10.0,
+      "Case_Count": 11.0,
       "Country": "Jordan",
       "Warning_ID": "BR_CU_Jordan_2018-01-31",
       "Model_Details": {

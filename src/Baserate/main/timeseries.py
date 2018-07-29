@@ -110,26 +110,23 @@ def future_dates(dt_index, n_ahead=1):
     of the index
     """
 
-    first_date = dt_index[-1]
-
-    if dt_index.freqstr is None:
-        # Then we have to infer the time step size
-        use_freq = "W-SUN"
-        use_delta=7
-
-    elif dt_index.freqstr[0] == "W":
-        use_delta = 7
-        use_freq = dt_index.freq
-
+    index_ = dt_index.copy()
+    if index_.freqstr is not None:
+        use_freq = index_.freq
     else:
-        use_delta = 1
-        use_freq = dt_index.freq
+        interval = (index_[-1] - index_[-2]).days
+        if interval == 1:
+            use_freq = "D"
+        elif interval == 7:
+            weekday_freq_dict = {7: "W-SUN", 6: "W-SAT", 5: "W-FRI", 4: "W-THU",
+                                 3: "W-WED", 2: "W-TUE", 1: "W-MON"}
 
-    last_date = first_date + datetime.timedelta(use_delta*n_ahead)
+            # Then we have to infer the time step size
+            weekday_ = index_[0].isoweekday()
+            use_freq = weekday_freq_dict[weekday_]
+    future_dr = pd.date_range(index_[-1], freq=use_freq, periods=n_ahead+1)
 
-    future_dates = pd.date_range(first_date, last_date,
-                                 freq=dt_index.freq)
-    return pd.DatetimeIndex(start=dt_index[-1], freq=use_freq, periods=n_ahead+1)
+    return pd.DatetimeIndex(future_dr)
 
 
 def status_quo_predict(history_ser, n_ahead=1):
