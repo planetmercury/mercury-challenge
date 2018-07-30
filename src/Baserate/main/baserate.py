@@ -3,6 +3,9 @@ This module provides the classes that facilitate generation of baserate
 warnings.  It is lightly modified from Pete Haglich's original prototype.
 '''
 
+import sys
+sys.path.append("../..")
+
 import datetime
 import re
 from datetime import timedelta
@@ -10,13 +13,13 @@ from uuid import uuid4
 
 import pandas as pd
 from dateutil.parser import parse
-from mercury.common import db_management as db
-from mercury.common.schema import (
+from ExpressScore.main.schema import (
   JSONField,
   EventType,
   DiseaseType,
   CountryName,
-  Subtype
+  Subtype,
+  db
   )
 from numpy.random import (
   choice,
@@ -25,12 +28,8 @@ from numpy.random import (
 )
 from pandas import DataFrame, Series
 
-from .historian import (
-  Historian,
-  RareDiseaseHistorian,
-  CaseCountDiseaseHistorian,
-  IcewsHistorian
-  )
+from .historian import Historian
+
 from .loaddictionaries import (
   REASON_VALUES,
   POPULATION_VALUES,
@@ -132,10 +131,17 @@ class Baserate:
         self.country = country
         self.team = team
         self.event_type = event_type
-        self.historian = Historian(locality=self.REQUIRE_LOCALITY)
+        self.historian = Historian(country=country)
         self.facets = {}
 
-    def get_history(self, history_start_date, history_end_date, **matchargs):
+    def generate_warning_id(self):
+        """
+        Basis for warning generation
+        :return: warning ID
+        """
+        return self.team + uuid4().hex
+
+    def get_history(self, history_start_date, history_end_date, gsr):
         """
         Retrieves GSR event history using the historian
         :param history_start_date: first date
@@ -145,17 +151,14 @@ class Baserate:
         """
 
         return self.historian.get_history(
-          db.GSR_TYPE,
-          event_type=self.event_type,
-          country=self.country,
-          start_date=history_start_date,
+          start_date = history_start_date,
           end_date=history_end_date,
-          **matchargs
+          gsr=gsr
           )
 
     def make_predictions(self, history_start_date, history_end_date,
                          warning_start_date, warning_end_date,
-                         prob=0.5, leadtime_mean=None,
+                         leadtime_mean=None,
                          event_rate=None, replace=True, **matchargs):
         """
         Creates Test_Max_Dist_Date_Diff predictions
@@ -163,7 +166,6 @@ class Baserate:
         :param history_end_date: last date of GSR history
         :param warning_start_date: First date of warning period
         :param warning_end_date: Last date of warning period
-        :param prob: What probability to be assigned to warnings
         :param leadtime_mean: Mean of a Poisson distribution to simulate lead times
         :param event_rate: Predetermined rate at which warnings are produced, default None
         :param replace: Sample with replacement?  Default True
@@ -181,7 +183,7 @@ class Baserate:
         n_days = len(pd.date_range(warning_start_date, warning_end_date))
 
         # How many events to generate?
-        n_events = int(n_days * event_rate)
+        n_events = round(n_days * event_rate)
         if n_events > 0:
 
             # Sample dates
@@ -224,8 +226,7 @@ class Baserate:
                                             )
 
             # Sample locations
-            if self.event_type in [EventType.CIVIL_UNREST, EventType.MILITARY_ACTION,
-                                   EventType.NONSTATE_ACTOR, EventType.DISEASE]:
+            if self.event_type in [EventType.MILITARY_ACTION]:
                 new_locations = sample_location(event_df=event_df,
                                                 sample_size=n_events,
                                                 replace=replace)
@@ -249,12 +250,6 @@ class Baserate:
             br_dict[JSONField.EVENT_DATE] = []
             br_df = pd.DataFrame(br_dict)
         br_df[JSONField.EVENT_TYPE] = self.event_type
-        if prob == "random":
-            prob_ser = Series(uniform(low=0.5, high=1.0, size=len(br_df)),
-                              index=br_df.index)
-            br_df[JSONField.PROBABILITY] = prob_ser
-        else:
-            br_df[JSONField.PROBABILITY] = prob
         return br_df
 
     def convert_warnings_to_json(self, warning_df):
@@ -263,7 +258,7 @@ class Baserate:
         :param warning_df: A data frame of warnings
         :return:
         """
-        warn_list = [self.team + uuid4().hex for i in warning_df.index]
+        warn_list = [self.generate_warning_id() for i in warning_df.index]
         warn_ser = Series(warn_list, index=warning_df.index)
         warning_df[JSONField.WARNING_ID] = warn_ser
         warn_json = warning_df.to_json(force_ascii=False, orient="records")
@@ -272,55 +267,7 @@ class Baserate:
         return warn_json
 
 
-class RareDiseaseBaserate(Baserate):
-
-    def __init__(self, country, team="R"):
-        self.REQUIRE_LOCALITY = True
-        self.historian = RareDiseaseHistorian()
-        self.country = country
-        self.team = team
-        self.event_type = EventType.DISEASE
-        self.facets={JSONField.DISEASE: None}
-
-    def get_history(self, history_start_date, history_end_date, **matchargs):
-        """
-        """
-        # Will need to modify the query a bit
-        return self.historian.get_history(
-          db.GSR_TYPE,
-          country=self.country,
-          start_date=history_start_date,
-          end_date=history_end_date,
-          **matchargs
-          )
-
-
-class MaNsaBaserate(Baserate):
-
-    def convert_warnings_to_json(self, warning_df):
-        """
-        Converts warnings to a JSON ready for indexing and adding to Elasticsearch
-        :param warning_df:
-        :return:
-        """
-        warn_list = [self.team + uuid4().hex for i in warning_df.index]
-        warn_ser = Series(warn_list, index=warning_df.index)
-        warning_df[JSONField.WARNING_ID] = warn_ser
-        warning_df[JSONField.GSR_TARGET_STATUS] = warning_df[JSONField.TARGETS].apply(lambda x:
-                                                                                    x[JSONField.GSR_TARGET_STATUS])
-        warning_df[JSONField.GSR_TARGET] = warning_df[JSONField.TARGETS].apply(lambda x:
-                                                                            x[JSONField.GSR_TARGET])
-        warning_df.drop(JSONField.TARGETS, axis=1, inplace=True)
-        warn_json = warning_df.to_json(force_ascii=False, orient="records")
-        warn_json = eval(warn_json)
-        for item in warn_json:
-            item[JSONField.ACTOR] = re.sub("\\\\", "", item[JSONField.ACTOR])
-            item[JSONField.GSR_TARGET_STATUS] = re.sub("\\\\", "", item[JSONField.GSR_TARGET_STATUS])
-            item[JSONField.GSR_TARGET] = re.sub("\\\\", "", item[JSONField.GSR_TARGET])
-        return warn_json
-
-
-class MaBaserate(MaNsaBaserate):
+class MaBaserate(Baserate):
 
     def __init__(self, country, team="R"):
         self.REQUIRE_LOCALITY = True
@@ -329,87 +276,19 @@ class MaBaserate(MaNsaBaserate):
           event_type=EventType.MILITARY_ACTION,
           team=team
           )
-        self.facets = {JSONField.TARGETS: TARGET_VALUES,
-                       JSONField.SUBTYPE: [Subtype.ARMED_CONFLICT, Subtype.FORCE_POSTURE],
+        self.facets = {JSONField.SUBTYPE: [Subtype.ARMED_CONFLICT, Subtype.FORCE_POSTURE],
                        JSONField.ACTOR: STATE_ACTOR_VALUES}
 
-
-class NsaBaserate(MaNsaBaserate):
-
-    def __init__(self, country, team="R"):
-        self.REQUIRE_LOCALITY = True
-        super().__init__(
-          country=country,
-          event_type=EventType.NONSTATE_ACTOR,
-          team=team
-          )
-
-        self.facets = {JSONField.TARGETS: TARGET_VALUES,
-                       JSONField.SUBTYPE: [Subtype.ARMED_ASSAULT, Subtype.BOMBING, Subtype.HOSTAGE_TAKING],
-                       JSONField.ACTOR: NON_STATE_ACTOR_VALUES}
-
-
-class WidespreadCivilUnrestBaserate(Baserate):
-
-    def __init__(self, country, team="R"):
-        super().__init__(
-          country=country,
-          event_type=EventType.WIDESPREAD_CIVIL_UNREST,
-          team=team
-          )
-        self.facets = {JSONField.REASON: REASON_VALUES,
-                       JSONField.VIOLENT: ["True", "False"],
-                       JSONField.POPULATION: POPULATION_VALUES}
-
     def convert_warnings_to_json(self, warning_df):
         """
         Converts warnings to a JSON ready for indexing and adding to Elasticsearch
         :param warning_df:
         :return:
         """
-        warn_list = [self.team + uuid4().hex for i in warning_df.index]
-        warn_ser = Series(warn_list, index=warning_df.index)
-        warning_df[JSONField.WARNING_ID] = warn_ser
-        for col_name in [JSONField.STATE, JSONField.CITY]:
-            try:
-                warning_df.drop(col_name, axis=1, inplace=True)
-            except ValueError:
-                pass
-        warn_json = warning_df.to_json(force_ascii=False, orient="records")
-        warn_json = eval(warn_json)
+        warn_json = super().convert_warnings_to_json(warning_df)
         for item in warn_json:
-            item[JSONField.POPULATION] = re.sub("\\\\", "", item[JSONField.POPULATION])
+            item[JSONField.ACTOR] = re.sub("\\\\", "", item[JSONField.ACTOR])
         return warn_json
-
-
-class CivilUnrestBaserate(Baserate):
-
-    def __init__(self, country, team="R"):
-        self.REQUIRE_LOCALITY = True
-        super().__init__(
-          country=country,
-          event_type=EventType.CIVIL_UNREST,
-          team=team
-          )
-        self.facets = {JSONField.REASON: REASON_VALUES,
-                       JSONField.VIOLENT: ["True", "False"],
-                       JSONField.POPULATION: POPULATION_VALUES}
-
-    def convert_warnings_to_json(self, warning_df):
-        """
-        Converts warnings to a JSON ready for indexing and adding to Elasticsearch
-        :param warning_df:
-        :return:
-        """
-        warn_list = [self.team + uuid4().hex for i in warning_df.index]
-        warn_ser = Series(warn_list, index=warning_df.index)
-        warning_df[JSONField.WARNING_ID] = warn_ser
-        warn_json = warning_df.to_json(force_ascii=False, orient="records")
-        warn_json = eval(warn_json)
-        for item in warn_json:
-            item[JSONField.POPULATION] = re.sub("\\\\", "", item[JSONField.POPULATION])
-        return warn_json
-
 
 
 class CaseCountBaserate(Baserate):

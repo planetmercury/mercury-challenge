@@ -15,6 +15,11 @@ __all__ = '''
 #from .dictionaries import Dictionary
 
 
+class db(object):
+  GSR_TYPE = "GSR"
+  WARNING_TYPE = 'warnings'
+
+
 class JSONField(object):
   EVENT_ID = 'Event_ID'
   EVENT_TYPE = 'Event_Type'
@@ -40,6 +45,7 @@ class JSONField(object):
   LATEST = 'latest'
   WARN_VALUE = 'Warning Case Count'
   EVENT_VALUE = "GSR Case Count"
+  PARTICIPANT_ID = "participant_id"
 
 class EventType(object):
   CU = 'Civil Unrest'
