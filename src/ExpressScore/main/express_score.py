@@ -39,10 +39,10 @@ class Defaults(object):
     Holds default values for scoring system parameters
     """
     ACCURACY_DENOMINATOR = 4
-    LS_WEIGHT = 1.0
-    DS_WEIGHT = 1.0
-    AS_WEIGHT = 1.0
-    ESS_WEIGHT = 1.0
+    LS_WEIGHT = 0.25
+    DS_WEIGHT = 0.25
+    AS_WEIGHT = 0.25
+    ESS_WEIGHT = 0.25
     MAX_DIST = 100.0
     DIST_BUFFER = MAX_DIST/6.0
     MAX_DATE_DIFF = 4.0
@@ -59,7 +59,6 @@ class Scorer:
     '''
     Base class for all scoring classes.
     '''
-
 
     def __init__(self):
         pass
@@ -485,7 +484,7 @@ class MaScorer(Scorer):
                 out_dict["Precision"] = prec
                 out_dict["Recall"] = rec
                 out_dict["F1"] = Scorer.f1(prec, rec)
-                out_dict["Mercury Score"] = out_dict["Quality Score"]/4.0 + out_dict["F1"]
+                out_dict["Mercury Score"] = (out_dict["Quality Score"] + out_dict["F1"])/2
 
         return out_dict
 
@@ -516,12 +515,12 @@ class MaScorer(Scorer):
             bad_qs = True
             error_list.append("ESS Weight must be positive")
         weight_sum = ls_weight + ds_weight + as_weight + ess_weight
-        if weight_sum != 4.0:
+        if weight_sum != 1.0:
             notice_list.append("Reweighting so that sum of weights is 4.0")
-            ls_weight = 4*ls_weight/weight_sum
-            ds_weight = 4*ds_weight/weight_sum
-            as_weight = 4*as_weight/weight_sum
-            ess_weight = 4*ess_weight/weight_sum
+            ls_weight = ls_weight/weight_sum
+            ds_weight = ds_weight/weight_sum
+            as_weight = as_weight/weight_sum
+            ess_weight = ess_weight/weight_sum
 
         out_dict = dict()
         # Compute the distance
@@ -821,10 +820,10 @@ class MaScorer(Scorer):
             raise ValueError(error_str)
 
         # Reweight
-        ls_weight = 4*ls_weight/weight_sum
-        ds_weight = 4*ls_weight/weight_sum
-        ess_weight = 4*ess_weight/weight_sum
-        as_weight = 4*as_weight/weight_sum
+        ls_weight = ls_weight/weight_sum
+        ds_weight = ls_weight/weight_sum
+        ess_weight = ess_weight/weight_sum
+        as_weight = as_weight/weight_sum
 
         # Compute component score matrices
         ls_mat = MaScorer.make_ls_mat(warn_list, event_list, max_dist, max_date_diff)
