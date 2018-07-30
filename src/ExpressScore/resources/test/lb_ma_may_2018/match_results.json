@@ -7,15 +7,15 @@
   ],
   "Details": {
     "Quality Scores": [
-      3.8209,
-      3.8236,
-      3.50,
-      3.3260
+      0.955225,
+      0.9559,
+      0.875,
+      0.8315
     ]
   },
-  "Quality Score": 3.618,
+  "Quality Score": 0.9045,
   "Precision": 0.235,
   "Recall": 1.000,
   "F1": 0.381,
-  "Mercury Score": 1.2855
+  "Mercury Score": 0.64275
 }

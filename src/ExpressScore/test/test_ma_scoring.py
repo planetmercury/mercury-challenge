@@ -642,7 +642,7 @@ class MaScorerTest(unittest.TestCase):
         path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
         test_mat = pd.read_csv(path_, index_col=0)
         expected_matches = [("warn_0", "evt_0"), ("warn_1", "evt_1"), ("warn_2", "evt_3")]
-        expected_qs_ser = [4, 3.4, 3.2]
+        expected_qs_ser = [1, 0.85, 0.8]
         expected_qs_mean = np.mean(expected_qs_ser)
         result = MaScorer.match(input_matrix=test_mat)
         self.assertEqual(result["Matches"], expected_matches)
@@ -650,14 +650,15 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 1.0)
         self.assertAlmostEqual(result["Recall"], 0.75)
         self.assertAlmostEqual(result["F1"], 1.5/1.75)
-        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 1.5/1.75)
+        self.assertAlmostEqual(result["Mercury Score"], (expected_qs_mean + 1.5/1.75)/2.)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
         # Simple matrix, 4 by 3
+
         test_matrix_filename = "test_qs_matrix_2.csv"
         path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
         test_mat = pd.read_csv(path_, index_col=0)
         expected_matches = [("warn_0", "evt_0"), ("warn_1", "evt_1"), ("warn_3", "evt_2")]
-        expected_qs_ser = [4, 3.4, 3]
+        expected_qs_ser = [1, 0.85, 0.75]
         expected_qs_mean = np.mean(expected_qs_ser)
         result = MaScorer.match(input_matrix=test_mat)
         self.assertEqual(result["Matches"], expected_matches)
@@ -665,7 +666,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], 0.75)
         self.assertAlmostEqual(result["Recall"], 1.00)
         self.assertAlmostEqual(result["F1"], 1.5/1.75)
-        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 1.5/1.75)
+        self.assertAlmostEqual(result["Mercury Score"], (expected_qs_mean + 1.5/1.75)/2.)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
         # Null Matrix
         test_matrix_filename = "test_null_matrix.csv"
@@ -687,15 +688,15 @@ class MaScorerTest(unittest.TestCase):
         path_ = os.path.join(TEST_RESOURCE_PATH, test_matrix_filename)
         test_mat = pd.read_csv(path_, index_col=0)
         expected_matches = [("warn_0", "evt_0"), ("warn_2", "evt_2")]
-        expected_qs_ser = [3, 4]
-        expected_qs_mean = 3.5
+        expected_qs_ser = [0.75, 1.0]
+        expected_qs_mean = 0.875
         result = MaScorer.match(input_matrix=test_mat)
         self.assertEqual(result["Matches"], expected_matches)
         self.assertAlmostEqual(result["Quality Score"], expected_qs_mean, 3)
         self.assertAlmostEqual(result["Precision"], 0.5)
         self.assertAlmostEqual(result["Recall"], 0.667, 3)
         self.assertAlmostEqual(result["F1"], 0.667/1.167, 3)
-        self.assertAlmostEqual(result["Mercury Score"], expected_qs_mean/4.0 + 0.667/1.167, 3)
+        self.assertAlmostEqual(result["Mercury Score"], (expected_qs_mean + 0.667/1.167)/2, 3)
         self.assertAlmostEqual(result["Details"]["Quality Scores"], expected_qs_ser, 3)
 
         # Matrix with Lebanon data
@@ -718,7 +719,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result["Precision"], expected_precision, 3)
         self.assertAlmostEqual(result["Recall"], expected_recall, 3)
         self.assertAlmostEqual(result["F1"], expected_f1, 3)
-        self.assertAlmostEqual(result["Mercury Score"], expected["Quality Score"]/4.0 + expected["F1"], 3)
+        self.assertAlmostEqual(result["Mercury Score"], (expected["Quality Score"] + expected["F1"])/2, 3)
         for i, qs in enumerate(expected_qs_ser):
             res_qs = result["Details"]["Quality Scores"][i]
             self.assertAlmostEqual(res_qs, qs, 3)
@@ -812,7 +813,7 @@ class MaScorerTest(unittest.TestCase):
         self.assertEqual(result[ScoreComponents.ESS], 1)
         self.assertAlmostEqual(result[ScoreComponents.LS], 0.778, 3)
         self.assertAlmostEqual(result[ScoreComponents.DS], 0.75)
-        self.assertAlmostEqual(result[ScoreComponents.QS], 3.528, 3)
+        self.assertAlmostEqual(result[ScoreComponents.QS], 0.882, 3)
         self.assertFalse("Notices" in result)
         self.assertFalse("Errors" in result)
 
