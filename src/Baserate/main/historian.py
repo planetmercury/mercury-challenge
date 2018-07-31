@@ -1,12 +1,16 @@
 import os
 import json
 import pandas as pd
+import sys
+sys.path.append("../..")
+from ExpressScore.main.schema import JSONField as JF
+from ExpressScore.main.schema import EventType
 
 MC_HOME = os.path.join("..", "..", "..")
 DATA_PATH = os.path.join(MC_HOME, "data", "gsr", "ma_gsr")
 
 
-class Historian():
+class Historian:
 
     def __init__(self, country):
         self.country = country
@@ -54,3 +58,33 @@ class Historian():
                 out_gsr += json.load(f)
 
         return out_gsr
+
+    def event_rate(self, gsr_df, start_date=None, end_date=None):
+        """
+        Determines the rate of events over the interval in the GSR
+        :param gsr_df: DataFrame of GSR data
+        :param start_date:  First date from which to compute history
+        :param end_date: Last date from which to compute history
+        :return:
+        """
+        df_ = gsr_df.copy()
+        df_ = df_[df_.Country == self.country]
+        if start_date is None:
+            start_date = df_.Event_Date.min()
+        if end_date is None:
+            end_date = df_.Event_Date.max()
+        df_ = df_[df_.Event_Date <= end_date]
+        df_ = df_[df_.Event_Date >= start_date]
+        event_count = len(df_)
+        dr_ = pd.date_range(start_date, end_date)
+        n_days = len(dr_)
+        rate_ = 1.*event_count/n_days
+
+        return rate_
+
+
+class MaHistorian(Historian):
+
+    def __init__(self, country):
+        self.event_type = EventType.MA
+        super().__init__(country)

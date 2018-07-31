@@ -3,6 +3,8 @@ This module provides the classes that facilitate generation of baserate
 warnings.  It is lightly modified from Pete Haglich's original prototype.
 '''
 
+import os
+import json
 import sys
 sys.path.append("../..")
 
@@ -17,7 +19,7 @@ from ExpressScore.main.schema import (
   JSONField,
   EventType,
   DiseaseType,
-  CountryName,
+  LocationName,
   Subtype,
   db
   )
@@ -28,21 +30,8 @@ from numpy.random import (
 )
 from pandas import DataFrame, Series
 
-from .historian import Historian
+from .historian import Historian, MaHistorian
 
-from .loaddictionaries import (
-  REASON_VALUES,
-  POPULATION_VALUES,
-  TARGET_VALUES,
-  STATE_ACTOR_VALUES,
-  NON_STATE_ACTOR_VALUES
-)
-from .scoring import(
-  CASE_COUNT,
-  EVENT_DATE,
-  EVENT_TYPE,
-  WARNING_ID
-)
 from .timeseries import (
     ewma_predict,
     arima_predict,
@@ -50,6 +39,21 @@ from .timeseries import (
     status_quo_predict,
     hist_avg_predict
   )
+
+SRC_HOME = os.path.abspath("../..")
+ES_PATH = os.path.join(SRC_HOME, "ExpressScore")
+DICT_PATH = os.path.join(ES_PATH, "resources", "dictionaries")
+SA_DICT_FILENAME = "state_actor_dictionary.json"
+sa_dict_path = os.path.join(DICT_PATH, SA_DICT_FILENAME)
+with open(sa_dict_path, "r", encoding="utf8") as f:
+    STATE_ACTOR_VALUES = json.load(f)["values"]
+
+class Defaults:
+
+    LT = 3
+    DATE_FMT = "%Y-%m-%d"
+    FACET_LIST_DELIM = ";"
+    BR_TEAM = "Mercury_Baserate"
 
 
 def sample_column(event_df, col_name, sample_size, replace=True, value_list=None):
@@ -66,7 +70,7 @@ def sample_column(event_df, col_name, sample_size, replace=True, value_list=None
     result = []
     for item in the_sample:
         if not isinstance(item, list):
-            item = [item]
+            item = item.split(Defaults.FACET_LIST_DELIM)
         if value_list is not None:
             item = [x for x in item if x in value_list]
             # It's still possible that the selection isn't a legal value if the data being sampled
@@ -119,7 +123,7 @@ class Baserate:
     """
     REQUIRE_LOCALITY = False
 
-    def __init__(self, country, event_type=False, team="Test_Max_Dist_Date_Diff"):
+    def __init__(self, country, event_type=False, team=Defaults.BR_TEAM):
         """
         Test_Max_Dist_Date_Diff model for a specific country and event type
         :param country: The country to be studied
@@ -131,8 +135,16 @@ class Baserate:
         self.country = country
         self.team = team
         self.event_type = event_type
-        self.historian = Historian(country=country)
+        self._set_historian()
         self.facets = {}
+
+    def _set_historian(self):
+        """
+        Attaches a Historian instance to the baserate
+        :return:
+        """
+        h = Historian(country=self.country)
+        self.historian = h
 
     def generate_warning_id(self):
         """
@@ -156,28 +168,32 @@ class Baserate:
           gsr=gsr
           )
 
-    def make_predictions(self, history_start_date, history_end_date,
-                         warning_start_date, warning_end_date,
-                         leadtime_mean=None,
+    def make_predictions(self, warning_start_date, warning_end_date,
+                         gsr,
+                         history_length=365,
+                         assumed_leadtime=Defaults.LT,
                          event_rate=None, replace=True, **matchargs):
         """
         Creates Test_Max_Dist_Date_Diff predictions
-        :param history_start_date: first date of GSR history
-        :param history_end_date: last date of GSR history
         :param warning_start_date: First date of warning period
         :param warning_end_date: Last date of warning period
-        :param leadtime_mean: Mean of a Poisson distribution to simulate lead times
+        :param gsr: The history of events
+        :param history_length: How far to look back, default is 365 days
+        :param assumed_leadtime: Mean of a Poisson distribution to simulate lead times
         :param event_rate: Predetermined rate at which warnings are produced, default None
         :param replace: Sample with replacement?  Default True
         :param matchargs: Additional arguments to be matched.
         :returns: Dataframe of warnings
         """
-        event_df = self.get_history(history_start_date, history_end_date, **matchargs)
-        if not event_rate:
-            event_count = len(event_df)
-            history_date_range = pd.date_range(history_start_date, history_end_date)
-            history_date_count = len(history_date_range)
-            event_rate = 1. * event_count / history_date_count
+        history_end_dtg = parse(warning_start_date) - datetime.timedelta(1)
+        history_end_date = history_end_dtg.strftime(Defaults.DATE_FMT)
+        history_start_dtg = parse(warning_start_date) - datetime.timedelta(history_length)
+        history_start_date = history_start_dtg.strftime(Defaults.DATE_FMT)
+        event_df = self.get_history(history_start_date, history_end_date, gsr)
+        if event_rate is None:
+            event_rate = self.historian.event_rate(gsr_df=event_df,
+                                                   start_date=history_start_date,
+                                                   end_date=history_end_date)
 
         # Count future dates
         n_days = len(pd.date_range(warning_start_date, warning_end_date))
@@ -194,8 +210,8 @@ class Baserate:
                 replace=replace
             )
             br_dict = {JSONField.EVENT_DATE: new_dates}
-            if leadtime_mean is not None:
-                lt_ser = poisson(lam=leadtime_mean, size=n_events)
+            if assumed_leadtime is not None:
+                lt_ser = poisson(lam=assumed_leadtime, size=n_events)
                 lt_ser = Series([timedelta(int(x) + 1, 0, 0) for x in lt_ser])
                 ed_ser = Series([parse(ed) for ed in new_dates])
                 ts_ser = ed_ser - lt_ser
@@ -226,7 +242,7 @@ class Baserate:
                                             )
 
             # Sample locations
-            if self.event_type in [EventType.MILITARY_ACTION]:
+            if self.event_type in [EventType.MA]:
                 new_locations = sample_location(event_df=event_df,
                                                 sample_size=n_events,
                                                 replace=replace)
@@ -263,21 +279,25 @@ class Baserate:
         warning_df[JSONField.WARNING_ID] = warn_ser
         warn_json = warning_df.to_json(force_ascii=False, orient="records")
         warn_json = eval(warn_json)
-        warn_json = {"performer_id": self.team, "payload": warn_json}
+        warn_json = {JSONField.PARTICIPANT_ID: self.team, "payload": warn_json}
         return warn_json
 
 
 class MaBaserate(Baserate):
 
-    def __init__(self, country, team="R"):
+    def __init__(self, country, team=Defaults.BR_TEAM):
         self.REQUIRE_LOCALITY = True
         super().__init__(
           country=country,
-          event_type=EventType.MILITARY_ACTION,
+          event_type=EventType.MA,
           team=team
           )
-        self.facets = {JSONField.SUBTYPE: [Subtype.ARMED_CONFLICT, Subtype.FORCE_POSTURE],
+        self.facets = {JSONField.SUBTYPE: [Subtype.CONFLICT, Subtype.FORCE_POSTURE],
                        JSONField.ACTOR: STATE_ACTOR_VALUES}
+
+    def _set_historian(self):
+        h = MaHistorian(country=self.country)
+        self.historian = h
 
     def convert_warnings_to_json(self, warning_df):
         """
@@ -285,10 +305,12 @@ class MaBaserate(Baserate):
         :param warning_df:
         :return:
         """
-        warn_json = super().convert_warnings_to_json(warning_df)
-        for item in warn_json:
+        warnings_ = super().convert_warnings_to_json(warning_df)["payload"]
+        for item in warnings_:
             item[JSONField.ACTOR] = re.sub("\\\\", "", item[JSONField.ACTOR])
-        return warn_json
+        out_json = {JSONField.PARTICIPANT_ID: self.team,
+                    "payload": warnings_}
+        return out_json
 
 
 class CaseCountBaserate(Baserate):
@@ -323,7 +345,7 @@ class CaseCountBaserate(Baserate):
 
     def make_predictions(self, history_start_date, history_end_date,
                          warning_start_date, warning_end_date,
-                         leadtime_mean=None,
+                         assumed_leadtime=None,
                          predict_method=ewma_predict,
                          **pm_args):
         """
@@ -364,8 +386,8 @@ class CaseCountBaserate(Baserate):
                                 EVENT_DATE: predict_ser.index})
         warning_df[EVENT_TYPE] = self.event_type
         warning_df[JSONField.COUNTRY] = self.country
-        if leadtime_mean is not None:
-            ts_ser = warning_df[EVENT_DATE] - datetime.timedelta(leadtime_mean)
+        if assumed_leadtime is not None:
+            ts_ser = warning_df[EVENT_DATE] - datetime.timedelta(assumed_leadtime)
             ts_ser = ts_ser.apply(lambda x: str(x.date()))
 
             def pad_timestamp(ts_str):
@@ -419,8 +441,7 @@ class IcewsBaserate(CaseCountBaserate):
 
 class CaseCountDiseaseBaserate(CaseCountBaserate):
 
-    country_disease_map = {CountryName.EGYPT: DiseaseType.AVIAN_INFLUENZA,
-                           CountryName.SAUDI_ARABIA: DiseaseType.MERS}
+    country_disease_map = {LocationName.SAUDI_ARABIA: DiseaseType.MERS}
 
     def __init__(self, country, team="R"):
 
@@ -433,7 +454,7 @@ class CaseCountDiseaseBaserate(CaseCountBaserate):
 
     def make_predictions(self, history_start_date, history_end_date,
                          warning_start_date, warning_end_date,
-                         leadtime_mean=None,
+                         assumed_leadtime=None,
                          predict_method=ewma_predict, **pm_args):
         """
         Uses the CaseCountBaserate method and then adds a disease field to it.
@@ -451,7 +472,7 @@ class CaseCountDiseaseBaserate(CaseCountBaserate):
                                          history_end_date=history_end_date,
                                          warning_start_date=warning_start_date,
                                          warning_end_date=warning_end_date,
-                                         leadtime_mean=leadtime_mean,
+                                         assumed_leadtime=assumed_leadtime,
                                          predict_method=predict_method, **pm_args)
         preds[EventType.DISEASE] = self.country_disease_map[self.country]
 

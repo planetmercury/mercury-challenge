@@ -1,0 +1,83 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Al Qaţīf",
+      "Event_Date": "2018-06-17",
+      "Event_Subtype": "Conflict",
+      "Latitude": 26.5208,
+      "Longitude": 50.0245,
+      "State": "Eastern Province",
+      "timestamp": "2018-06-15T0:33:15.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate3148a892c3a145dc87df59532018100e"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Al ‘Awāmīyah",
+      "Event_Date": "2018-06-22",
+      "Event_Subtype": "Conflict",
+      "Latitude": 26.5936,
+      "Longitude": 49.9875,
+      "State": "Eastern Province",
+      "timestamp": "2018-06-19T16:0:38.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate0736f9dd320e431d95007faad74c0d05"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Najrān",
+      "Event_Date": "2018-06-24",
+      "Event_Subtype": "Conflict",
+      "Latitude": 17.4933,
+      "Longitude": 44.1277,
+      "State": "Najrān",
+      "timestamp": "2018-06-21T14:41:48.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserated3dd463c40984030a97a712c96eae43e"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Jizan",
+      "Event_Date": "2018-06-04",
+      "Event_Subtype": "Conflict",
+      "Latitude": 16.8892,
+      "Longitude": 42.5511,
+      "State": "Jizan",
+      "timestamp": "2018-05-31T21:52:34.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratea298bfcfd9264b2997c83a63fc684570"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Muḩāyil",
+      "Event_Date": "2018-06-02",
+      "Event_Subtype": "Conflict",
+      "Latitude": 18.5464,
+      "Longitude": 42.0489,
+      "State": "-",
+      "timestamp": "2018-05-31T17:46:28.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate9b27db846c184748b39d5de0baaac0aa"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Muḩāyil",
+      "Event_Date": "2018-06-07",
+      "Event_Subtype": "Conflict",
+      "Latitude": 18.5464,
+      "Longitude": 42.0489,
+      "State": "-",
+      "timestamp": "2018-06-02T4:26:47.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratea5940afa024b4385b9c823c5a9a9b82c"
+    }
+  ]
+}
