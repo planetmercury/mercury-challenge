@@ -68,6 +68,12 @@ class LocationName(object):
   AMMAN = "Amman"
   IRBID = "Irbid"
   MADABA = "Madaba"
+  BAHRAIN = "Bahrain"
+  IRAQ = "Iraq"
+  LEBANON = "Lebanon"
+  QATAR = "Qatar"
+  SYRIA = "Syria"
+  YEMEN = "Yemen"
 
 class Wildcards(object):
   STATE_ACTOR = "Unspecified"

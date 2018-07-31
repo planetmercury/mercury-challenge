@@ -1,11 +1,18 @@
 import sys, os, json
 sys.path.append("..")
-from main.mahistorian import MaHistorian
+from main.historian import Historian, MaHistorian
 
 MC_HOME = os.path.join("..", "..", "..")
 DATA_PATH = os.path.join(MC_HOME, "data", "gsr", "ma_gsr")
 
+h = Historian("Jordan")
+print (h.__class__)
+print (h.country)
+
 h = MaHistorian("Egypt")
+print (h.__class__)
+print (h.country)
+print (h.event_type)
 
 gsr = []
 for filename_ in os.listdir(DATA_PATH):

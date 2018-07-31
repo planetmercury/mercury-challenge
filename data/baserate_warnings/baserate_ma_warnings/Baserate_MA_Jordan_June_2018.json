@@ -1,0 +1,18 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Actor": "Royal Jordanian Military",
+      "City": "Jābir",
+      "Event_Date": "2018-06-20",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 32.5116,
+      "Longitude": 36.1971,
+      "State": "Mafraq",
+      "timestamp": "2018-06-16T7:54:23.0",
+      "Country": "Jordan",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate80c225f8ef124121b3b6b0e85647e3f7"
+    }
+  ]
+}
