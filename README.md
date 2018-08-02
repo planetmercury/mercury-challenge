@@ -3,7 +3,7 @@ Public Repository for the IARPA Mercury Challenge.  Challenge participants shoul
 
 ## Software
 ### Official Scoring
-The official scoring package requires a Docker installation.  This package provides the requisite REST endpoints for warning submission, GSR intake, and scoring requests.  This package has not yet been released.
+The official scoring package requires a Docker installation.  This package provides the requisite REST endpoints for warning submission can be found by going to the challenge in Topcoder: http://community.topcoder.com/longcontest/?module=ViewProblemStatement&rd=17231&compid=67293&popup=false
 ### ExpressScore 
 The **ExpressScorer** package provides Challenge participants with a lightweight testing engine that does not require a Docker installation.  The code is found at https://github.com/planetmercury/mercury-challenge/tree/master/src/ExpressScore and tutorial Jupyter notebooks are found at https://github.com/planetmercury/mercury-challenge/blob/master/src/ExpressScore/notebooks
 **ExpressScore** has been tested on MacOS Sierra, Windows 7, and Windows 10 and requires Python 3.4 or greater.
