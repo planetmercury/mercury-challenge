@@ -52,10 +52,14 @@ class Historian:
         :return: List of JSON-formatted events
         """
         out_gsr = []
-        for filename_ in os.listdir(gsr_path):
-            path_ = os.path.join(gsr_path, filename_)
-            with open(path_, "r", encoding="utf8") as f:
-                out_gsr += json.load(f)
+        gsr_filenames = [x for x in os.listdir(gsr_path) if x.endswith(".json")]
+        for filename_ in gsr_filenames:
+            try:
+                path_ = os.path.join(gsr_path, filename_)
+                with open(path_, "r", encoding="utf8") as f:
+                    out_gsr += json.load(f)
+            except UnicodeDecodeError as e:
+                print("UnicodeDecodeError with {}".format(filename_))
 
         return out_gsr
 

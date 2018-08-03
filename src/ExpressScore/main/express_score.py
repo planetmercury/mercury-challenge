@@ -34,6 +34,7 @@ import dlib
 SRC_HOME = os.path.abspath("../..")
 ES_HOME = os.path.abspath(os.path.join(SRC_HOME, "ExpressScore"))
 
+
 class Defaults(object):
     """
     Holds default values for scoring system parameters
@@ -793,7 +794,7 @@ class MaScorer(Scorer):
         :return: Matrix of pairwise QS values
         """
 
-        #Check validity of inputs
+        # Check validity of inputs
         error_list = []
         if ls_weight < 0:
             error_list.append("LS Weight must be positive.  Input value: {}".format(ls_weight))
@@ -832,8 +833,7 @@ class MaScorer(Scorer):
         as_mat = MaScorer.make_as_mat(warn_list, event_list)
 
         qs_mat = ls_weight*ls_mat + ds_weight*ds_mat + ess_weight*ess_mat + as_weight*as_mat
-        qs_mat[ls_mat == 0] = 0
-        qs_mat[ds_mat == 0] = 0
+        qs_mat = qs_mat*np.sign(ls_mat)*np.sign(ds_mat)
         warn_id_list = [w["Warning_ID"] for w in warn_list]
         event_id_list = [e["Event_ID"] for e in event_list]
         qs_df = pd.DataFrame(qs_mat, index=warn_id_list, columns=event_id_list)
