@@ -1,1 +1,33 @@
-{"participant_id": "Mercury_Baserate", "payload": [{"Event_Type": "Disease", "Event_Date": "2018-06-03", "Case_Count": 18.0, "Country": "Saudi Arabia", "Warning_ID": "BR_CU_MERS_2018-06-03", "timestamp": "2018-05-30T15:7:47.0"}, {"Event_Type": "Disease", "Event_Date": "2018-06-10", "Case_Count": 15.0, "Country": "Saudi Arabia", "Warning_ID": "BR_CU_MERS_2018-06-10", "timestamp": "2018-06-06T19:52:43.0"}, {"Event_Type": "Disease", "Event_Date": "2018-06-17", "Case_Count": 5.0, "Country": "Saudi Arabia", "Warning_ID": "BR_CU_MERS_2018-06-17", "timestamp": "2018-06-13T4:56:30.0"}, {"Event_Type": "Disease", "Event_Date": "2018-06-24", "Case_Count": 9.0, "Country": "Saudi Arabia", "Warning_ID": "BR_CU_MERS_2018-06-24", "timestamp": "2018-06-20T4:58:40.0"}]}
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-06-03",
+      "Case_Count": 18.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-06-03"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-06-10",
+      "Case_Count": 15.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-06-10"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-06-17",
+      "Case_Count": 5.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-06-17"
+    },
+    {
+      "Event_Type": "Disease",
+      "Event_Date": "2018-06-24",
+      "Case_Count": 9.0,
+      "Country": "Saudi Arabia",
+      "Warning_ID": "BR_CU_MERS_2018-06-24"
+    }
+  ]
+}
