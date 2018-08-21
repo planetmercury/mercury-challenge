@@ -6,88 +6,28 @@
       "Event_Date": "2018-03-07",
       "Case_Count": 11.0,
       "Country": "Jordan",
-      "Warning_ID": "BR_CU_Jordan_2018-03-07",
-      "Model_Details": {
-        "Order": [
-          4,
-          0,
-          0
-        ],
-        "Model_Params": [
-          11.027921685059578,
-          0.4502484516492988,
-          -0.15446368628884596,
-          0.06735044515885791,
-          -0.03486694497046559
-        ],
-        "Error": 0.44692563630220655
-      }
+      "Warning_ID": "BR_CU_Jordan_2018-03-07"
     },
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-03-14",
       "Case_Count": 11.0,
       "Country": "Jordan",
-      "Warning_ID": "BR_CU_Jordan_2018-03-14",
-      "Model_Details": {
-        "Order": [
-          4,
-          0,
-          0
-        ],
-        "Model_Params": [
-          11.027921685059578,
-          0.4502484516492988,
-          -0.15446368628884596,
-          0.06735044515885791,
-          -0.03486694497046559
-        ],
-        "Error": 0.44692563630220655
-      }
+      "Warning_ID": "BR_CU_Jordan_2018-03-14"
     },
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-03-21",
       "Case_Count": 11.0,
       "Country": "Jordan",
-      "Warning_ID": "BR_CU_Jordan_2018-03-21",
-      "Model_Details": {
-        "Order": [
-          4,
-          0,
-          0
-        ],
-        "Model_Params": [
-          11.027921685059578,
-          0.4502484516492988,
-          -0.15446368628884596,
-          0.06735044515885791,
-          -0.03486694497046559
-        ],
-        "Error": 0.44692563630220655
-      }
+      "Warning_ID": "BR_CU_Jordan_2018-03-21"
     },
     {
       "Event_Type": "Civil Unrest",
       "Event_Date": "2018-03-28",
       "Case_Count": 11.0,
       "Country": "Jordan",
-      "Warning_ID": "BR_CU_Jordan_2018-03-28",
-      "Model_Details": {
-        "Order": [
-          4,
-          0,
-          0
-        ],
-        "Model_Params": [
-          11.027921685059578,
-          0.4502484516492988,
-          -0.15446368628884596,
-          0.06735044515885791,
-          -0.03486694497046559
-        ],
-        "Error": 0.44692563630220655
-      }
+      "Warning_ID": "BR_CU_Jordan_2018-03-28"
     }
   ]
 }
