@@ -1,1 +1,1 @@
-{"participant_id": "Mercury_Baserate", "payload": [{"Event_Type": "Civil Unrest", "Event_Date": "2018-03-01", "Case_Count": 13.0, "Country": "Jordan", "State": "Amman",, "Warning_ID": "BR_CU_Amman_2018-03-01", "timestamp": "2018-02-25T12:4:48.0"}]}
+{"participant_id": "Mercury_Baserate", "payload": [{"Event_Type": "Civil Unrest", "Event_Date": "2018-03-01", "Case_Count": 13.0, "Country": "Jordan", "State": "Amman", "Warning_ID": "BR_CU_Amman_2018-03-01", "timestamp": "2018-02-25T12:4:48.0"}]}
