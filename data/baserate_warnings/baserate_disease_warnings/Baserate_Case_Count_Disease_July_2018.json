@@ -1,0 +1,32 @@
+{
+  "payload": [
+    {
+      "Event_Date": "2018-07-01",
+      "Disease": "MERS",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Disease",
+      "Warning_ID": "BR_MERS_Saudi_Arabia_2018-07-01",
+      "timestamp": "2018-06-28T10:11:3.0",
+      "Case_Count": 1
+    },
+    {
+      "Event_Date": "2018-07-08",
+      "Disease": "MERS",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Disease",
+      "Warning_ID": "BR_MERS_Saudi_Arabia_2018-07-08",
+      "timestamp": "2018-07-05T5:2:5.0",
+      "Case_Count": 1
+    },
+    {
+      "Event_Date": "2018-07-15",
+      "Disease": "MERS",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Disease",
+      "Warning_ID": "BR_MERS_Saudi_Arabia_2018-07-15",
+      "timestamp": "2018-07-12T4:41:4.0",
+      "Case_Count": 2
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
