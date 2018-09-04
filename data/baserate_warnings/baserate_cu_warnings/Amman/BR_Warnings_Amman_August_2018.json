@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "Case_Count": 13.0,
+      "Country": "Jordan",
+      "Event_Date": "2018-08-01",
+      "Event_Type": "Civil Unrest",
+      "State": "Amman",
+      "timestamp": "2018-07-10T12:00:00",
+      "Warning_ID": "BR_CU_Amman_2018-08-01"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}

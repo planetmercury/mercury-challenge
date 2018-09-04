@@ -1,0 +1,70 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Najrān",
+      "Event_Date": "2018-07-19",
+      "Event_Subtype": "Conflict",
+      "Latitude": 17.5,
+      "Longitude": 44.1667,
+      "State": "-",
+      "timestamp": "2018-07-15T10:43:18.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserated522d9c1b34747edb8155a36dbe2929a"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Jizan",
+      "Event_Date": "2018-07-03",
+      "Event_Subtype": "Conflict",
+      "Latitude": 16.8892,
+      "Longitude": 42.5511,
+      "State": "Jizan",
+      "timestamp": "2018-06-29T21:26:48.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratea16e0d0a507b4c18aefa48b54984bbb3"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Riyadh",
+      "Event_Date": "2018-07-07",
+      "Event_Subtype": "Conflict",
+      "Latitude": 24.6877,
+      "Longitude": 46.7219,
+      "State": "Ar Riyāḑ",
+      "timestamp": "2018-07-06T17:7:47.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratecc1b912170c247c2a1be4401f23f2979"
+    },
+    {
+      "Actor": "Royal Saudi Military",
+      "City": "Jizan",
+      "Event_Date": "2018-07-13",
+      "Event_Subtype": "Conflict",
+      "Latitude": 16.8892,
+      "Longitude": 42.5511,
+      "State": "Jizan",
+      "timestamp": "2018-07-09T14:43:21.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratefc1419b25259433d9affe052961bd8a1"
+    },
+    {
+      "Actor": "Royal Saudi Police",
+      "City": "Jizan",
+      "Event_Date": "2018-07-24",
+      "Event_Subtype": "Conflict",
+      "Latitude": 16.8892,
+      "Longitude": 42.5511,
+      "State": "Jizan",
+      "timestamp": "2018-07-19T8:34:37.0",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate2363b1a3b09f4f3fa5e0dae8e4d1b43d"
+    }
+  ]
+}

@@ -169,7 +169,7 @@ class Baserate:
           )
 
     def make_predictions(self, warning_start_date, warning_end_date,
-                         gsr,
+                         gsr, history_delay=0,
                          history_length=365,
                          assumed_leadtime=Defaults.LT,
                          event_rate=None, replace=True, **matchargs):
@@ -178,6 +178,7 @@ class Baserate:
         :param warning_start_date: First date of warning period
         :param warning_end_date: Last date of warning period
         :param gsr: The history of events
+        :param history_delay: Lag between end of history and start of warnings
         :param history_length: How far to look back, default is 365 days
         :param assumed_leadtime: Mean of a Poisson distribution to simulate lead times
         :param event_rate: Predetermined rate at which warnings are produced, default None
@@ -185,9 +186,9 @@ class Baserate:
         :param matchargs: Additional arguments to be matched.
         :returns: Dataframe of warnings
         """
-        history_end_dtg = parse(warning_start_date) - datetime.timedelta(1)
+        history_end_dtg = parse(warning_start_date) - datetime.timedelta(1 + history_delay)
         history_end_date = history_end_dtg.strftime(Defaults.DATE_FMT)
-        history_start_dtg = parse(warning_start_date) - datetime.timedelta(history_length)
+        history_start_dtg = parse(warning_start_date) - datetime.timedelta(history_length + history_delay)
         history_start_date = history_start_dtg.strftime(Defaults.DATE_FMT)
         event_df = self.get_history(history_start_date, history_end_date, gsr)
         if event_rate is None:

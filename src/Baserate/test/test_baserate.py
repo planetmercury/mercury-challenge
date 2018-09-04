@@ -18,6 +18,7 @@ class TestBaserate(unittest.TestCase):
         b = Baserate(country=cc)
         self.assertEqual(cc, b.country)
 
+
 class TestMaBaserate(unittest.TestCase):
 
     def test_event_type(self):
