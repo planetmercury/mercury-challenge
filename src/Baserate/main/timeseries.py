@@ -49,6 +49,7 @@ class TsDefaults:
     P_MAX = 4
     D_MAX = 1
     Q_MAX = 4
+    CU_WEEKLY_FREQ = "W-WED"
 
 
 # The REFERENCE_WEEKDAY is used to anchor ISO Weeks.
