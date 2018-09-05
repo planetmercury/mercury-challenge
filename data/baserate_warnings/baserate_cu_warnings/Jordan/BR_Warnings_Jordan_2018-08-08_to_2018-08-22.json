@@ -5,7 +5,7 @@
       "Country": "Jordan",
       "Event_Date": "2018-08-08",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Jordan_2018-08-08"
     },
     {
@@ -13,7 +13,7 @@
       "Country": "Jordan",
       "Event_Date": "2018-08-15",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Jordan_2018-08-15"
     },
     {
@@ -21,7 +21,7 @@
       "Country": "Jordan",
       "Event_Date": "2018-08-22",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Jordan_2018-08-22"
     }
   ],

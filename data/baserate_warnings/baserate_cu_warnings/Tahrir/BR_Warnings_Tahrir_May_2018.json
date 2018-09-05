@@ -1,1 +1,50 @@
-{"participant_id": "Mercury_Baserate", "payload": [{"Event_Type": "Civil Unrest", "Event_Date": "2018-05-02", "Case_Count": 7.0, "Country": "Egypt", "City": "Tahrir Square", "Warning_ID": "BR_CU_Tahrir_2018-05-02", "timestamp": "2018-04-28T20:39:35.0"}, {"Event_Type": "Civil Unrest", "Event_Date": "2018-05-09", "Case_Count": 5.0, "Country": "Egypt", "City": "Tahrir Square", "Warning_ID": "BR_CU_Tahrir_2018-05-09", "timestamp": "2018-05-05T21:17:11.0"}, {"Event_Type": "Civil Unrest", "Event_Date": "2018-05-16", "Case_Count": 9.0, "Country": "Egypt", "City": "Tahrir Square", "Warning_ID": "BR_CU_Tahrir_2018-05-16", "timestamp": "2018-05-12T0:32:25.0"}, {"Event_Type": "Civil Unrest", "Event_Date": "2018-05-23", "Case_Count": 11.0, "Country": "Egypt", "City": "Tahrir Square", "Warning_ID": "BR_CU_Tahrir_2018-05-23", "timestamp": "2018-05-19T16:41:45.0"}, {"Event_Type": "Civil Unrest", "Event_Date": "2018-05-30", "Case_Count": 12.0, "Country": "Egypt", "City": "Tahrir Square", "Warning_ID": "BR_CU_Tahrir_2018-05-30", "timestamp": "2018-05-26T15:49:46.0"}]}
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Case_Count": 7.0,
+      "City": "Tahrir Square",
+      "Country": "Egypt",
+      "Event_Date": "2018-05-02",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-05-02",
+      "timestamp": "2018-04-29T12:00:01.1"
+    },
+    {
+      "Case_Count": 5.0,
+      "City": "Tahrir Square",
+      "Country": "Egypt",
+      "Event_Date": "2018-05-09",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-05-09",
+      "timestamp": "2018-05-06T12:00:01.1"
+    },
+    {
+      "Case_Count": 9.0,
+      "City": "Tahrir Square",
+      "Country": "Egypt",
+      "Event_Date": "2018-05-16",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-05-16",
+      "timestamp": "2018-05-13T12:00:01.1"
+    },
+    {
+      "Case_Count": 11.0,
+      "City": "Tahrir Square",
+      "Country": "Egypt",
+      "Event_Date": "2018-05-23",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-05-23",
+      "timestamp": "2018-05-20T12:00:01.1"
+    },
+    {
+      "Case_Count": 12.0,
+      "City": "Tahrir Square",
+      "Country": "Egypt",
+      "Event_Date": "2018-05-30",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-05-30",
+      "timestamp": "2018-05-27T12:00:01.1"
+    }
+  ]
+}

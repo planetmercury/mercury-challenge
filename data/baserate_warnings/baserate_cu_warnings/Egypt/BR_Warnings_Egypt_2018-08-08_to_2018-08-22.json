@@ -5,7 +5,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-08",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-08"
     },
     {
@@ -13,7 +13,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-09",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-09"
     },
     {
@@ -21,7 +21,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-10",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-10"
     },
     {
@@ -29,7 +29,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-11",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-11"
     },
     {
@@ -37,7 +37,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-12",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-12"
     },
     {
@@ -45,7 +45,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-13",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-13"
     },
     {
@@ -53,7 +53,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-14",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-14"
     },
     {
@@ -61,7 +61,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-15",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-15"
     },
     {
@@ -69,7 +69,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-16",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-16"
     },
     {
@@ -77,7 +77,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-17",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-17"
     },
     {
@@ -85,7 +85,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-18",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-18"
     },
     {
@@ -93,7 +93,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-19",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-19"
     },
     {
@@ -101,7 +101,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-20",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-20"
     },
     {
@@ -109,7 +109,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-21",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-21"
     },
     {
@@ -117,7 +117,7 @@
       "Country": "Egypt",
       "Event_Date": "2018-08-22",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-07-24T12:00:00",
+      "timestamp": "2018-07-24T12:00:00.1",
       "Warning_ID": "BR_CU_Egypt_2018-08-22"
     }
   ],
