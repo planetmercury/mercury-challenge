@@ -14,9 +14,11 @@ for place in places:
         load_warn_cmd = LOAD_WARN_CMD.copy()
         path_ = os.path.join(place_path, wf)
         load_warn_cmd.append("@{}".format(path_))
-        print(load_warn_cmd)
+        #print(load_warn_cmd)
         proc = subprocess.Popen(load_warn_cmd, stdout=subprocess.PIPE)
         out, errs = proc.communicate()
+        if "rror" in out.__str__():
+            print (wf, out)
         if errs is not None:
             print(errs)
 

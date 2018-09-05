@@ -2,36 +2,40 @@
   "participant_id": "Mercury_Baserate",
   "payload": [
     {
-      "Event_Type": "Civil Unrest",
-      "Event_Date": "2018-07-04",
       "Case_Count": 5.0,
-      "Country": "Egypt",
       "City": "Tahrir Square",
-      "Warning_ID": "BR_CU_Tahrir_2018-07-04"
+      "Country": "Egypt",
+      "Event_Date": "2018-07-04",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-07-04",
+      "timestamp": "2018-07-01T12:00:01.1"
     },
     {
-      "Event_Type": "Civil Unrest",
-      "Event_Date": "2018-07-11",
       "Case_Count": 7.0,
-      "Country": "Egypt",
       "City": "Tahrir Square",
-      "Warning_ID": "BR_CU_Tahrir_2018-07-11"
+      "Country": "Egypt",
+      "Event_Date": "2018-07-11",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-07-11",
+      "timestamp": "2018-07-08T12:00:01.1"
     },
     {
-      "Event_Type": "Civil Unrest",
-      "Event_Date": "2018-07-18",
       "Case_Count": 8.0,
-      "Country": "Egypt",
       "City": "Tahrir Square",
-      "Warning_ID": "BR_CU_Tahrir_2018-07-18"
+      "Country": "Egypt",
+      "Event_Date": "2018-07-18",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-07-18",
+      "timestamp": "2018-07-15T12:00:01.1"
     },
     {
-      "Event_Type": "Civil Unrest",
-      "Event_Date": "2018-07-25",
       "Case_Count": 10.0,
-      "Country": "Egypt",
       "City": "Tahrir Square",
-      "Warning_ID": "BR_CU_Tahrir_2018-07-25"
+      "Country": "Egypt",
+      "Event_Date": "2018-07-25",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-07-25",
+      "timestamp": "2018-07-22T12:00:01.1"
     }
   ]
 }
