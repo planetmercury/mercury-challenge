@@ -1,0 +1,23 @@
+{
+  "payload": [
+    {
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Case_Count": 1,
+      "Warning_ID": "BR_MERS_Saudi_Arabia_2018-09-16",
+      "Country": "Saudi Arabia",
+      "Event_Date": "2018-09-16",
+      "timestamp": "2018-09-13T3:44:17.0"
+    },
+    {
+      "Disease": "MERS",
+      "Event_Type": "Disease",
+      "Case_Count": 0,
+      "Warning_ID": "BR_MERS_Saudi_Arabia_2018-09-23",
+      "Country": "Saudi Arabia",
+      "Event_Date": "2018-09-23",
+      "timestamp": "2018-09-20T3:5:38.0"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
