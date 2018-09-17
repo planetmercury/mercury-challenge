@@ -1,0 +1,31 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Date": "2018-09-28",
+      "timestamp": "2018-09-25T20:47:19.0",
+      "Event_Subtype": "Force Posture",
+      "Actor": "Egyptian Military",
+      "City": "Dishnā",
+      "Latitude": 26.1247,
+      "Longitude": 32.476,
+      "State": "Qinā",
+      "Country": "Egypt",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate1238a56f5a624ec4b26cd773ef3f8d56"
+    },
+    {
+      "Event_Date": "2018-09-27",
+      "timestamp": "2018-09-21T21:49:49.0",
+      "Event_Subtype": "Conflict",
+      "Actor": "Egyptian Police",
+      "City": "Muḩāfaz̧at Shamāl Sīnā’",
+      "Latitude": 30.5,
+      "Longitude": 33.7,
+      "State": "Shamāl Sīnāʼ",
+      "Country": "Egypt",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate2f63bb2a1af74b22b5a426f0fa509460"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Date": "2018-09-29",
+      "timestamp": "2018-09-23T18:34:18.0",
+      "Event_Subtype": "Force Posture",
+      "Actor": "Lebanese Military",
+      "City": "Caza de Zahleh",
+      "Latitude": 33.8333,
+      "Longitude": 35.9,
+      "State": "Béqaa",
+      "Country": "Lebanon",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baseratefb803a22f25042f09c2a8d673fb8501e"
+    }
+  ]
+}
