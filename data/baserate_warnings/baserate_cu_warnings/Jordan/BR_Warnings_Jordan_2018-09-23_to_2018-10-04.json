@@ -5,7 +5,7 @@
       "Case_Count": 6.0,
       "Country": "Jordan",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-09-04T12:00:00",
+      "timestamp": "2018-09-04T12:00:00.1",
       "Warning_ID": "BR_CU_Jordan_2018-09-26"
     },
     {
@@ -13,7 +13,7 @@
       "Case_Count": 6.0,
       "Country": "Jordan",
       "Event_Type": "Civil Unrest",
-      "timestamp": "2018-09-04T12:00:00",
+      "timestamp": "2018-09-04T12:00:00.1",
       "Warning_ID": "BR_CU_Jordan_2018-10-03"
     }
   ],
