@@ -1,0 +1,18 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Date": "2018-09-24",
+      "timestamp": "2018-09-22T13:16:43.0",
+      "Event_Subtype": "Conflict",
+      "Actor": "Royal Saudi Military",
+      "City": "Najrān",
+      "Latitude": 17.4933,
+      "Longitude": 44.1277,
+      "State": "Najrān",
+      "Country": "Saudi Arabia",
+      "Event_Type": "Military Activity",
+      "Warning_ID": "Mercury_Baserate31a42b049087403ba2d30b27679cdbd8"
+    }
+  ]
+}
