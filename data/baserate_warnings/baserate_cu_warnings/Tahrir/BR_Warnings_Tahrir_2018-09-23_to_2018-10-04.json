@@ -6,7 +6,7 @@
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "City": "Tahrir Square",
-      "timestamp": "2018-09-04T12:00:00",
+      "timestamp": "2018-09-04T12:00:00.1",
       "Warning_ID": "BR_CU_Tahrir_2018-09-26"
     },
     {
@@ -15,7 +15,7 @@
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "City": "Tahrir Square",
-      "timestamp": "2018-09-04T12:00:00",
+      "timestamp": "2018-09-04T12:00:00.1",
       "Warning_ID": "BR_CU_Tahrir_2018-10-03"
     }
   ],
