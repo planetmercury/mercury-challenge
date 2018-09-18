@@ -2,7 +2,7 @@
   "payload": [
     {
       "Event_Date": "2018-09-26",
-      "Case_Count": 2.0,
+      "Case_Count": 9.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "City": "Tahrir Square",
@@ -11,7 +11,7 @@
     },
     {
       "Event_Date": "2018-10-03",
-      "Case_Count": 2.0,
+      "Case_Count": 10.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "City": "Tahrir Square",

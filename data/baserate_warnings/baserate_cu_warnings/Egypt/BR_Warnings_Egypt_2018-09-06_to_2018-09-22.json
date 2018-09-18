@@ -2,7 +2,7 @@
   "payload": [
     {
       "Event_Date": "2018-09-06",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -10,7 +10,7 @@
     },
     {
       "Event_Date": "2018-09-07",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -18,7 +18,7 @@
     },
     {
       "Event_Date": "2018-09-08",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -26,7 +26,7 @@
     },
     {
       "Event_Date": "2018-09-09",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -34,7 +34,7 @@
     },
     {
       "Event_Date": "2018-09-10",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -42,7 +42,7 @@
     },
     {
       "Event_Date": "2018-09-11",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -50,7 +50,7 @@
     },
     {
       "Event_Date": "2018-09-12",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -58,7 +58,7 @@
     },
     {
       "Event_Date": "2018-09-13",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -66,7 +66,7 @@
     },
     {
       "Event_Date": "2018-09-14",
-      "Case_Count": 1.0,
+      "Case_Count": 2.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -74,7 +74,7 @@
     },
     {
       "Event_Date": "2018-09-15",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -82,7 +82,7 @@
     },
     {
       "Event_Date": "2018-09-16",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -90,7 +90,7 @@
     },
     {
       "Event_Date": "2018-09-17",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -98,7 +98,7 @@
     },
     {
       "Event_Date": "2018-09-18",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -106,7 +106,7 @@
     },
     {
       "Event_Date": "2018-09-19",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -114,7 +114,7 @@
     },
     {
       "Event_Date": "2018-09-20",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -122,7 +122,7 @@
     },
     {
       "Event_Date": "2018-09-21",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -130,7 +130,7 @@
     },
     {
       "Event_Date": "2018-09-22",
-      "Case_Count": 1.0,
+      "Case_Count": 3.0,
       "Country": "Egypt",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
