@@ -2,7 +2,7 @@
   "payload": [
     {
       "Event_Date": "2018-09-26",
-      "Case_Count": 6.0,
+      "Case_Count": 11.0,
       "Country": "Jordan",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
@@ -10,7 +10,7 @@
     },
     {
       "Event_Date": "2018-10-03",
-      "Case_Count": 6.0,
+      "Case_Count": 11.0,
       "Country": "Jordan",
       "Event_Type": "Civil Unrest",
       "timestamp": "2018-09-04T12:00:00.1",
