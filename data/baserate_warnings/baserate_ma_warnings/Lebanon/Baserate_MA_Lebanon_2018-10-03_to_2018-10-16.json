@@ -1,0 +1,70 @@
+{
+  "payload": [
+    {
+      "Country": "Lebanon",
+      "Warning_ID": "Mercury_Baserate295194da7dd847778de7edad3c0d1cd3",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese General Security",
+      "State": "State",
+      "Longitude": "Longitude",
+      "City": "City",
+      "Event_Date": "2018-10-12",
+      "timestamp": "2018-10-10T19:51:22.0",
+      "Event_Subtype": "Force Posture",
+      "Latitude": "Latitude"
+    },
+    {
+      "Country": "Lebanon",
+      "Warning_ID": "Mercury_Baserate6ce52d6ecb634d928cf28866f03f7414",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese General Security",
+      "State": "Liban-Nord",
+      "Longitude": 35.8728,
+      "City": "Majdlaya",
+      "Event_Date": "2018-10-13",
+      "timestamp": "2018-10-08T9:19:15.0",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 34.4175
+    },
+    {
+      "Country": "Lebanon",
+      "Warning_ID": "Mercury_Baseratebe9bac74a63c4646b6f0fe33d54de511",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese General Security",
+      "State": "Beyrouth",
+      "Longitude": 35.4944,
+      "City": "Beirut",
+      "Event_Date": "2018-10-15",
+      "timestamp": "2018-10-11T17:29:41.0",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 33.8889
+    },
+    {
+      "Country": "Lebanon",
+      "Warning_ID": "Mercury_Baserateb28a811469e14fbea295e4340276d255",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "State": "Baalbek-Hermel",
+      "Longitude": 36.4208,
+      "City": "Aarsâl",
+      "Event_Date": "2018-10-08",
+      "timestamp": "2018-10-05T22:27:8.0",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 34.1794
+    },
+    {
+      "Country": "Lebanon",
+      "Warning_ID": "Mercury_Baserate56fd8ef07d67440098487721778c335f",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "State": "Béqaa",
+      "Longitude": 35.8914,
+      "City": "Khandaq el Hommaïda",
+      "Event_Date": "2018-10-08",
+      "timestamp": "2018-10-06T17:37:4.0",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 33.78
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
