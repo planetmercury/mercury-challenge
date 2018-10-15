@@ -1,0 +1,70 @@
+{
+  "payload": [
+    {
+      "timestamp": "2018-10-18T11:26:25.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese General Security",
+      "Longitude": 36.1414,
+      "Country": "Lebanon",
+      "Event_Date": "2018-10-20",
+      "Warning_ID": "Mercury_Baserate0fa1fb6f0f454d798265abcdf9728f1d",
+      "State": "Baalbek-Hermel",
+      "City": "Hortaala",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 33.9181
+    },
+    {
+      "timestamp": "2018-10-19T0:40:54.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "Longitude": 36.4208,
+      "Country": "Lebanon",
+      "Event_Date": "2018-10-22",
+      "Warning_ID": "Mercury_Baserate5654cf049ae74001805393c1862b4853",
+      "State": "Baalbek-Hermel",
+      "City": "Aarsâl",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 34.1794
+    },
+    {
+      "timestamp": "2018-10-22T21:54:33.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "Longitude": 35.5844,
+      "Country": "Lebanon",
+      "Event_Date": "2018-10-24",
+      "Warning_ID": "Mercury_Baserate3b2bac5056f1453fa50f5a9743f4581d",
+      "State": "Liban-Sud",
+      "City": "Jezzîne",
+      "Event_Subtype": "Conflict",
+      "Latitude": 33.5417
+    },
+    {
+      "timestamp": "2018-10-24T22:33:30.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "Longitude": 36.2181,
+      "Country": "Lebanon",
+      "Event_Date": "2018-10-29",
+      "Warning_ID": "Mercury_Baserate1fd0648555ee4d4eb06022570e4a3b8f",
+      "State": "Aakkâr",
+      "City": "Shaqdouf Aakkar",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 34.5239
+    },
+    {
+      "timestamp": "2018-10-12T13:57:34.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Lebanese Military",
+      "Longitude": 36.4208,
+      "Country": "Lebanon",
+      "Event_Date": "2018-10-20",
+      "Warning_ID": "Mercury_Baserate4a8bfe66e1654862aac5b32ac9656deb",
+      "State": "Baalbek-Hermel",
+      "City": "Aarsâl",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 34.1794
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}

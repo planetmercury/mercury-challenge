@@ -1,0 +1,122 @@
+{
+  "payload": [
+    {
+      "timestamp": "2018-10-19T13:46:12.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Police",
+      "Longitude": 33.7,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-22",
+      "Warning_ID": "Mercury_Baserateae2997ff67b042da909be284a038375d",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Muḩāfaz̧at Shamāl Sīnā’",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 30.5
+    },
+    {
+      "timestamp": "2018-10-18T11:32:57.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 30.2,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-21",
+      "Warning_ID": "Mercury_Baseratee9c20b8c142e43fa874a7007615cc883",
+      "State": "Al Buḩayrah",
+      "City": "Beheira Governorate",
+      "Event_Subtype": "Conflict",
+      "Latitude": 30.6
+    },
+    {
+      "timestamp": "2018-10-22T2:24:6.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 33.7,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-24",
+      "Warning_ID": "Mercury_Baseratedb27668b9e3c4b6885b0ad56ac73c7fc",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Muḩāfaz̧at Shamāl Sīnā’",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 30.5
+    },
+    {
+      "timestamp": "2018-10-15T10:22:23.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 30.2167,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-19",
+      "Warning_ID": "Mercury_Baserate7261597cdc1f4263a74f2176f1e7725f",
+      "State": "Al Buḩayrah",
+      "City": "Wādī an Naţrūn",
+      "Event_Subtype": "Conflict",
+      "Latitude": 30.4167
+    },
+    {
+      "timestamp": "2018-10-21T3:23:40.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Police",
+      "Longitude": 34.1107,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-26",
+      "Warning_ID": "Mercury_Baserate74875e9a165948d795196311f97146ce",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Ash Shaykh Zuwayd",
+      "Event_Subtype": "Conflict",
+      "Latitude": 31.2163
+    },
+    {
+      "timestamp": "2018-10-19T17:11:51.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 33.7,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-22",
+      "Warning_ID": "Mercury_Baserate473f44a63f074bfbac632931faa2707b",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Muḩāfaz̧at Shamāl Sīnā’",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 30.5
+    },
+    {
+      "timestamp": "2018-10-20T1:41:31.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 33.7,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-26",
+      "Warning_ID": "Mercury_Baserate7d9d846eb8654844a5b4131b8ff649ba",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Muḩāfaz̧at Shamāl Sīnā’",
+      "Event_Subtype": "Force Posture",
+      "Latitude": 30.5
+    },
+    {
+      "timestamp": "2018-10-15T22:57:1.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 33.7984,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-17",
+      "Warning_ID": "Mercury_Baserate337dd25627cd42a98835f345f3b2f608",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Arish",
+      "Event_Subtype": "Conflict",
+      "Latitude": 31.1316
+    },
+    {
+      "timestamp": "2018-10-24T6:54:11.0",
+      "Event_Type": "Military Activity",
+      "Actor": "Egyptian Military",
+      "Longitude": 34.2381,
+      "Country": "Egypt",
+      "Event_Date": "2018-10-29",
+      "Warning_ID": "Mercury_Baserate3af32621d7c041748fe9b685365a8817",
+      "State": "Shamāl Sīnāʼ",
+      "City": "Rafaḩ",
+      "Event_Subtype": "Conflict",
+      "Latitude": 31.2878
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
