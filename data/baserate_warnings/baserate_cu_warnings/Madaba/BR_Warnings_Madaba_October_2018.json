@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "Case_Count": 2.0,
+      "timestamp": "2018-09-04T12:00:00.1",
+      "Country": "Jordan",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Madaba_2018-10-01",
+      "Event_Date": "2018-10-01",
+      "State": "Madaba"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
