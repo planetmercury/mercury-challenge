@@ -1,0 +1,23 @@
+{
+  "payload": [
+    {
+      "Country": "Egypt",
+      "Case_Count": 9.0,
+      "Event_Date": "2018-10-24",
+      "timestamp": "2018-10-02T12:00:00.1",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-10-24",
+      "City": "Tahrir Square"
+    },
+    {
+      "Country": "Egypt",
+      "Case_Count": 10.0,
+      "Event_Date": "2018-10-31",
+      "timestamp": "2018-10-02T12:00:00.1",
+      "Event_Type": "Civil Unrest",
+      "Warning_ID": "BR_CU_Tahrir_2018-10-31",
+      "City": "Tahrir Square"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
