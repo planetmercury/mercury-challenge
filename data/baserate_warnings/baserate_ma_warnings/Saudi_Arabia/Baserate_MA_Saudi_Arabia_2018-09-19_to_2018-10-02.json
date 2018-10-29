@@ -2,56 +2,43 @@
   "participant_id": "Mercury_Baserate",
   "payload": [
     {
-      "Event_Date": "2018-09-20",
-      "timestamp": "2018-09-19T10:35:16.0",
+      "City": "Ar Rimal",
+      "Event_Date": "2018-09-24",
+      "Event_Type": "Military Activity",
       "Event_Subtype": "Conflict",
       "Actor": "Royal Saudi Military",
-      "City": "Jizan",
-      "Latitude": 16.8892,
-      "Longitude": 42.5511,
-      "State": "Jizan",
+      "Longitude": 46.8231,
+      "timestamp": "2018-09-23T12:41:53.0",
+      "Latitude": 24.8679,
       "Country": "Saudi Arabia",
-      "Event_Type": "Military Activity",
-      "Warning_ID": "Mercury_Baserate385269e32ff045ae98820d585b82bd1d"
+      "State": "Ar Riyāḑ",
+      "Warning_ID": "Mercury_Baserate8ff8867804cf4b619c910959a0ac5256"
     },
     {
-      "Event_Date": "2018-09-30",
-      "timestamp": "2018-09-25T23:25:47.0",
-      "Event_Subtype": "Conflict",
-      "Actor": "Royal Saudi Military",
-      "City": "Najrān",
-      "Latitude": 17.4933,
-      "Longitude": 44.1277,
-      "State": "Najrān",
-      "Country": "Saudi Arabia",
+      "City": "Khamis Mushait",
+      "Event_Date": "2018-09-24",
       "Event_Type": "Military Activity",
-      "Warning_ID": "Mercury_Baserate461793a55ee14b4bab09d6ace7ef1174"
+      "Event_Subtype": "Conflict",
+      "Actor": "Unspecified",
+      "Longitude": 42.7333,
+      "timestamp": "2018-09-21T18:33:55.0",
+      "Latitude": 18.3,
+      "Country": "Saudi Arabia",
+      "State": "Minţaqat ‘Asīr",
+      "Warning_ID": "Mercury_Baseratef06a08e988e9473bb88b8a5bccb032c5"
     },
     {
-      "Event_Date": "2018-09-26",
-      "timestamp": "2018-09-23T8:56:54.0",
+      "City": "Bi’r Khaḑrā’",
+      "Event_Date": "2018-10-01",
+      "Event_Type": "Military Activity",
       "Event_Subtype": "Conflict",
       "Actor": "Royal Saudi Military",
-      "City": "Jizan",
-      "Latitude": 16.8892,
-      "Longitude": 42.5511,
-      "State": "Jizan",
+      "Longitude": 44.4308,
+      "timestamp": "2018-09-26T14:45:23.0",
+      "Latitude": 17.5444,
       "Country": "Saudi Arabia",
-      "Event_Type": "Military Activity",
-      "Warning_ID": "Mercury_Baserateffbb9ace90ad445a967ad68bc2f99aa2"
-    },
-    {
-      "Event_Date": "2018-09-25",
-      "timestamp": "2018-09-20T22:57:34.0",
-      "Event_Subtype": "Conflict",
-      "Actor": "Royal Saudi Military",
-      "City": "Najrān",
-      "Latitude": 17.4933,
-      "Longitude": 44.1277,
-      "State": "Najrān",
-      "Country": "Saudi Arabia",
-      "Event_Type": "Military Activity",
-      "Warning_ID": "Mercury_Baseratec4867a23a6794f42af8f8b2194b03149"
+      "State": "-",
+      "Warning_ID": "Mercury_Baserateecf1417c017040c8a85037b75d17970f"
     }
   ]
 }
