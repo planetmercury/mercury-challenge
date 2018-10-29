@@ -1,0 +1,117 @@
+{
+  "payload": [
+    {
+      "Case_Count": 3.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-02",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-02"
+    },
+    {
+      "Case_Count": 3.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-03",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-03"
+    },
+    {
+      "Case_Count": 3.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-04",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-04"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-05",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-05"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-06",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-06"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-07",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-07"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-08",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-08"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-09",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-09"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-10",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-10"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-11",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-11"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-12",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-12"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-13",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-13"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-14",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-14"
+    },
+    {
+      "Case_Count": 4.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-15",
+      "Country": "Egypt",
+      "Warning_ID": "BR_CU_Egypt_2018-11-15"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}

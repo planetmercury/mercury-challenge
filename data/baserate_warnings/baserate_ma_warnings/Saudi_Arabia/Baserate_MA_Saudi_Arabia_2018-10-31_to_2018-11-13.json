@@ -1,0 +1,44 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-08",
+      "City": "Jizan",
+      "Actor": "Royal Saudi Police",
+      "Latitude": 16.8892,
+      "timestamp": "2018-11-02T8:30:2.0",
+      "State": "Jizan",
+      "Event_Subtype": "Conflict",
+      "Warning_ID": "Mercury_Baserate60a93cc1085e4849aa26572e5c214d58",
+      "Longitude": 42.5511,
+      "Country": "Saudi Arabia"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-08",
+      "City": "Najrān",
+      "Actor": "Royal Saudi Military",
+      "Latitude": 17.4933,
+      "timestamp": "2018-11-06T20:54:30.0",
+      "State": "Najrān",
+      "Event_Subtype": "Conflict",
+      "Warning_ID": "Mercury_Baserate1526518240b04994ae944a45e1ca318b",
+      "Longitude": 44.1277,
+      "Country": "Saudi Arabia"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-04",
+      "City": "Jizan Region",
+      "Actor": "Royal Saudi Military",
+      "Latitude": 17.3333,
+      "timestamp": "2018-10-29T15:27:10.0",
+      "State": "Jizan",
+      "Event_Subtype": "Conflict",
+      "Warning_ID": "Mercury_Baseratea65ea8992bc54d1f9fcbf7df51758a1e",
+      "Longitude": 42.6667,
+      "Country": "Saudi Arabia"
+    }
+  ]
+}
