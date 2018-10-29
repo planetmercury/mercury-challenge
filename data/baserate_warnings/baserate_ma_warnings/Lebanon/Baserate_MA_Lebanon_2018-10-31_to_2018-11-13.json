@@ -1,0 +1,70 @@
+{
+  "participant_id": "Mercury_Baserate",
+  "payload": [
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-07",
+      "City": "Aarsâl",
+      "Actor": "Lebanese Military",
+      "Latitude": 34.1794,
+      "timestamp": "2018-11-03T21:22:49.0",
+      "State": "Baalbek-Hermel",
+      "Event_Subtype": "Force Posture",
+      "Warning_ID": "Mercury_Baserate4e0a19187ce24cde8a0d72bc90cd91f1",
+      "Longitude": 36.4208,
+      "Country": "Lebanon"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-04",
+      "City": "Aarsâl",
+      "Actor": "Lebanese Military",
+      "Latitude": 34.1794,
+      "timestamp": "2018-10-30T0:39:22.0",
+      "State": "Baalbek-Hermel",
+      "Event_Subtype": "Force Posture",
+      "Warning_ID": "Mercury_Baserateb3f52f17740c483e84ed7614988a8813",
+      "Longitude": 36.4208,
+      "Country": "Lebanon"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-12",
+      "City": "El Beddâoui",
+      "Actor": "Lebanese Military",
+      "Latitude": 34.4538,
+      "timestamp": "2018-11-05T7:40:37.0",
+      "State": "Liban-Nord",
+      "Event_Subtype": "Conflict",
+      "Warning_ID": "Mercury_Baserate01f9a46957cf4de28f8987790da63618",
+      "Longitude": 35.8655,
+      "Country": "Lebanon"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-08",
+      "City": "Caza de Nabatîyé",
+      "Actor": "Lebanese General Security",
+      "Latitude": 33.3943,
+      "timestamp": "2018-10-30T22:15:55.0",
+      "State": "Nabatîyé",
+      "Event_Subtype": "Conflict",
+      "Warning_ID": "Mercury_Baseratee5f8f0dc937d46fc9c8d3bcc00357b7d",
+      "Longitude": 35.4448,
+      "Country": "Lebanon"
+    },
+    {
+      "Event_Type": "Military Activity",
+      "Event_Date": "2018-11-12",
+      "City": "Aarsâl",
+      "Actor": "Lebanese General Security",
+      "Latitude": 34.1794,
+      "timestamp": "2018-11-08T1:26:34.0",
+      "State": "Baalbek-Hermel",
+      "Event_Subtype": "Force Posture",
+      "Warning_ID": "Mercury_Baseratea7a068b69ce2456eae3378a12179a1da",
+      "Longitude": 36.4208,
+      "Country": "Lebanon"
+    }
+  ]
+}

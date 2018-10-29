@@ -1,12 +1,12 @@
 {
   "payload": [
     {
+      "Case_Count": 7.0,
+      "Event_Type": "Civil Unrest",
+      "timestamp": "2018-10-16T12:00:00.1",
+      "Event_Date": "2018-11-01",
       "State": "Irbid",
       "Country": "Jordan",
-      "Case_Count": 7.0,
-      "Event_Date": "2018-11-01",
-      "timestamp": "2018-10-02T12:00:00.1",
-      "Event_Type": "Civil Unrest",
       "Warning_ID": "BR_CU_Irbid_2018-11-01"
     }
   ],
