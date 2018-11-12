@@ -15,6 +15,7 @@ import numpy as np
 from dateutil.parser import parse
 import json
 import os
+from collections import Counter
 
 EXPRESS_SCORE_HOME = os.path.abspath("..")
 RESOURCE_PATH = os.path.join(EXPRESS_SCORE_HOME, "resources")
@@ -23,6 +24,8 @@ LB_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "lb_ma_may_2018")
 SA_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "sa_ma_may_2018")
 EG_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "eg_ma_may_2018")
 IQ_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "iq_ma_may_2018")
+SY_MA_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "sy_ma_may_2018")
+LB_PER1_TEST_PATH = os.path.join(TEST_RESOURCE_PATH, "lb_ma_period1")
 
 
 class ScorerTest(unittest.TestCase):
@@ -816,6 +819,50 @@ class MaScorerTest(unittest.TestCase):
         self.assertAlmostEqual(result[ScoreComponents.QS], 0.882, 3)
         self.assertFalse("Notices" in result)
         self.assertFalse("Errors" in result)
+
+    def test_duplicate_matches(self):
+        """
+        Tests if the same GSR event or warning are matched multiply.
+        :return:
+        """
+        # Test using Lebanon for one participant.  Known faiure case.
+        test_warn_filename = "test_warn.json"
+        test_warn_path = os.path.join(LB_PER1_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings= json.load(f)
+        test_gsr_filename = "test_gsr.json"
+        test_gsr_path = os.path.join(LB_PER1_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+        result = MaScorer.score(test_warnings, test_gsr)
+        matches = result["Matches"]
+        warn_ids = [m[0] for m in matches]
+        warn_id_counter = Counter(warn_ids)
+        max_warn_usage = warn_id_counter.most_common(1)[0][1]
+        self.assertEqual(max_warn_usage, 1)
+        gsr_ids = [m[1] for m in matches]
+        gsr_id_counter = Counter(gsr_ids)
+        max_gsr_usage = gsr_id_counter.most_common(1)[0][1]
+        self.assertEqual(max_gsr_usage, 1)
+        # Test using Syria, May 2018.  This will take a while to run.
+        test_warn_filename = "test_cc_warnings.json"
+        test_warn_path = os.path.join(SY_MA_TEST_PATH, test_warn_filename)
+        with open(test_warn_path, "r", encoding="utf8") as f:
+            test_warnings= json.load(f)
+        test_gsr_filename = "test_cc_gsr.json"
+        test_gsr_path = os.path.join(SY_MA_TEST_PATH, test_gsr_filename)
+        with open(test_gsr_path, "r", encoding="utf8") as f:
+            test_gsr = json.load(f)
+        result = MaScorer.score(test_warnings, test_gsr)
+        matches = result["Matches"]
+        warn_ids = [m[0] for m in matches]
+        warn_id_counter = Counter(warn_ids)
+        max_warn_usage = warn_id_counter.most_common(1)[0][1]
+        self.assertEqual(max_warn_usage, 1)
+        gsr_ids = [m[1] for m in matches]
+        gsr_id_counter = Counter(gsr_ids)
+        max_gsr_usage = gsr_id_counter.most_common(1)[0][1]
+        self.assertEqual(max_gsr_usage, 1)
 
 
 if __name__ == "__main__":
