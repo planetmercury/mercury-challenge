@@ -542,6 +542,14 @@ class MaScorerTest(unittest.TestCase):
         expected = 1
         result = Scorer.facet_score(warn_value, gsr_value, wildcards)
         self.assertEqual(result, expected)
+        gsr_value = "Ethel;Fred"
+        expected = 1
+        result = Scorer.facet_score(warn_value, gsr_value, wildcards)
+        self.assertEqual(result, expected)
+        gsr_value = "Ethel,Fred"
+        expected = 1
+        result = Scorer.facet_score(warn_value, gsr_value, wildcards, gsr_value_delim=",")
+        self.assertEqual(result, expected)
 
     def test_actor_score(self):
         """
@@ -572,6 +580,16 @@ class MaScorerTest(unittest.TestCase):
         gsr_value = ["Ethel", "Fred"]
         expected = 1
         result = MaScorer.actor_score(warn_value, gsr_value, legits, wildcards)
+        self.assertEqual(result, expected)
+        warn_value = "Fred"
+        gsr_value = "Ethel;Fred"
+        expected = 1
+        result = MaScorer.actor_score(warn_value, gsr_value, legits, wildcards)
+        self.assertEqual(result, expected)
+        warn_value = "Fred"
+        gsr_value = "Ethel,Fred"
+        expected = 1
+        result = MaScorer.actor_score(warn_value, gsr_value, legits, wildcards, gsr_value_delim=",")
         self.assertEqual(result, expected)
         warn_value = "Lucy"
         gsr_value = ["Ethel", "Fred"]

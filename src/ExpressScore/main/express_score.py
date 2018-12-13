@@ -616,20 +616,21 @@ class MaScorer(Scorer):
 
     @staticmethod
     def actor_score(warn_actor, gsr_actor, legit_actors=ACTORS,
-                    wildcards=WILDCARD_ACTORS):
+                    wildcards=WILDCARD_ACTORS, gsr_value_delim=";"):
         """
         Computes the facet score for Actor
         :param warn_actor: Warning value for Actor
         :param gsr_actor: GSR value for Actor, could be a list
         :param legit_actors: Which actors are legal values for submission
         :param wildcards: Which values in the GSR are assumed to match all legit inputs?
+        :param gsr_value_delim: Character that separates actors in a string
         :return: 1 if it matches, 0 if it doesn't.
         """
 
         if warn_actor not in legit_actors:
             _as = 0
         else:
-            _as = Scorer.facet_score(warn_actor, gsr_actor, wildcards)
+            _as = Scorer.facet_score(warn_actor, gsr_actor, wildcards, gsr_value_delim)
 
         return _as
 
