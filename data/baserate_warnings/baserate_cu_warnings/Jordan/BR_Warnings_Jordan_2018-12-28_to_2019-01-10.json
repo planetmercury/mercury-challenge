@@ -1,0 +1,21 @@
+{
+  "payload": [
+    {
+      "Case_Count": 11.0,
+      "Event_Date": "2019-01-02",
+      "Warning_ID": "BR_CU_Jordan_2019-01-02",
+      "timestamp": "2018-12-11T12:00:00.1",
+      "Event_Type": "Civil Unrest",
+      "Country": "Jordan"
+    },
+    {
+      "Case_Count": 11.0,
+      "Event_Date": "2019-01-09",
+      "Warning_ID": "BR_CU_Jordan_2019-01-09",
+      "timestamp": "2018-12-11T12:00:00.1",
+      "Event_Type": "Civil Unrest",
+      "Country": "Jordan"
+    }
+  ],
+  "participant_id": "Mercury_Baserate"
+}
